@@ -30,6 +30,29 @@ color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe 
 .card .ph{height:180px;display:grid;place-items:center;background:radial-gradient(circle at top,#27344d,#121825);font-family:Georgia,serif;color:#c7b484;font-size:2rem}
 .caption{padding:12px 13px;display:flex;gap:10px;align-items:center;justify-content:space-between}
 .caption b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inventory-preview{
+  width:100%;
+  margin-top:20px;
+  overflow:hidden;
+
+  border:1px solid var(--line);
+  border-radius:12px;
+
+  background:#080c13;
+}
+.inventory-preview img{
+  display:block;
+
+  width:100%;
+  height:auto;
+
+  object-fit:contain;
+}
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:30px;
+}
 .tag{border:1px solid #2563eb;color:#75a7ff;padding:4px 7px;border-radius:5px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
 .champs{display:grid;grid-template-columns:repeat(8,1fr);gap:16px}
 .champ{text-align:center;color:#d4cdbd;font-family:Georgia,serif;font-size:.8rem}
@@ -58,75 +81,25 @@ color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe 
 
   <section class="section">
     <h3>SKINS</h3>
-    <input id="skinSearch" class="search" placeholder="Search skins..." autocomplete="off">
-    <div id="skinGrid" class="grid">
     
-      <article class="card skin-card" data-name="25a7f0f2-4bce-7e45-b4b0-ca9264f5dfcc">
-        <div class="ph">✦</div>
-        <div class="caption"><b>25a7f0f2-4bce-7e45-b4b0-ca9264f5dfcc</b><span class="tag">skin</span></div>
-      </article>
+          <p class="empty">
+            Skin inventory preview unavailable.
+          </p>
     
-      <article class="card skin-card" data-name="a590c03a-43b1-a408-4c6b-0bb9fdda1570">
-        <div class="ph">✦</div>
-        <div class="caption"><b>a590c03a-43b1-a408-4c6b-0bb9fdda1570</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="ee01d99d-4392-a37e-2096-7bbe2681bcda">
-        <div class="ph">✦</div>
-        <div class="caption"><b>ee01d99d-4392-a37e-2096-7bbe2681bcda</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="b9ee2457-481c-6776-3f5b-0ca8e8f90c89">
-        <div class="ph">✦</div>
-        <div class="caption"><b>b9ee2457-481c-6776-3f5b-0ca8e8f90c89</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="48486283-48d8-cb8b-01c9-9b9409ab1d4d">
-        <div class="ph">✦</div>
-        <div class="caption"><b>48486283-48d8-cb8b-01c9-9b9409ab1d4d</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="a40a6ce2-462c-c864-5d30-7b9408b98d3d">
-        <div class="ph">✦</div>
-        <div class="caption"><b>a40a6ce2-462c-c864-5d30-7b9408b98d3d</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="25a656e2-4994-020b-32e9-e99b8171429f">
-        <div class="ph">✦</div>
-        <div class="caption"><b>25a656e2-4994-020b-32e9-e99b8171429f</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="89793303-4735-a4e0-a49d-608c69c4785e">
-        <div class="ph">✦</div>
-        <div class="caption"><b>89793303-4735-a4e0-a49d-608c69c4785e</b><span class="tag">skin</span></div>
-      </article>
-    
-    
-    </div>
   </section>
 
   <section class="section">
     <h3>CHAMPIONS</h3>
-    <div class="champs">
     
+          <p class="empty">
+            Champion inventory preview unavailable.
+          </p>
     
-      <div class="champ"><div class="circle">?</div><div>Source list unavailable</div></div>
-    
-    </div>
   </section>
 
   <div class="footer">
     Public inventory preview only. Login, email and recovery credentials are never exposed on this page.
   </div>
 </div>
-<script>
-const q=document.getElementById('skinSearch');
-q?.addEventListener('input',()=>{
-  const v=q.value.toLowerCase().trim();
-  document.querySelectorAll('.skin-card').forEach(el=>{
-    el.style.display=el.dataset.name.includes(v)?'block':'none';
-  });
-});
-</script>
 </body>
 </html>

@@ -30,6 +30,29 @@ color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe 
 .card .ph{height:180px;display:grid;place-items:center;background:radial-gradient(circle at top,#27344d,#121825);font-family:Georgia,serif;color:#c7b484;font-size:2rem}
 .caption{padding:12px 13px;display:flex;gap:10px;align-items:center;justify-content:space-between}
 .caption b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inventory-preview{
+  width:100%;
+  margin-top:20px;
+  overflow:hidden;
+
+  border:1px solid var(--line);
+  border-radius:12px;
+
+  background:#080c13;
+}
+.inventory-preview img{
+  display:block;
+
+  width:100%;
+  height:auto;
+
+  object-fit:contain;
+}
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:30px;
+}
 .tag{border:1px solid #2563eb;color:#75a7ff;padding:4px 7px;border-radius:5px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
 .champs{display:grid;grid-template-columns:repeat(8,1fr);gap:16px}
 .champ{text-align:center;color:#d4cdbd;font-family:Georgia,serif;font-size:.8rem}
@@ -58,185 +81,25 @@ color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe 
 
   <section class="section">
     <h3>SKINS</h3>
-    <input id="skinSearch" class="search" placeholder="Search skins..." autocomplete="off">
-    <div id="skinGrid" class="grid">
     
-      <article class="card skin-card" data-name="ccde2f25-4525-ef52-e1f0-bd88184bd4a4">
-        <div class="ph">✦</div>
-        <div class="caption"><b>ccde2f25-4525-ef52-e1f0-bd88184bd4a4</b><span class="tag">skin</span></div>
-      </article>
+          <p class="empty">
+            Skin inventory preview unavailable.
+          </p>
     
-      <article class="card skin-card" data-name="706dcacc-432b-47e5-3cf7-2db432a8afe6">
-        <div class="ph">✦</div>
-        <div class="caption"><b>706dcacc-432b-47e5-3cf7-2db432a8afe6</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="63260230-44aa-2a9f-71db-329e2a3afab5">
-        <div class="ph">✦</div>
-        <div class="caption"><b>63260230-44aa-2a9f-71db-329e2a3afab5</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="15588213-4d09-344b-c7e1-28af37374c82">
-        <div class="ph">✦</div>
-        <div class="caption"><b>15588213-4d09-344b-c7e1-28af37374c82</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="ae2ea89b-495e-2902-f67f-3490c1a03754">
-        <div class="ph">✦</div>
-        <div class="caption"><b>ae2ea89b-495e-2902-f67f-3490c1a03754</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="6196c91c-4f0a-2aa2-342a-6fbac6d4ec3c">
-        <div class="ph">✦</div>
-        <div class="caption"><b>6196c91c-4f0a-2aa2-342a-6fbac6d4ec3c</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="d90a940b-4040-4c7b-7a9b-7ab574429226">
-        <div class="ph">✦</div>
-        <div class="caption"><b>d90a940b-4040-4c7b-7a9b-7ab574429226</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="a17d4eeb-46e5-a041-ae7b-a2841ac6b36e">
-        <div class="ph">✦</div>
-        <div class="caption"><b>a17d4eeb-46e5-a041-ae7b-a2841ac6b36e</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="8256eb2c-4368-9da8-521f-379c3793dce1">
-        <div class="ph">✦</div>
-        <div class="caption"><b>8256eb2c-4368-9da8-521f-379c3793dce1</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="0a6edcf0-4a64-0ed5-1b10-0e96c2eb4cb4">
-        <div class="ph">✦</div>
-        <div class="caption"><b>0a6edcf0-4a64-0ed5-1b10-0e96c2eb4cb4</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="b454bb93-4dd5-5a7c-6720-38afd82bfd78">
-        <div class="ph">✦</div>
-        <div class="caption"><b>b454bb93-4dd5-5a7c-6720-38afd82bfd78</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="df65f29b-465c-827a-7c34-15be149b883e">
-        <div class="ph">✦</div>
-        <div class="caption"><b>df65f29b-465c-827a-7c34-15be149b883e</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="0581fb92-4b2d-0ede-6bfc-8d93fde11f74">
-        <div class="ph">✦</div>
-        <div class="caption"><b>0581fb92-4b2d-0ede-6bfc-8d93fde11f74</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="0568cd14-42ca-db85-3ac2-c485079bbbf1">
-        <div class="ph">✦</div>
-        <div class="caption"><b>0568cd14-42ca-db85-3ac2-c485079bbbf1</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="9a6c6db7-4f56-12d6-8339-6386f12090e8">
-        <div class="ph">✦</div>
-        <div class="caption"><b>9a6c6db7-4f56-12d6-8339-6386f12090e8</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="12e6f520-460b-e69b-0617-bab9fff1a134">
-        <div class="ph">✦</div>
-        <div class="caption"><b>12e6f520-460b-e69b-0617-bab9fff1a134</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="f7fc6f86-4599-e131-e392-d6b2dfabd8cb">
-        <div class="ph">✦</div>
-        <div class="caption"><b>f7fc6f86-4599-e131-e392-d6b2dfabd8cb</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="47d5e54a-48e5-b62a-5cf5-3cb7efc12e90">
-        <div class="ph">✦</div>
-        <div class="caption"><b>47d5e54a-48e5-b62a-5cf5-3cb7efc12e90</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="121bc438-4748-b2ee-2c58-768c8c26838b">
-        <div class="ph">✦</div>
-        <div class="caption"><b>121bc438-4748-b2ee-2c58-768c8c26838b</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="46c8b165-4ba5-d42c-79e9-4fba8951ca48">
-        <div class="ph">✦</div>
-        <div class="caption"><b>46c8b165-4ba5-d42c-79e9-4fba8951ca48</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="d6af3716-4ab5-8204-a2f4-1eb4ffc51088">
-        <div class="ph">✦</div>
-        <div class="caption"><b>d6af3716-4ab5-8204-a2f4-1eb4ffc51088</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="bb46d680-4e05-bacd-6ecd-11895d2f22e7">
-        <div class="ph">✦</div>
-        <div class="caption"><b>bb46d680-4e05-bacd-6ecd-11895d2f22e7</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="e917273f-42d1-3a8d-7c9e-54afd6e5e68d">
-        <div class="ph">✦</div>
-        <div class="caption"><b>e917273f-42d1-3a8d-7c9e-54afd6e5e68d</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="02cce94a-4dc2-d11a-33cf-d8aba4e36202">
-        <div class="ph">✦</div>
-        <div class="caption"><b>02cce94a-4dc2-d11a-33cf-d8aba4e36202</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="3d8f9c7d-4259-4710-1f94-0fbc4f25035c">
-        <div class="ph">✦</div>
-        <div class="caption"><b>3d8f9c7d-4259-4710-1f94-0fbc4f25035c</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="4725c2c4-45b7-d9ab-ff4f-a79c3b2dd9ec">
-        <div class="ph">✦</div>
-        <div class="caption"><b>4725c2c4-45b7-d9ab-ff4f-a79c3b2dd9ec</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="50b0db3d-46a9-5c2f-2e57-7fbeedf30362">
-        <div class="ph">✦</div>
-        <div class="caption"><b>50b0db3d-46a9-5c2f-2e57-7fbeedf30362</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="34919680-4f00-554b-0c2b-95acca7d0d36">
-        <div class="ph">✦</div>
-        <div class="caption"><b>34919680-4f00-554b-0c2b-95acca7d0d36</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="9a6d4520-48a6-d46c-5a3f-2ab0b10dd8f6">
-        <div class="ph">✦</div>
-        <div class="caption"><b>9a6d4520-48a6-d46c-5a3f-2ab0b10dd8f6</b><span class="tag">skin</span></div>
-      </article>
-    
-      <article class="card skin-card" data-name="06854a71-4eac-cb4c-cdbe-bbbdda492e9c">
-        <div class="ph">✦</div>
-        <div class="caption"><b>06854a71-4eac-cb4c-cdbe-bbbdda492e9c</b><span class="tag">skin</span></div>
-      </article>
-    
-    
-    </div>
   </section>
 
   <section class="section">
     <h3>CHAMPIONS</h3>
-    <div class="champs">
     
+          <p class="empty">
+            Champion inventory preview unavailable.
+          </p>
     
-      <div class="champ"><div class="circle">?</div><div>Source list unavailable</div></div>
-    
-    </div>
   </section>
 
   <div class="footer">
     Public inventory preview only. Login, email and recovery credentials are never exposed on this page.
   </div>
 </div>
-<script>
-const q=document.getElementById('skinSearch');
-q?.addEventListener('input',()=>{
-  const v=q.value.toLowerCase().trim();
-  document.querySelectorAll('.skin-card').forEach(el=>{
-    el.style.display=el.dataset.name.includes(v)?'block':'none';
-  });
-});
-</script>
 </body>
 </html>

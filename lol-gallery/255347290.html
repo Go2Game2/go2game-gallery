@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Go2Game • EUW1 • 139 Skins</title>
+<style>
+:root{
+  --bg:#090d15;--panel:#111725;--panel2:#171e2d;--text:#f6f1e7;
+  --muted:#9aa3b4;--gold:#d8b56d;--line:#2a3447;--blue:#4d8dff;
+}
+*{box-sizing:border-box} body{margin:0;background:
+radial-gradient(circle at 50% -20%,#26314a 0,#0b1019 36%,var(--bg) 70%);
+color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{width:min(1120px,calc(100% - 28px));margin:auto;padding:24px 0 70px}
+.hero{padding:36px 0 24px;text-align:center}
+.brand{letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:800;font-size:.82rem}
+.hero h1{font-family:Georgia,serif;font-size:clamp(3rem,10vw,7rem);margin:14px 0 4px;line-height:.9}
+.hero h2{font-family:Georgia,serif;font-size:clamp(1.8rem,7vw,4.5rem);margin:6px 0;color:#f4dfad}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px auto;max-width:820px}
+.stat{background:linear-gradient(180deg,#151d2d,#0f1521);border:1px solid var(--line);padding:18px;border-radius:14px}
+.stat strong{display:block;font-family:Georgia,serif;color:#f4dfad;font-size:1.9rem}
+.stat span{font-size:.72rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.section{margin-top:48px}.section h3{text-align:center;font-family:Georgia,serif;color:#f4dfad;font-size:2.5rem;letter-spacing:.05em}
+.search{width:100%;padding:16px 18px;border:1px solid #39445b;background:#101622;color:#fff;border-radius:11px;font-size:1rem;outline:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.card{position:relative;min-height:170px;border:1px solid var(--line);background:linear-gradient(145deg,#161e2d,#0c111a);overflow:hidden;border-radius:12px}
+.card img{width:100%;height:180px;object-fit:cover;display:block}
+.card .ph{height:180px;display:grid;place-items:center;background:radial-gradient(circle at top,#27344d,#121825);font-family:Georgia,serif;color:#c7b484;font-size:2rem}
+.caption{padding:12px 13px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.caption b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag{border:1px solid #2563eb;color:#75a7ff;padding:4px 7px;border-radius:5px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.champs{display:grid;grid-template-columns:repeat(8,1fr);gap:16px}
+.champ{text-align:center;color:#d4cdbd;font-family:Georgia,serif;font-size:.8rem}
+.champ img,.champ .circle{width:82px;height:82px;max-width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:1px solid #4a453b;margin:auto}
+.champ .circle{display:grid;place-items:center;background:#1b2434;font-size:1.4rem}
+.champ div:last-child{margin-top:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.footer{margin-top:60px;border-top:1px solid var(--line);padding:22px 0;color:var(--muted);text-align:center;font-size:.8rem}
+@media(max-width:760px){.stats{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.champs{grid-template-columns:repeat(5,1fr)}}
+@media(max-width:460px){.wrap{width:min(100% - 18px,1120px)}.grid{grid-template-columns:repeat(2,1fr);gap:8px}.card img,.card .ph{height:128px}.card{min-height:0}.caption{padding:9px;font-size:.78rem}.champs{grid-template-columns:repeat(4,1fr);gap:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="brand">Go2Game • Account Overview</div>
+    <h1>EUW1</h1>
+    <h2>Unranked</h2>
+    <div class="stats">
+      <div class="stat"><strong>139</strong><span>Skins</span></div>
+      <div class="stat"><strong>181</strong><span>Champions</span></div>
+      <div class="stat"><strong>?</strong><span>Summoner Level</span></div>
+      <div class="stat"><strong>0</strong><span>Blue Essence</span></div>
+      <div class="stat"><strong>0</strong><span>RP</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>SKINS</h3>
+    <input id="skinSearch" class="search" placeholder="Search skins..." autocomplete="off">
+    <div id="skinGrid" class="grid">
+    
+      <article class="card skin-card" data-name="34919680-4f00-554b-0c2b-95acca7d0d36">
+        <div class="ph">✦</div>
+        <div class="caption"><b>34919680-4f00-554b-0c2b-95acca7d0d36</b><span class="tag">skin</span></div>
+      </article>
+    
+    
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>CHAMPIONS</h3>
+    <div class="champs">
+    
+    
+      <div class="champ"><div class="circle">?</div><div>Source list unavailable</div></div>
+    
+    </div>
+  </section>
+
+  <div class="footer">
+    Public inventory preview only. Login, email and recovery credentials are never exposed on this page.
+  </div>
+</div>
+<script>
+const q=document.getElementById('skinSearch');
+q?.addEventListener('input',()=>{
+  const v=q.value.toLowerCase().trim();
+  document.querySelectorAll('.skin-card').forEach(el=>{
+    el.style.display=el.dataset.name.includes(v)?'block':'none';
+  });
+});
+</script>
+</body>
+</html>

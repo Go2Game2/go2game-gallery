@@ -9,8 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,900&display=swap');
 
 :root {
-  --bg-main: #0b071a;
-  --bg-card: #15112e;
+  --bg-main: #050314;
   --text-main: #ffffff;
   --text-muted: #8b87a6;
   
@@ -29,10 +28,10 @@
 }
 
 * { box-sizing: border-box; }
-html, body { min-height: 100%; }
+html, body { min-height: 100%; width: 100%; margin: 0; padding: 0; }
 
 body {
-  margin: 0; color: var(--text-main); 
+  color: var(--text-main); 
   font-family: 'Montserrat', sans-serif;
   background: radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
               radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.1) 0%, transparent 40%),
@@ -48,9 +47,10 @@ body::before {
   background-size: 40px 40px;
 }
 
-.wrap { max-width: 1400px; margin: auto; padding: 40px 20px 80px; }
+/* Sayfanın ortalanması ve tam genişlik sorununun giderilmesi */
+.wrap { width: 100%; max-width: 1450px; margin: 0 auto; padding: 40px 30px 100px; display: flex; flex-direction: column; align-items: center; }
 
-.hero { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 40px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.hero { width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 40px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .hero-badges { display: flex; gap: 10px; margin-bottom: 15px; }
 .badge { background: #fff; color: #000; padding: 4px 12px; font-size: 0.75rem; font-weight: 900; letter-spacing: 1px; transform: skewX(-10deg); text-transform: uppercase; }
 .badge.mythic { background: var(--neon-yellow); }
@@ -64,12 +64,12 @@ body::before {
 }
 .hero-subtitle { font-size: clamp(2rem, 4vw, 3.5rem); margin: 0; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.8); }
 
-.arsenal-section { margin-top: 50px; text-align: center; }
-.section-title { font-size: 2.2rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; }
+.arsenal-section { width: 100%; margin-top: 50px; text-align: center; }
+.section-title { font-size: 2.2rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
 .section-title span { color: var(--neon-yellow); }
 .section-subtitle { font-size: 0.7rem; color: var(--neon-pink); letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 5px; }
 
-.stats-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 40px; }
+.stats-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 40px; width: 100%; }
 .stat-box { 
   background: linear-gradient(145deg, #18143c, #0b091c); border-radius: 8px; padding: 20px;
   min-width: 140px; text-align: center; border-top: 3px solid var(--neon-pink);
@@ -80,7 +80,7 @@ body::before {
 .stat-box strong { display: block; font-size: 2.2rem; font-weight: 900; margin-bottom: 5px; }
 .stat-box span { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
 
-.controls { display: flex; flex-direction: column; align-items: center; gap: 20px; margin-bottom: 30px; }
+.controls { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px; margin-bottom: 30px; }
 .search-input { 
   width: 100%; max-width: 600px; padding: 15px 25px; border-radius: 30px;
   background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
@@ -97,11 +97,15 @@ body::before {
 .filter-btn:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 .filter-btn.active { background: #fff; color: #000; border-color: #fff; }
 
-.inventory-section { margin-top: 60px; }
+.inventory-section { width: 100%; margin-top: 60px; }
+
+/* KARTLARIN DEVASA OLmasını ÖNLEYEN DÜZGÜN GRID YAPISI */
 .grid { 
   display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
-  gap: 12px; margin-top: 20px; 
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+  gap: 15px; 
+  margin-top: 25px; 
+  width: 100%;
 }
 
 .item-card {
@@ -109,11 +113,12 @@ body::before {
   border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;
   border-top: 3px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.2s; position: relative;
+  width: 100%;
 }
 .item-card:hover { transform: translateY(-4px); z-index: 10; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
 
 .card-img-wrap { width: 100%; aspect-ratio: 1; display: grid; place-items: center; padding: 10px; }
-.card-img-wrap img { width: 90%; height: 90%; object-fit: contain; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.4)); }
+.card-img-wrap img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.4)); }
 
 .caption { padding: 10px 8px; text-align: left; background: rgba(0,0,0,0.3); flex-grow: 1; }
 .caption b { display: block; font-size: 0.75rem; font-weight: 900; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-transform: uppercase; }
@@ -129,7 +134,7 @@ body::before {
 .r-common { color: var(--c-common); } .card-common { border-top-color: var(--c-common); }
 .r-mythic { color: var(--c-mythic); } .card-mythic { border-top-color: var(--c-mythic); }
 
-.cta-footer { margin-top: 100px; text-align: center; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+.cta-footer { width: 100%; margin-top: 100px; text-align: center; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; align-items: center; }
 .cta-footer h2 { font-size: clamp(3rem, 6vw, 5rem); margin: 0 0 10px; color: var(--neon-yellow); line-height: 1; letter-spacing: -2px; text-shadow: 0 0 30px rgba(251, 191, 36, 0.3); }
 .cta-footer p { font-size: 0.8rem; letter-spacing: 3px; color: var(--text-muted); margin-bottom: 30px; text-transform: uppercase; }
 .btn-claim { 

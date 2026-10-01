@@ -1,0 +1,4348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Go2Game • EUW1 • 75 Skins</title>
+<style>
+:root {
+  --bg-1: #07101d;
+  --bg-2: #0b1730;
+  --bg-3: #101a2a;
+  --gold: #d8b56d;
+  --gold-soft: rgba(216, 181, 109, 0.16);
+  --line: rgba(255,255,255,0.08);
+  --text: #f5efe3;
+  --muted: #9ca7bb;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Inter, Arial, sans-serif;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(58, 92, 170, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgba(216, 181, 109, 0.10), transparent 22%),
+    radial-gradient(circle at 50% 85%, rgba(25, 52, 110, 0.20), transparent 32%),
+    linear-gradient(135deg, #08111f 0%, #0a1630 35%, #091220 65%, #07101a 100%);
+
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.35;
+
+    background:
+        radial-gradient(circle at 50% 50%, transparent 0 38%, rgba(216,181,109,0.06) 38.5%, transparent 39%),
+        radial-gradient(circle at 50% 50%, transparent 0 54%, rgba(216,181,109,0.05) 54.4%, transparent 55%),
+        radial-gradient(circle at 50% 50%, transparent 0 68%, rgba(216,181,109,0.04) 68.3%, transparent 69%),
+        radial-gradient(circle at 50% 50%, transparent 0 82%, rgba(216,181,109,0.035) 82.2%, transparent 83%);
+}
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+
+      background-image:
+        radial-gradient(circle, rgba(216,181,109,0.85) 0 1px, transparent 1.6px),
+        radial-gradient(circle, rgba(255,255,255,0.45) 0 1px, transparent 1.8px),
+        radial-gradient(circle, rgba(216,181,109,0.45) 0 1px, transparent 2px);
+
+      background-size:
+        180px 180px,
+        240px 240px,
+        320px 320px;
+
+      background-position:
+        10% 20%,
+        70% 35%,
+        40% 80%;
+    }
+
+.wrap{
+  width:min(1120px,calc(100% - 28px));
+  margin:auto;
+  padding:24px 0 70px;
+  position:relative;
+  z-index:1;
+}
+.hero{padding:36px 0 24px;text-align:center;position:relative}
+.hero-glow {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 180px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(216,181,109,0.10) 0%,
+      rgba(216,181,109,0.04) 35%,
+      transparent 70%
+    );
+}
+.brand{letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:800;font-size:.82rem}
+.hero h1{font-family:Georgia,serif;font-size:clamp(3rem,10vw,7rem);margin:14px 0 4px;line-height:.9}
+.hero h2{font-family:Georgia,serif;font-size:clamp(1.8rem,7vw,4.5rem);margin:6px 0;color:#f4dfad}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px auto;max-width:820px}
+.stat{background:linear-gradient(180deg,#151d2d,#0f1521);border:1px solid var(--line);padding:18px;border-radius:14px}
+.stat strong{display:block;font-family:Georgia,serif;color:#f4dfad;font-size:1.9rem}
+.stat span{font-size:.72rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.stat,
+.card,
+.skin-card {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 24, 41, 0.88),
+    rgba(9, 16, 28, 0.92)
+  );
+
+  border: 1px solid rgba(216, 181, 109, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 10px 28px rgba(0,0,0,0.22);
+}
+
+.stat strong,
+h1, h2, h3,
+.rank-value {
+  color: #f3dfb0;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.rank-value {
+    font-size: 1.35rem !important;
+    color: #f4dfad;
+    white-space: nowrap;
+}
+.section{margin-top:48px}.section h3{text-align:center;font-family:Georgia,serif;color:#f4dfad;font-size:2.5rem;letter-spacing:.05em}
+.search {
+  width: 100%;
+  padding: 16px 18px;
+
+  border: 1px solid #39445b;
+  background: #101622;
+  color: #fff;
+
+  border-radius: 11px;
+  font-size: 1rem;
+
+  outline: none;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  background: #111725;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+  display: block;
+}
+
+.card .ph{height:180px;display:grid;place-items:center;background:radial-gradient(circle at top,#27344d,#121825);font-family:Georgia,serif;color:#c7b484;font-size:2rem}
+
+.caption {
+  padding: 12px 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.caption b {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.inventory-preview{
+  width:100%;
+  margin-top:20px;
+  overflow:hidden;
+
+  border:1px solid var(--line);
+  border-radius:12px;
+
+  background:#080c13;
+}
+.inventory-preview img{
+  display:block;
+
+  width:100%;
+  height:auto;
+
+  object-fit:contain;
+}
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:30px;
+}
+.tag {
+  flex-shrink: 0;
+
+  border: 1px solid #2563eb;
+  color: #75a7ff;
+
+  padding: 4px 7px;
+  border-radius: 5px;
+
+  font-size: .72rem;
+  text-transform: uppercase;
+}
+.champs {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+}
+
+.champ {
+  text-align: center;
+  color: #d4cdbd;
+  font-family: Georgia, serif;
+  font-size: .8rem;
+}
+
+.champ img,
+.champ .circle {
+  width: 82px;
+  height: 82px;
+  max-width: 100%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 1px solid #4a453b;
+
+  margin: auto;
+}
+
+.champ .circle {
+  display: grid;
+  place-items: center;
+  background: #1b2434;
+}
+
+.champ div:last-child {
+  margin-top: 7px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footer{margin-top:60px;border-top:1px solid var(--line);padding:22px 0;color:var(--muted);text-align:center;font-size:.8rem}
+@media(max-width:760px){
+  .stats{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:760px) {
+    .champs {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media(max-width:460px){
+  .wrap{width:min(100% - 18px,1120px)}
+  .grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .card img,.card .ph{height:128px}
+  .card{min-height:0}
+  .caption{padding:9px;font-size:.78rem}
+}
+
+@media(max-width:460px) {
+    .champs {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
+
+.go2game-popup {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: #111725;
+
+    border: 1px solid #d8b56d;
+    border-radius: 14px;
+
+    color: #f6f1e7;
+    text-decoration: none;
+
+    z-index: 99999;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.5);
+}
+
+.go2game-popup-logo {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: #d8b56d;
+
+    color: #080c13;
+
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+.go2game-popup-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.go2game-popup-text strong {
+    color: #f4dfad;
+}
+
+.go2game-popup-text span {
+    color: #9aa3b4;
+    font-size: .72rem;
+}
+
+.go2game-popup-arrow {
+    margin-left: auto;
+
+    color: #d8b56d;
+    font-size: 1.3rem;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="brand">Go2Game • Account Overview</div>
+    <div class="hero-glow"></div>
+    <h1>EUW1</h1>
+    <div class="stats">
+      <div class="stat">
+        <strong>75</strong>
+        <span>Skins</span>
+      </div>
+
+      <div class="stat">
+        <strong>92</strong>
+        <span>Champions</span>
+      </div>
+
+      <div class="stat">
+        <strong>118</strong>
+        <span>Summoner Level</span>
+      </div>
+
+      <div class="stat">
+        <strong>990</strong>
+        <span>Blue Essence</span>
+      </div>
+
+      <div class="stat">
+        <strong>90</strong>
+        <span>RP</span>
+      </div>
+
+      <div class="stat">
+        <strong class="rank-value">
+            Unranked
+        </strong>
+        <span>Rank</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>SKINS</h3>
+
+    <input
+      id="skinSearch"
+      class="search"
+      placeholder="Search skins..."
+      autocomplete="off"
+    >
+
+    <div id="skinGrid" class="grid">
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="dwg twisted fate"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/twistedfate/skins/skin23/images/twistedfate_splash_centered_23.jpg"
+          alt="DWG Twisted Fate"
+        >
+        
+
+        <div class="caption">
+
+          <b>DWG Twisted Fate</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="project: ekko"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ekko/skins/skin03/images/ekko_splash_centered_3.jpg"
+          alt="PROJECT: Ekko"
+        >
+        
+
+        <div class="caption">
+
+          <b>PROJECT: Ekko</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="candy cane miss fortune"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin04/images/missfortune_splash_centered_4.jpg"
+          alt="Candy Cane Miss Fortune"
+        >
+        
+
+        <div class="caption">
+
+          <b>Candy Cane Miss Fortune</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="piltover customs blitzcrank"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin04/images/blitzcrank_splash_centered_4.jpg"
+          alt="Piltover Customs Blitzcrank"
+        >
+        
+
+        <div class="caption">
+
+          <b>Piltover Customs Blitzcrank</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="winter wonder lulu"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin04/images/lulu_splash_centered_4.jpg"
+          alt="Winter Wonder Lulu"
+        >
+        
+
+        <div class="caption">
+
+          <b>Winter Wonder Lulu</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="blood moon master yi"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin24/images/masteryi_splash_centered_24.jpg"
+          alt="Blood Moon Master Yi"
+        >
+        
+
+        <div class="caption">
+
+          <b>Blood Moon Master Yi</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="battle boss blitzcrank"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin11/images/blitzcrank_splash_centered_11.jpg"
+          alt="Battle Boss Blitzcrank"
+        >
+        
+
+        <div class="caption">
+
+          <b>Battle Boss Blitzcrank</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="gun goddess miss fortune"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin16/images/missfortune_splash_centered_16.jpg"
+          alt="Gun Goddess Miss Fortune"
+        >
+        
+
+        <div class="caption">
+
+          <b>Gun Goddess Miss Fortune</b>
+
+          
+          <span class="tag rarity-ultimate">
+            ULTIMATE
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="psyops master yi"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin33/images/masteryi_splash_centered_33.jpg"
+          alt="PsyOps Master Yi"
+        >
+        
+
+        <div class="caption">
+
+          <b>PsyOps Master Yi</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="apocalyptic brand"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin01/images/brand_splash_centered_1.jpg"
+          alt="Apocalyptic Brand"
+        >
+        
+
+        <div class="caption">
+
+          <b>Apocalyptic Brand</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="lancer paragon blitzcrank"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin21/images/blitzcrank_splash_centered_21.jpg"
+          alt="Lancer Paragon Blitzcrank"
+        >
+        
+
+        <div class="caption">
+
+          <b>Lancer Paragon Blitzcrank</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="storm dragon lee sin"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leesin/skins/skin31/images/leesin_splash_centered_31.jpg"
+          alt="Storm Dragon Lee Sin"
+        >
+        
+
+        <div class="caption">
+
+          <b>Storm Dragon Lee Sin</b>
+
+          
+          <span class="tag rarity-legendary">
+            LEGENDARY
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="tranquility dragon karma"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/karma/skins/skin44/images/karma_splash_centered_44.jpg"
+          alt="Tranquility Dragon Karma"
+        >
+        
+
+        <div class="caption">
+
+          <b>Tranquility Dragon Karma</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="nurse akali"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/skin04/images/akali_splash_centered_4.jpg"
+          alt="Nurse Akali"
+        >
+        
+
+        <div class="caption">
+
+          <b>Nurse Akali</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="tpa nunu & willump"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/nunu/skins/skin06/images/nunu_splash_centered_6.jpg"
+          alt="TPA Nunu & Willump"
+        >
+        
+
+        <div class="caption">
+
+          <b>TPA Nunu & Willump</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="drx aatrox"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aatrox/skins/skin30/images/aatrox_splash_centered_30.jpg"
+          alt="DRX Aatrox"
+        >
+        
+
+        <div class="caption">
+
+          <b>DRX Aatrox</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="void fizz"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin04/images/fizz_splash_centered_4.jpg"
+          alt="Void Fizz"
+        >
+        
+
+        <div class="caption">
+
+          <b>Void Fizz</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="true damage akali"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/skin15/images/akali_splash_centered_15.jpg"
+          alt="True Damage Akali"
+        >
+        
+
+        <div class="caption">
+
+          <b>True Damage Akali</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="dawnbringer yone"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yone/skins/skin19/images/yone_splash_centered_19.jpg"
+          alt="Dawnbringer Yone"
+        >
+        
+
+        <div class="caption">
+
+          <b>Dawnbringer Yone</b>
+
+          
+          <span class="tag rarity-legendary">
+            LEGENDARY
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="jayce brighthammer"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jayce/skins/skin04/images/jayce_splash_centered_4.jpg"
+          alt="Jayce Brighthammer"
+        >
+        
+
+        <div class="caption">
+
+          <b>Jayce Brighthammer</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="star guardian jinx"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin04/images/jinx_splash_centered_4.jpg"
+          alt="Star Guardian Jinx"
+        >
+        
+
+        <div class="caption">
+
+          <b>Star Guardian Jinx</b>
+
+          
+          <span class="tag rarity-legendary">
+            LEGENDARY
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="firefang warwick"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin06/images/warwick_splash_centered_6.jpg"
+          alt="Firefang Warwick"
+        >
+        
+
+        <div class="caption">
+
+          <b>Firefang Warwick</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="project: yasuo"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yasuo/skins/skin02/images/yasuo_splash_centered_2.jpg"
+          alt="PROJECT: Yasuo"
+        >
+        
+
+        <div class="caption">
+
+          <b>PROJECT: Yasuo</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="sacred sword janna"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/janna/skins/skin08/images/janna_splash_centered_8.jpg"
+          alt="Sacred Sword Janna"
+        >
+        
+
+        <div class="caption">
+
+          <b>Sacred Sword Janna</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="dragon knight mordekaiser"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin01/images/mordekaiser_splash_centered_1.jpg"
+          alt="Dragon Knight Mordekaiser"
+        >
+        
+
+        <div class="caption">
+
+          <b>Dragon Knight Mordekaiser</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="shadow evelynn"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/evelynn/skins/skin01/images/evelynn_splash_centered_1.jpg"
+          alt="Shadow Evelynn"
+        >
+        
+
+        <div class="caption">
+
+          <b>Shadow Evelynn</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="reignited worlds 2012 riven"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/riven/skins/skin07/images/riven_splash_centered_7.jpg"
+          alt="Reignited Worlds 2012 Riven"
+        >
+        
+
+        <div class="caption">
+
+          <b>Reignited Worlds 2012 Riven</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="arcade riven"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/riven/skins/skin06/images/riven_splash_centered_6.jpg"
+          alt="Arcade Riven"
+        >
+        
+
+        <div class="caption">
+
+          <b>Arcade Riven</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="happy elf teemo"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/teemo/skins/skin01/images/teemo_splash_centered_1.jpg"
+          alt="Happy Elf Teemo"
+        >
+        
+
+        <div class="caption">
+
+          <b>Happy Elf Teemo</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="recon teemo"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/teemo/skins/skin02/images/teemo_splash_centered_2.jpg"
+          alt="Recon Teemo"
+        >
+        
+
+        <div class="caption">
+
+          <b>Recon Teemo</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="high noon irelia"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin18/images/irelia_splash_centered_18.jpg"
+          alt="High Noon Irelia"
+        >
+        
+
+        <div class="caption">
+
+          <b>High Noon Irelia</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="sweetheart rakan"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rakan/skins/skin02/images/rakan_splash_centered_2.jpg"
+          alt="Sweetheart Rakan"
+        >
+        
+
+        <div class="caption">
+
+          <b>Sweetheart Rakan</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="ig fiora"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/fiora/skins/skin31/images/fiora_splash_centered_31.jpg"
+          alt="iG Fiora"
+        >
+        
+
+        <div class="caption">
+
+          <b>iG Fiora</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="omega squad teemo"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/teemo/skins/skin08/images/teemo_splash_centered_8.jpg"
+          alt="Omega Squad Teemo"
+        >
+        
+
+        <div class="caption">
+
+          <b>Omega Squad Teemo</b>
+
+          
+          <span class="tag rarity-legendary">
+            LEGENDARY
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="high noon twitch"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/twitch/skins/skin45/images/twitch_splash_centered_45.jpg"
+          alt="High Noon Twitch"
+        >
+        
+
+        <div class="caption">
+
+          <b>High Noon Twitch</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="renegade talon"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/talon/skins/skin01/images/talon_splash_centered_1.jpg"
+          alt="Renegade Talon"
+        >
+        
+
+        <div class="caption">
+
+          <b>Renegade Talon</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="high noon urgot"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin09/images/urgot_splash_centered_9.jpg"
+          alt="High Noon Urgot"
+        >
+        
+
+        <div class="caption">
+
+          <b>High Noon Urgot</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="firecracker tristana"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin41/images/tristana_splash_centered_41.jpg"
+          alt="Firecracker Tristana"
+        >
+        
+
+        <div class="caption">
+
+          <b>Firecracker Tristana</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="arcade kai'sa"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kaisa/skins/skin17/images/kaisa_splash_centered_17.jpg"
+          alt="Arcade Kai'Sa"
+        >
+        
+
+        <div class="caption">
+
+          <b>Arcade Kai'Sa</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="mad scientist singed"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/singed/skins/skin04/images/singed_splash_centered_4.jpg"
+          alt="Mad Scientist Singed"
+        >
+        
+
+        <div class="caption">
+
+          <b>Mad Scientist Singed</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="myrmidon pantheon"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/pantheon/skins/skin01/images/pantheon_splash_centered_1.jpg"
+          alt="Myrmidon Pantheon"
+        >
+        
+
+        <div class="caption">
+
+          <b>Myrmidon Pantheon</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="dryad soraka"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin01/images/soraka_splash_centered_1.jpg"
+          alt="Dryad Soraka"
+        >
+        
+
+        <div class="caption">
+
+          <b>Dryad Soraka</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="spirit blossom teemo"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/teemo/skins/skin25/images/teemo_splash_centered_25.jpg"
+          alt="Spirit Blossom Teemo"
+        >
+        
+
+        <div class="caption">
+
+          <b>Spirit Blossom Teemo</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="perseus pantheon"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/pantheon/skins/skin03/images/pantheon_splash_centered_3.jpg"
+          alt="Perseus Pantheon"
+        >
+        
+
+        <div class="caption">
+
+          <b>Perseus Pantheon</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="enduring sword talon"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/talon/skins/skin12/images/talon_splash_centered_12.jpg"
+          alt="Enduring Sword Talon"
+        >
+        
+
+        <div class="caption">
+
+          <b>Enduring Sword Talon</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="pentakill sona"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin02/images/sona_splash_centered_2.jpg"
+          alt="Pentakill Sona"
+        >
+        
+
+        <div class="caption">
+
+          <b>Pentakill Sona</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="talon blackwood"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/talon/skins/skin20/images/talon_splash_centered_20.jpg"
+          alt="Talon Blackwood"
+        >
+        
+
+        <div class="caption">
+
+          <b>Talon Blackwood</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="old saint zilean"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zilean/skins/skin01/images/zilean_splash_centered_1.jpg"
+          alt="Old Saint Zilean"
+        >
+        
+
+        <div class="caption">
+
+          <b>Old Saint Zilean</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="odyssey sona"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin09/images/sona_splash_centered_9.jpg"
+          alt="Odyssey Sona"
+        >
+        
+
+        <div class="caption">
+
+          <b>Odyssey Sona</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="fnatic gragas"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gragas/skins/skin08/images/gragas_splash_centered_8.jpg"
+          alt="Fnatic Gragas"
+        >
+        
+
+        <div class="caption">
+
+          <b>Fnatic Gragas</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="pizza delivery sivir"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin10/images/sivir_splash_centered_10.jpg"
+          alt="Pizza Delivery Sivir"
+        >
+        
+
+        <div class="caption">
+
+          <b>Pizza Delivery Sivir</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="corporate mundo"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/skin03/images/drmundo_splash_centered_3.jpg"
+          alt="Corporate Mundo"
+        >
+        
+
+        <div class="caption">
+
+          <b>Corporate Mundo</b>
+
+          
+          <span class="tag rarity-legendary">
+            LEGENDARY
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="ghost bride morgana"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/morgana/skins/skin05/images/morgana_splash_centered_5.jpg"
+          alt="Ghost Bride Morgana"
+        >
+        
+
+        <div class="caption">
+
+          <b>Ghost Bride Morgana</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="lumberjack sion"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin03/images/sion_splash_centered_3.jpg"
+          alt="Lumberjack Sion"
+        >
+        
+
+        <div class="caption">
+
+          <b>Lumberjack Sion</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="solar eclipse leona"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin10/images/leona_splash_centered_10.jpg"
+          alt="Solar Eclipse Leona"
+        >
+        
+
+        <div class="caption">
+
+          <b>Solar Eclipse Leona</b>
+
+          
+          <span class="tag rarity-legendary">
+            LEGENDARY
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="star guardian poppy"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/poppy/skins/skin07/images/poppy_splash_centered_7.jpg"
+          alt="Star Guardian Poppy"
+        >
+        
+
+        <div class="caption">
+
+          <b>Star Guardian Poppy</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="sorceress lux"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lux/skins/skin01/images/lux_splash_centered_1.jpg"
+          alt="Sorceress Lux"
+        >
+        
+
+        <div class="caption">
+
+          <b>Sorceress Lux</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="the mighty jax"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin01/images/jax_splash_centered_1.jpg"
+          alt="The Mighty Jax"
+        >
+        
+
+        <div class="caption">
+
+          <b>The Mighty Jax</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="spirit guard udyr"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin03/images/udyr_splash_centered_3.jpg"
+          alt="Spirit Guard Udyr"
+        >
+        
+
+        <div class="caption">
+
+          <b>Spirit Guard Udyr</b>
+
+          
+          <span class="tag rarity-ultimate">
+            ULTIMATE
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="primal udyr"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin02/images/udyr_splash_centered_2.jpg"
+          alt="Primal Udyr"
+        >
+        
+
+        <div class="caption">
+
+          <b>Primal Udyr</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="soulhunter kayn"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kayn/skins/skin01/images/kayn_splash_centered_1.jpg"
+          alt="Soulhunter Kayn"
+        >
+        
+
+        <div class="caption">
+
+          <b>Soulhunter Kayn</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="veigar greybeard"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin03/images/veigar_splash_centered_3.jpg"
+          alt="Veigar Greybeard"
+        >
+        
+
+        <div class="caption">
+
+          <b>Veigar Greybeard</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="final boss veigar"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin08/images/veigar_splash_centered_8.jpg"
+          alt="Final Boss Veigar"
+        >
+        
+
+        <div class="caption">
+
+          <b>Final Boss Veigar</b>
+
+          
+          <span class="tag rarity-legendary">
+            LEGENDARY
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="elderwood veigar"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin13/images/veigar_splash_centered_13.jpg"
+          alt="Elderwood Veigar"
+        >
+        
+
+        <div class="caption">
+
+          <b>Elderwood Veigar</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="cosmic paladin sion"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin40/images/sion_splash_centered_40.jpg"
+          alt="Cosmic Paladin Sion"
+        >
+        
+
+        <div class="caption">
+
+          <b>Cosmic Paladin Sion</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="blood moon tryndamere"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tryndamere/skins/skin10/images/tryndamere_splash_centered_10.jpg"
+          alt="Blood Moon Tryndamere"
+        >
+        
+
+        <div class="caption">
+
+          <b>Blood Moon Tryndamere</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="matador alistar"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/skin03/images/alistar_splash_centered_3.jpg"
+          alt="Matador Alistar"
+        >
+        
+
+        <div class="caption">
+
+          <b>Matador Alistar</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="moo cow alistar"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/skin10/images/alistar_splash_centered_10.jpg"
+          alt="Moo Cow Alistar"
+        >
+        
+
+        <div class="caption">
+
+          <b>Moo Cow Alistar</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="blood moon katarina"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/katarina/skins/skin21/images/katarina_splash_centered_21.jpg"
+          alt="Blood Moon Katarina"
+        >
+        
+
+        <div class="caption">
+
+          <b>Blood Moon Katarina</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="pulsefire lucian"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lucian/skins/skin18/images/lucian_splash_centered_18.jpg"
+          alt="Pulsefire Lucian"
+        >
+        
+
+        <div class="caption">
+
+          <b>Pulsefire Lucian</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="assassin master yi"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin01/images/masteryi_splash_centered_1.jpg"
+          alt="Assassin Master Yi"
+        >
+        
+
+        <div class="caption">
+
+          <b>Assassin Master Yi</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="worlds 2017 ashe"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin09/images/ashe_splash_centered_9.jpg"
+          alt="Worlds 2017 Ashe"
+        >
+        
+
+        <div class="caption">
+
+          <b>Worlds 2017 Ashe</b>
+
+          
+          <span class="tag rarity-epic">
+            EPIC
+          </span>
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="headhunter master yi"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin05/images/masteryi_splash_centered_5.jpg"
+          alt="Headhunter Master Yi"
+        >
+        
+
+        <div class="caption">
+
+          <b>Headhunter Master Yi</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="archduke nasus"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/nasus/skins/skin06/images/nasus_splash_centered_6.jpg"
+          alt="Archduke Nasus"
+        >
+        
+
+        <div class="caption">
+
+          <b>Archduke Nasus</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+      <article
+        class="card skin-card"
+        data-name="conqueror karma"
+      >
+
+        
+        <img
+          loading="lazy"
+          src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/karma/skins/skin07/images/karma_splash_centered_7.jpg"
+          alt="Conqueror Karma"
+        >
+        
+
+        <div class="caption">
+
+          <b>Conqueror Karma</b>
+
+          
+
+        </div>
+
+      </article>
+
+      
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>CHAMPIONS</h3>
+
+    <div class="champs">
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/1.png"
+                alt="Annie"
+            >
+            
+
+            <div>Annie</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/2.png"
+                alt="Olaf"
+            >
+            
+
+            <div>Olaf</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/3.png"
+                alt="Galio"
+            >
+            
+
+            <div>Galio</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/4.png"
+                alt="Twisted Fate"
+            >
+            
+
+            <div>Twisted Fate</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/5.png"
+                alt="Xin Zhao"
+            >
+            
+
+            <div>Xin Zhao</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/6.png"
+                alt="Urgot"
+            >
+            
+
+            <div>Urgot</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/7.png"
+                alt="LeBlanc"
+            >
+            
+
+            <div>LeBlanc</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/8.png"
+                alt="Vladimir"
+            >
+            
+
+            <div>Vladimir</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/9.png"
+                alt="Fiddlesticks"
+            >
+            
+
+            <div>Fiddlesticks</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/10.png"
+                alt="Kayle"
+            >
+            
+
+            <div>Kayle</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/11.png"
+                alt="Master Yi"
+            >
+            
+
+            <div>Master Yi</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/12.png"
+                alt="Alistar"
+            >
+            
+
+            <div>Alistar</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/13.png"
+                alt="Ryze"
+            >
+            
+
+            <div>Ryze</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/14.png"
+                alt="Sion"
+            >
+            
+
+            <div>Sion</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/15.png"
+                alt="Sivir"
+            >
+            
+
+            <div>Sivir</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/16.png"
+                alt="Soraka"
+            >
+            
+
+            <div>Soraka</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/17.png"
+                alt="Teemo"
+            >
+            
+
+            <div>Teemo</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/18.png"
+                alt="Tristana"
+            >
+            
+
+            <div>Tristana</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/19.png"
+                alt="Warwick"
+            >
+            
+
+            <div>Warwick</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/20.png"
+                alt="Nunu & Willump"
+            >
+            
+
+            <div>Nunu & Willump</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/21.png"
+                alt="Miss Fortune"
+            >
+            
+
+            <div>Miss Fortune</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/22.png"
+                alt="Ashe"
+            >
+            
+
+            <div>Ashe</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/23.png"
+                alt="Tryndamere"
+            >
+            
+
+            <div>Tryndamere</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/24.png"
+                alt="Jax"
+            >
+            
+
+            <div>Jax</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/25.png"
+                alt="Morgana"
+            >
+            
+
+            <div>Morgana</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/26.png"
+                alt="Zilean"
+            >
+            
+
+            <div>Zilean</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/27.png"
+                alt="Singed"
+            >
+            
+
+            <div>Singed</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/28.png"
+                alt="Evelynn"
+            >
+            
+
+            <div>Evelynn</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/29.png"
+                alt="Twitch"
+            >
+            
+
+            <div>Twitch</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/30.png"
+                alt="Karthus"
+            >
+            
+
+            <div>Karthus</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/31.png"
+                alt="Cho'Gath"
+            >
+            
+
+            <div>Cho'Gath</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/32.png"
+                alt="Amumu"
+            >
+            
+
+            <div>Amumu</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/33.png"
+                alt="Rammus"
+            >
+            
+
+            <div>Rammus</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/34.png"
+                alt="Anivia"
+            >
+            
+
+            <div>Anivia</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/35.png"
+                alt="Shaco"
+            >
+            
+
+            <div>Shaco</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/36.png"
+                alt="Dr. Mundo"
+            >
+            
+
+            <div>Dr. Mundo</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/37.png"
+                alt="Sona"
+            >
+            
+
+            <div>Sona</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/38.png"
+                alt="Kassadin"
+            >
+            
+
+            <div>Kassadin</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/39.png"
+                alt="Irelia"
+            >
+            
+
+            <div>Irelia</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/40.png"
+                alt="Janna"
+            >
+            
+
+            <div>Janna</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/41.png"
+                alt="Gangplank"
+            >
+            
+
+            <div>Gangplank</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/42.png"
+                alt="Corki"
+            >
+            
+
+            <div>Corki</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/43.png"
+                alt="Karma"
+            >
+            
+
+            <div>Karma</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/44.png"
+                alt="Taric"
+            >
+            
+
+            <div>Taric</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png"
+                alt="Veigar"
+            >
+            
+
+            <div>Veigar</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/48.png"
+                alt="Trundle"
+            >
+            
+
+            <div>Trundle</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png"
+                alt="Swain"
+            >
+            
+
+            <div>Swain</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/51.png"
+                alt="Caitlyn"
+            >
+            
+
+            <div>Caitlyn</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/53.png"
+                alt="Blitzcrank"
+            >
+            
+
+            <div>Blitzcrank</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/54.png"
+                alt="Malphite"
+            >
+            
+
+            <div>Malphite</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/55.png"
+                alt="Katarina"
+            >
+            
+
+            <div>Katarina</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/56.png"
+                alt="Nocturne"
+            >
+            
+
+            <div>Nocturne</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/57.png"
+                alt="Maokai"
+            >
+            
+
+            <div>Maokai</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/58.png"
+                alt="Renekton"
+            >
+            
+
+            <div>Renekton</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/59.png"
+                alt="Jarvan IV"
+            >
+            
+
+            <div>Jarvan IV</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/60.png"
+                alt="Elise"
+            >
+            
+
+            <div>Elise</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/61.png"
+                alt="Orianna"
+            >
+            
+
+            <div>Orianna</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/62.png"
+                alt="Wukong"
+            >
+            
+
+            <div>Wukong</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/63.png"
+                alt="Brand"
+            >
+            
+
+            <div>Brand</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/68.png"
+                alt="Rumble"
+            >
+            
+
+            <div>Rumble</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/69.png"
+                alt="Cassiopeia"
+            >
+            
+
+            <div>Cassiopeia</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/75.png"
+                alt="Nasus"
+            >
+            
+
+            <div>Nasus</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/81.png"
+                alt="Ezreal"
+            >
+            
+
+            <div>Ezreal</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/84.png"
+                alt="Akali"
+            >
+            
+
+            <div>Akali</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/99.png"
+                alt="Lux"
+            >
+            
+
+            <div>Lux</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/106.png"
+                alt="Volibear"
+            >
+            
+
+            <div>Volibear</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/113.png"
+                alt="Sejuani"
+            >
+            
+
+            <div>Sejuani</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/115.png"
+                alt="Ziggs"
+            >
+            
+
+            <div>Ziggs</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/119.png"
+                alt="Draven"
+            >
+            
+
+            <div>Draven</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/122.png"
+                alt="Darius"
+            >
+            
+
+            <div>Darius</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/126.png"
+                alt="Jayce"
+            >
+            
+
+            <div>Jayce</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/127.png"
+                alt="Lissandra"
+            >
+            
+
+            <div>Lissandra</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/133.png"
+                alt="Quinn"
+            >
+            
+
+            <div>Quinn</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/141.png"
+                alt="Kayn"
+            >
+            
+
+            <div>Kayn</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/150.png"
+                alt="Gnar"
+            >
+            
+
+            <div>Gnar</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/518.png"
+                alt="Neeko"
+            >
+            
+
+            <div>Neeko</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/777.png"
+                alt="Yone"
+            >
+            
+
+            <div>Yone</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/266.png"
+                alt="Aatrox"
+            >
+            
+
+            <div>Aatrox</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/64.png"
+                alt="Lee Sin"
+            >
+            
+
+            <div>Lee Sin</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/74.png"
+                alt="Heimerdinger"
+            >
+            
+
+            <div>Heimerdinger</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/77.png"
+                alt="Udyr"
+            >
+            
+
+            <div>Udyr</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/78.png"
+                alt="Poppy"
+            >
+            
+
+            <div>Poppy</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/79.png"
+                alt="Gragas"
+            >
+            
+
+            <div>Gragas</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/80.png"
+                alt="Pantheon"
+            >
+            
+
+            <div>Pantheon</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/82.png"
+                alt="Mordekaiser"
+            >
+            
+
+            <div>Mordekaiser</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/83.png"
+                alt="Yorick"
+            >
+            
+
+            <div>Yorick</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/86.png"
+                alt="Garen"
+            >
+            
+
+            <div>Garen</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/89.png"
+                alt="Leona"
+            >
+            
+
+            <div>Leona</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/91.png"
+                alt="Talon"
+            >
+            
+
+            <div>Talon</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/92.png"
+                alt="Riven"
+            >
+            
+
+            <div>Riven</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/96.png"
+                alt="Kog'Maw"
+            >
+            
+
+            <div>Kog'Maw</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/101.png"
+                alt="Xerath"
+            >
+            
+
+            <div>Xerath</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/102.png"
+                alt="Shyvana"
+            >
+            
+
+            <div>Shyvana</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/103.png"
+                alt="Ahri"
+            >
+            
+
+            <div>Ahri</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/105.png"
+                alt="Fizz"
+            >
+            
+
+            <div>Fizz</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/875.png"
+                alt="Sett"
+            >
+            
+
+            <div>Sett</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/112.png"
+                alt="Viktor"
+            >
+            
+
+            <div>Viktor</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/114.png"
+                alt="Fiora"
+            >
+            
+
+            <div>Fiora</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/117.png"
+                alt="Lulu"
+            >
+            
+
+            <div>Lulu</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/121.png"
+                alt="Kha'Zix"
+            >
+            
+
+            <div>Kha'Zix</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png"
+                alt="Syndra"
+            >
+            
+
+            <div>Syndra</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/145.png"
+                alt="Kai'Sa"
+            >
+            
+
+            <div>Kai'Sa</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/147.png"
+                alt="Seraphine"
+            >
+            
+
+            <div>Seraphine</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/157.png"
+                alt="Yasuo"
+            >
+            
+
+            <div>Yasuo</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/161.png"
+                alt="Vel'Koz"
+            >
+            
+
+            <div>Vel'Koz</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/163.png"
+                alt="Taliyah"
+            >
+            
+
+            <div>Taliyah</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/166.png"
+                alt="Akshan"
+            >
+            
+
+            <div>Akshan</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/432.png"
+                alt="Bard"
+            >
+            
+
+            <div>Bard</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/711.png"
+                alt="Vex"
+            >
+            
+
+            <div>Vex</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/222.png"
+                alt="Jinx"
+            >
+            
+
+            <div>Jinx</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/234.png"
+                alt="Viego"
+            >
+            
+
+            <div>Viego</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/236.png"
+                alt="Lucian"
+            >
+            
+
+            <div>Lucian</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/497.png"
+                alt="Rakan"
+            >
+            
+
+            <div>Rakan</div>
+
+        </div>
+
+        
+
+        <div class="champ">
+
+            
+            <img
+                loading="lazy"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/245.png"
+                alt="Ekko"
+            >
+            
+
+            <div>Ekko</div>
+
+        </div>
+
+        
+
+    </div>
+  </section>
+
+  <div class="footer">
+    Public inventory preview only. Login, email and recovery credentials are never exposed on this page.
+  </div>
+</div>
+<script>
+const q = document.getElementById('skinSearch');
+
+q?.addEventListener("input", () => {
+  const v = q.value.toLowerCase().trim();
+
+  document.querySelectorAll('.skin-card').forEach(el => {
+    el.style.display =
+      el.dataset.name.includes(v)
+      ? 'block'
+      : 'none';
+  });
+});
+</script>
+<a
+    class="go2game-popup"
+    href="https://www.eldorado.gg/"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <div class="go2game-popup-logo">G2G</div>
+
+    <div class="go2game-popup-text">
+        <strong>Go2Game</strong>
+        <span>View our store on Eldorado</span>
+    </div>
+
+    <div class="go2game-popup-arrow">→</div>
+</a>
+</body>
+</html>

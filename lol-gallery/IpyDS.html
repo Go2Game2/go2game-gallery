@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#060b16">
+<title>Go2Game · EUW1 · 47 Skins</title>
+<link rel="preconnect" href="https://raw.communitydragon.org" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #07080f;
+  --panel: #0e1120;
+  --panel-2: #141829;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #eef0f8;
+  --muted: #8f97b2;
+  --faint: #5d6482;
+  --accent: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.18);
+  --gold: #e5bd6a;
+  --glow-1: rgba(139, 92, 246, 0.20);
+  --glow-2: rgba(229, 189, 106, 0.10);
+  --bar-bg: rgba(7, 8, 15, 0.84);
+  --btn-bg: #eef0f8;
+  --btn-fg: #0b0d18;
+  --brand-grad: linear-gradient(135deg, #8b5cf6, #5b3fd1);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(139, 92, 246, 0.35);
+  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hl-width: 172px;
+}
+:root {
+  --bg: #060b16;
+  --panel: #0b1424;
+  --panel-2: #101b31;
+  --line: rgba(216, 181, 109, 0.14);
+  --line-strong: rgba(216, 181, 109, 0.34);
+  --text: #f3ecdc;
+  --muted: #9aa6bd;
+  --faint: #5f6d86;
+  --accent: #d8b56d;
+  --accent-soft: rgba(216, 181, 109, 0.18);
+  --gold: #d8b56d;
+  --glow-1: rgba(58, 92, 170, 0.24);
+  --glow-2: rgba(216, 181, 109, 0.12);
+  --bar-bg: rgba(6, 11, 22, 0.86);
+  --btn-bg: linear-gradient(180deg, #ecd08e, #c9a35a);
+  --btn-fg: #1a1408;
+  --brand-grad: linear-gradient(135deg, #ecd08e, #a98543);
+  --brand-fg: #1a1408;
+  --brand-shadow: rgba(216, 181, 109, 0.3);
+  --font-display: Cinzel, Georgia, "Times New Roman", serif;
+
+  --transcendent: #f472b6; --transcendent-glow: rgba(244, 114, 182, 0.34);
+  --exalted: #22d3ee;      --exalted-glow: rgba(34, 211, 238, 0.30);
+  --ultimate: #fb923c;     --ultimate-glow: rgba(251, 146, 60, 0.32);
+  --mythic: #c084fc;       --mythic-glow: rgba(192, 132, 252, 0.30);
+  --legendary: #ef4444;    --legendary-glow: rgba(239, 68, 68, 0.30);
+  --epic: #38bdf8;         --epic-glow: rgba(56, 189, 248, 0.26);
+  --rare: #34d399;         --rare-glow: rgba(52, 211, 153, 0.24);
+  --standard: #94a3b8;     --standard-glow: rgba(148, 163, 184, 0.16);
+  --other: #64748b;        --other-glow: rgba(100, 116, 139, 0.16);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 10% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(780px 480px at 100% 0%, var(--glow-2), transparent 55%);
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.container { width: min(1360px, 100% - 40px); margin-inline: auto; }
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: 0.2px; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--brand-grad); color: var(--brand-fg);
+  font-size: 12px; font-weight: 800; box-shadow: 0 6px 20px var(--brand-shadow);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px;
+  background: var(--btn-bg); color: var(--btn-fg); font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line-strong); }
+
+/* Hero */
+.hero { padding: 30px 0 4px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  margin: 10px 0 10px; font-family: var(--font-display); font-size: clamp(30px, 4.6vw, 54px);
+  line-height: 1.07; letter-spacing: -0.025em; font-weight: 800;
+}
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--muted); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 999px;
+  background: var(--panel); border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.chip small { color: var(--muted); font-size: 12px; font-weight: 500; }
+.chip.gold { border-color: rgba(245, 196, 81, 0.45); background: rgba(245, 196, 81, 0.08); color: #f5c451; }
+.chip.good { border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.08); color: #34d399; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px; }
+.stat {
+  position: relative; padding: 18px 18px 16px; overflow: hidden; border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid var(--line);
+  --tone: var(--accent);
+}
+.stat::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--tone); }
+.stat b { display: block; font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Panels */
+.panel {
+  padding: 22px; border-radius: 14px; border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+.panel h2 { font-size: 16px; font-weight: 700; }
+.panel .sub { margin: 4px 0 16px; color: var(--muted); font-size: 13px; }
+.grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+
+.rbar { display: flex; gap: 2px; height: 12px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.06); }
+.rbar i { display: block; min-width: 5px; height: 100%; background: var(--rc); }
+.rbar.thin { height: 8px; }
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-top: 16px; }
+.legend button {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; cursor: pointer; text-align: left;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 13px; transition: border-color 0.15s;
+}
+.legend button:hover { border-color: var(--line-strong); }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rc); box-shadow: 0 0 12px var(--rg); }
+.legend em { margin-left: auto; font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+.matrix { display: grid; gap: 12px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.mrow { display: grid; grid-template-columns: 78px 1fr 36px; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); }
+.mrow b { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+
+.dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; align-content: start; }
+.dl div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.dl dt { color: var(--muted); font-size: 13px; }
+.dl dd { margin: 0; font-size: 14px; font-weight: 600; text-align: right; }
+
+/* Highlights */
+.block-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 38px 0 14px; }
+.block-title h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.block-title p { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.hl {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, var(--hl-width)); gap: 12px; overflow-x: auto;
+  padding: 4px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+}
+.hl .card { scroll-snap-align: start; }
+
+/* Toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 30; margin-top: 38px; padding: 12px 0 10px;
+  background: var(--bar-bg); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.tb-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tb-row + .tb-row { margin-top: 10px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 8px 14px; border-radius: 9px; border: 1px solid transparent; background: transparent;
+  color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.tab span { margin-left: 6px; font-weight: 500; opacity: 0.7; }
+.tab:hover { color: var(--text); }
+.tab[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); }
+.search { position: relative; flex: 1; min-width: 200px; }
+.search svg { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search input {
+  width: 100%; padding: 10px 14px 10px 38px; border-radius: 10px; outline: none; font: inherit; font-size: 14px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+}
+.search input::placeholder { color: var(--faint); }
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.rfilters { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.rf {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600;
+}
+.rf .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rc, var(--text)); }
+.rf em { font-style: normal; opacity: 0.7; font-variant-numeric: tabular-nums; }
+.rf:hover { border-color: var(--line-strong); color: var(--text); }
+.rf[aria-pressed="true"] { border-color: var(--rc, var(--text)); color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.results { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* Inventory */
+.inv { margin-top: 34px; scroll-margin-top: 150px; }
+.inv .block-title { margin-top: 0; }
+.empty { margin-top: 40px; padding: 52px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 14px; }
+.empty b { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; }
+
+/* Footer */
+.cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  margin-top: 60px; padding: 34px; border-radius: 18px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--glow-1), var(--glow-2)), var(--panel);
+}
+.cta h2 { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.cta p { margin-top: 6px; color: var(--muted); }
+.cta ul { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
+.cta li::before { content: "✓"; margin-right: 7px; color: var(--gold); font-weight: 800; }
+.legal { margin: 26px 0 44px; color: var(--faint); font-size: 12px; text-align: center; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .container { width: calc(100% - 28px); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .dl { grid-template-columns: 1fr; }
+  .toolbar { margin-top: 28px; }
+  .results { margin-left: 0; width: 100%; }
+  .cta { padding: 24px; }
+  .btn { width: 100%; justify-content: center; }
+  .topbar .btn { width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+.hero h1 { font-weight: 700; letter-spacing: 0.01em; line-height: 1.12; }
+.block-title h2, .cta h2 { font-weight: 700; letter-spacing: 0.03em; }
+.hero h1 em { background: linear-gradient(90deg, #f6e3b4, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btn { box-shadow: 0 6px 18px rgba(216, 181, 109, 0.18); }
+.btn.ghost { box-shadow: none; }
+
+.chip.rank-unranked { --tone: #94a3b8; }
+.chip[class*="rank-"] { border-color: color-mix(in srgb, var(--tone) 55%, transparent); }
+.chip.rank-iron { --tone: #8b8f98; }
+.chip.rank-bronze { --tone: #c0824f; }
+.chip.rank-silver { --tone: #aab4c3; }
+.chip.rank-gold { --tone: #e5bd6a; }
+.chip.rank-platinum { --tone: #4fb3b0; }
+.chip.rank-emerald { --tone: #34d399; }
+.chip.rank-diamond { --tone: #7aa8ff; }
+.chip.rank-master { --tone: #c084fc; }
+.chip.rank-grandmaster { --tone: #f87171; }
+.chip.rank-challenger { --tone: #67e8f9; }
+
+.stats { grid-template-columns: repeat(4, 1fr); }
+.stat.text b { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.5; }
+.stat.skins { --tone: var(--gold); }
+.stat.champions { --tone: #60a5fa; }
+.stat.level { --tone: #34d399; }
+.stat.be { --tone: #38bdf8; }
+.stat.oe { --tone: #fb923c; }
+.stat.me { --tone: #c084fc; }
+.stat.rp { --tone: #f5d27a; }
+.stat.rank-unranked { --tone: #94a3b8; }
+.stat.rank-iron { --tone: #8b8f98; }
+.stat.rank-bronze { --tone: #c0824f; }
+.stat.rank-silver { --tone: #aab4c3; }
+.stat.rank-gold { --tone: #e5bd6a; }
+.stat.rank-platinum { --tone: #4fb3b0; }
+.stat.rank-emerald { --tone: #34d399; }
+.stat.rank-diamond { --tone: #7aa8ff; }
+.stat.rank-master { --tone: #c084fc; }
+.stat.rank-grandmaster { --tone: #f87171; }
+.stat.rank-challenger { --tone: #67e8f9; }
+
+.rlist { display: grid; gap: 4px; }
+.rrow {
+  display: grid; grid-template-columns: 12px 112px 1fr 40px; align-items: center; gap: 12px; width: 100%;
+  padding: 9px 10px; border-radius: 10px; border: 1px solid transparent; background: transparent;
+  cursor: pointer; text-align: left; font-size: 13px; transition: background 0.15s, border-color 0.15s;
+}
+.rrow:hover { background: rgba(255, 255, 255, 0.03); border-color: var(--line); }
+.rrow .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rc); box-shadow: 0 0 12px var(--rg); }
+.rrow .rtrack { height: 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); overflow: hidden; }
+.rrow .rtrack i { display: block; height: 100%; border-radius: 999px; background: var(--rc); }
+.rrow em { font-style: normal; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.cards.champs { grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); gap: 12px; }
+.hl { grid-auto-columns: 300px; }
+
+.card {
+  --rc: var(--standard); --rg: var(--standard-glow);
+  position: relative; overflow: hidden; border-radius: 12px; background: var(--panel); border: 1px solid var(--line);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover { transform: translateY(-3px); border-color: var(--rc); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5); }
+.art.missing::after { content: "?"; position: absolute; inset: 0; display: grid; place-items: center; font-size: 28px; font-weight: 800; color: var(--faint); }
+
+.skin .art { position: relative; aspect-ratio: 16 / 10; background: linear-gradient(135deg, #15233f, #0b1424); }
+.skin .art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; transition: transform 0.5s ease; }
+.skin:hover .art img { transform: scale(1.06); }
+.skin::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 60%; pointer-events: none;
+  background: linear-gradient(to top, rgba(4, 8, 16, 0.96), rgba(4, 8, 16, 0.55) 55%, transparent);
+}
+.skin .meta { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 12px 14px; }
+.skin .meta h3 {
+  font-size: 14px; font-weight: 700; line-height: 1.25; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.skin .badge {
+  position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 10px; border-radius: 999px;
+  background: var(--rc); color: #0b0d18; font-size: 10.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.skin[class*="r-"]:not(.r-standard):not(.r-other) { border-color: var(--line-strong); border-color: color-mix(in srgb, var(--rc) 45%, transparent); }
+
+.champ { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 14px 8px 12px; text-align: center; }
+.champ .art { position: relative; width: 64px; height: 64px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line-strong); background: #0b1424; }
+.champ .art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.champ h3 { font-size: 12px; font-weight: 600; line-height: 1.25; }
+
+.r-transcendent { --rc: var(--transcendent); --rg: var(--transcendent-glow); }
+.r-exalted { --rc: var(--exalted); --rg: var(--exalted-glow); }
+.r-ultimate { --rc: var(--ultimate); --rg: var(--ultimate-glow); }
+.r-mythic { --rc: var(--mythic); --rg: var(--mythic-glow); }
+.r-legendary { --rc: var(--legendary); --rg: var(--legendary-glow); }
+.r-epic { --rc: var(--epic); --rg: var(--epic-glow); }
+.r-rare { --rc: var(--rare); --rg: var(--rare-glow); }
+.r-standard { --rc: var(--standard); --rg: var(--standard-glow); }
+.r-other { --rc: var(--other); --rg: var(--other-glow); }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 9px; }
+  .cards.champs { grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 9px; }
+  .skin .meta { padding: 9px 10px; }
+  .skin .meta h3 { font-size: 12px; }
+  .skin .badge { top: 7px; left: 7px; padding: 3px 8px; font-size: 9.5px; }
+  .hl { grid-auto-columns: 240px; }
+  .rrow { grid-template-columns: 12px 96px 1fr 34px; gap: 10px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">G2G</span>Go2Game</div>
+    <a class="btn ghost" href="https://www.eldorado.gg/users/Go2Game/shop/Account" target="_blank" rel="noopener noreferrer">View on Eldorado</a>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">League of Legends · Account Preview</div>
+    <h1>Europe West account<br><em>47 skins</em> · 79 champions</h1>
+    <p>Complete inventory snapshot of this account: every skin with its rarity, every champion, essence balances and account standing.</p>
+    <div class="chips">
+<span class="chip"><small>Region</small>EUW1</span>      <span class="chip rank-unranked"><small>Rank</small>Unranked</span>
+<span class="chip good">Ranked ready</span>    </div>
+  </section>
+
+  <section class="stats" aria-label="Account totals">
+    <div class="stat skins"><b>47</b><span>Skins</span></div>
+    <div class="stat champions"><b>79</b><span>Champions</span></div>
+    <div class="stat level"><b>40</b><span>Summoner level</span></div>
+    <div class="stat rank-unranked text"><b>Unranked</b><span>Rank</span></div>
+    <div class="stat be"><b>815</b><span>Blue Essence</span></div>
+    <div class="stat oe"><b>3,465</b><span>Orange Essence</span></div>
+    <div class="stat me"><b>0</b><span>Mythic Essence</span></div>
+    <div class="stat rp"><b>31</b><span>Riot Points</span></div>
+  </section>
+
+  <section class="grid-2">
+    <div class="panel">
+      <h2>Skin rarity</h2>
+      <p class="sub">All 47 skins by rarity. Select a rarity to filter the collection below.</p>
+      <div class="rlist">
+        <button type="button" class="rrow r-standard" data-jump-rarity="standard">
+          <span class="dot"></span><span>Standard</span>
+          <span class="rtrack"><i style="width: 100.0%"></i></span>
+          <em>47</em>
+        </button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Account details</h2>
+      <p class="sub">Key facts about this account.</p>
+      <dl class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Region</dt><dd>Europe West (EUW1)</dd></div>
+        <div><dt>Summoner level</dt><dd>40</dd></div>
+        <div><dt>Rank</dt><dd>Unranked</dd></div>
+        <div><dt>Ranked ready</dt><dd>Yes · level 30+</dd></div>
+        <div><dt>Queue penalty</dt><dd>None</dd></div>
+      </dl>
+    </div>
+  </section>
+
+
+  <div class="toolbar" id="locker">
+    <div class="tb-row">
+      <div class="tabs" role="group" aria-label="Collection">
+        <button type="button" class="tab" data-section="all" aria-pressed="true">All<span>126</span></button>
+<button type="button" class="tab" data-section="skins" aria-pressed="false">Skins<span>47</span></button><button type="button" class="tab" data-section="champions" aria-pressed="false">Champions<span>79</span></button>      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="search" placeholder="Search skins and champions" autocomplete="off" aria-label="Search skins and champions">
+      </label>
+    </div>
+    <div class="tb-row">
+      <div class="rfilters" role="group" aria-label="Skin rarity filter">
+        <button type="button" class="rf" data-rarity="all" aria-pressed="true">All rarities</button>
+        <button type="button" class="rf r-standard" data-rarity="standard" aria-pressed="false"><span class="dot"></span>Standard<em>47</em></button>
+      </div>
+      <div class="results" id="results" aria-live="polite">Showing 126 of 126 items</div>
+    </div>
+  </div>
+
+  <section class="inv" data-section="skins" id="skins">
+    <div class="block-title">
+      <h2>Skins</h2>
+      <p data-count data-total="47" data-unit="skins">47 skins</p>
+    </div>
+    <div class="cards">
+      <article class="card skin r-standard" data-name="arcade ahri" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_7.jpg" alt="Arcade Ahri" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Arcade Ahri</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="arcane shimmer lab singed" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_28.jpg" alt="Arcane Shimmer Lab Singed" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Arcane Shimmer Lab Singed</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="ashen lord aurelion sol" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_1.jpg" alt="Ashen Lord Aurelion Sol" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ashen Lord Aurelion Sol</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="badlands baron rumble" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rumble_4.jpg" alt="Badlands Baron Rumble" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Badlands Baron Rumble</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="battle academia yone" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_10.jpg" alt="Battle Academia Yone" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Battle Academia Yone</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="battle boss qiyana" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Qiyana_1.jpg" alt="Battle Boss Qiyana" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Battle Boss Qiyana</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="battle cat jinx" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_38.jpg" alt="Battle Cat Jinx" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Battle Cat Jinx</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="blitzcrank steel molten" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_8.jpg" alt="Blitzcrank Steel Molten" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Blitzcrank Steel Molten</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="cafe cuties bard" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_17.jpg" alt="Cafe Cuties Bard" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cafe Cuties Bard</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="cosmic sting skarner" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_5.jpg" alt="Cosmic Sting Skarner" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cosmic Sting Skarner</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="cottontail teemo" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_5.jpg" alt="Cottontail Teemo" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cottontail Teemo</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="coven ashe" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_32.jpg" alt="Coven Ashe" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Coven Ashe</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="dragon knight mordekaiser" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_1.jpg" alt="Dragon Knight Mordekaiser" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dragon Knight Mordekaiser</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="dragon trainer tristana" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tristana_10.jpg" alt="Dragon Trainer Tristana" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dragon Trainer Tristana</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="eternal sword yi" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MasterYi_11.jpg" alt="Eternal Sword Yi" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Eternal Sword Yi</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="firecracker teemo" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_37.jpg" alt="Firecracker Teemo" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Firecracker Teemo</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="fright night annie" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_31.jpg" alt="Fright Night Annie" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fright Night Annie</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="frostfire annie" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_5.jpg" alt="Frostfire Annie" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Frostfire Annie</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="glacial malphite" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_5.jpg" alt="Glacial Malphite" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Glacial Malphite</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="heartseeker jinx" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_29.jpg" alt="Heartseeker Jinx" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartseeker Jinx</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="heartsteel kayn" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayn_20.jpg" alt="HEARTSTEEL Kayn" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>HEARTSTEEL Kayn</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="immortal journey zed" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_49.jpg" alt="Immortal Journey Zed" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Immortal Journey Zed</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="k/da ahri" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_15.jpg" alt="K/DA Ahri" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>K/DA Ahri</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="karthus lightsbane" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_9.jpg" alt="Karthus Lightsbane" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Karthus Lightsbane</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="king of clubs mordekaiser" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_5.jpg" alt="King of Clubs Mordekaiser" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>King of Clubs Mordekaiser</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="lagoon dragon kai&#39;sa" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_29.jpg" alt="Lagoon Dragon Kai&#39;Sa" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lagoon Dragon Kai&#39;Sa</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="little devil teemo" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_14.jpg" alt="Little Devil Teemo" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Little Devil Teemo</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="lunar eclipse senna" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Senna_26.jpg" alt="Lunar Eclipse Senna" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lunar Eclipse Senna</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="mecha kingdoms draven" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Draven_13.jpg" alt="Mecha Kingdoms Draven" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Mecha Kingdoms Draven</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="midnight ahri" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_2.jpg" alt="Midnight Ahri" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Midnight Ahri</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="pool party lulu" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lulu_5.jpg" alt="Pool Party Lulu" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pool Party Lulu</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="program lissandra" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_3.jpg" alt="Program Lissandra" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Program Lissandra</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="riot kayle" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_7.jpg" alt="Riot Kayle" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Riot Kayle</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="solar eclipse leona" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_10.jpg" alt="Solar Eclipse Leona" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Solar Eclipse Leona</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="space groove nami" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_41.jpg" alt="Space Groove Nami" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Space Groove Nami</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="spirit blossom ahri" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_27.jpg" alt="Spirit Blossom Ahri" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Spirit Blossom Ahri</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="spirit blossom teemo" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_25.jpg" alt="Spirit Blossom Teemo" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Spirit Blossom Teemo</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="spirit blossom yone" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_1.jpg" alt="Spirit Blossom Yone" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Spirit Blossom Yone</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="star guardian lux" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_6.jpg" alt="Star Guardian Lux" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Star Guardian Lux</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="star guardian taliyah" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taliyah_11.jpg" alt="Star Guardian Taliyah" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Star Guardian Taliyah</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="steel legion garen" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_6.jpg" alt="Steel Legion Garen" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Steel Legion Garen</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="stinger akali" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_1.jpg" alt="Stinger Akali" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Stinger Akali</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="super galaxy kindred" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kindred_2.jpg" alt="Super Galaxy Kindred" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Super Galaxy Kindred</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="super galaxy nidalee" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nidalee_9.jpg" alt="Super Galaxy Nidalee" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Super Galaxy Nidalee</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="super galaxy shyvana" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shyvana_6.jpg" alt="Super Galaxy Shyvana" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Super Galaxy Shyvana</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="tango twisted fate" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_4.jpg" alt="Tango Twisted Fate" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tango Twisted Fate</h3></div>
+      </article>
+      <article class="card skin r-standard" data-name="worlds 2017 ashe" data-rarity="standard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_9.jpg" alt="Worlds 2017 Ashe" width="1215" height="717" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Worlds 2017 Ashe</h3></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="inv" data-section="champions" id="champions">
+    <div class="block-title">
+      <h2>Champions</h2>
+      <p data-count data-total="79" data-unit="champions">79 champions</p>
+    </div>
+    <div class="cards champs">
+      <article class="card champ" data-name="ahri">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Ahri.png" alt="Ahri" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Ahri</h3>
+      </article>
+      <article class="card champ" data-name="akali">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Akali.png" alt="Akali" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Akali</h3>
+      </article>
+      <article class="card champ" data-name="amumu">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Amumu.png" alt="Amumu" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Amumu</h3>
+      </article>
+      <article class="card champ" data-name="annie">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Annie.png" alt="Annie" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Annie</h3>
+      </article>
+      <article class="card champ" data-name="aphelios">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Aphelios.png" alt="Aphelios" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Aphelios</h3>
+      </article>
+      <article class="card champ" data-name="ashe">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Ashe.png" alt="Ashe" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Ashe</h3>
+      </article>
+      <article class="card champ" data-name="aurelion sol">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/AurelionSol.png" alt="Aurelion Sol" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Aurelion Sol</h3>
+      </article>
+      <article class="card champ" data-name="bard">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Bard.png" alt="Bard" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Bard</h3>
+      </article>
+      <article class="card champ" data-name="blitzcrank">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Blitzcrank.png" alt="Blitzcrank" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Blitzcrank</h3>
+      </article>
+      <article class="card champ" data-name="brand">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Brand.png" alt="Brand" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Brand</h3>
+      </article>
+      <article class="card champ" data-name="caitlyn">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Caitlyn.png" alt="Caitlyn" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Caitlyn</h3>
+      </article>
+      <article class="card champ" data-name="diana">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Diana.png" alt="Diana" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Diana</h3>
+      </article>
+      <article class="card champ" data-name="dr. mundo">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/DrMundo.png" alt="Dr. Mundo" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Dr. Mundo</h3>
+      </article>
+      <article class="card champ" data-name="draven">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Draven.png" alt="Draven" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Draven</h3>
+      </article>
+      <article class="card champ" data-name="ekko">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Ekko.png" alt="Ekko" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Ekko</h3>
+      </article>
+      <article class="card champ" data-name="evelynn">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Evelynn.png" alt="Evelynn" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Evelynn</h3>
+      </article>
+      <article class="card champ" data-name="ezreal">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Ezreal.png" alt="Ezreal" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Ezreal</h3>
+      </article>
+      <article class="card champ" data-name="fizz">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Fizz.png" alt="Fizz" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Fizz</h3>
+      </article>
+      <article class="card champ" data-name="gangplank">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Gangplank.png" alt="Gangplank" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Gangplank</h3>
+      </article>
+      <article class="card champ" data-name="garen">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Garen.png" alt="Garen" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Garen</h3>
+      </article>
+      <article class="card champ" data-name="hwei">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Hwei.png" alt="Hwei" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Hwei</h3>
+      </article>
+      <article class="card champ" data-name="janna">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Janna.png" alt="Janna" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Janna</h3>
+      </article>
+      <article class="card champ" data-name="jayce">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Jayce.png" alt="Jayce" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Jayce</h3>
+      </article>
+      <article class="card champ" data-name="jinx">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Jinx.png" alt="Jinx" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Jinx</h3>
+      </article>
+      <article class="card champ" data-name="kai&#39;sa">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Kaisa.png" alt="Kai&#39;Sa" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Kai&#39;Sa</h3>
+      </article>
+      <article class="card champ" data-name="karma">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Karma.png" alt="Karma" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Karma</h3>
+      </article>
+      <article class="card champ" data-name="karthus">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Karthus.png" alt="Karthus" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Karthus</h3>
+      </article>
+      <article class="card champ" data-name="katarina">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Katarina.png" alt="Katarina" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Katarina</h3>
+      </article>
+      <article class="card champ" data-name="kayle">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Kayle.png" alt="Kayle" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Kayle</h3>
+      </article>
+      <article class="card champ" data-name="kayn">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Kayn.png" alt="Kayn" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Kayn</h3>
+      </article>
+      <article class="card champ" data-name="kindred">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Kindred.png" alt="Kindred" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Kindred</h3>
+      </article>
+      <article class="card champ" data-name="leona">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Leona.png" alt="Leona" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Leona</h3>
+      </article>
+      <article class="card champ" data-name="lissandra">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Lissandra.png" alt="Lissandra" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Lissandra</h3>
+      </article>
+      <article class="card champ" data-name="lucian">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Lucian.png" alt="Lucian" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Lucian</h3>
+      </article>
+      <article class="card champ" data-name="lulu">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Lulu.png" alt="Lulu" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Lulu</h3>
+      </article>
+      <article class="card champ" data-name="lux">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Lux.png" alt="Lux" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Lux</h3>
+      </article>
+      <article class="card champ" data-name="malphite">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Malphite.png" alt="Malphite" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Malphite</h3>
+      </article>
+      <article class="card champ" data-name="master yi">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/MasterYi.png" alt="Master Yi" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Master Yi</h3>
+      </article>
+      <article class="card champ" data-name="miss fortune">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/MissFortune.png" alt="Miss Fortune" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Miss Fortune</h3>
+      </article>
+      <article class="card champ" data-name="mordekaiser">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Mordekaiser.png" alt="Mordekaiser" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Mordekaiser</h3>
+      </article>
+      <article class="card champ" data-name="nami">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Nami.png" alt="Nami" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Nami</h3>
+      </article>
+      <article class="card champ" data-name="nasus">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Nasus.png" alt="Nasus" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Nasus</h3>
+      </article>
+      <article class="card champ" data-name="neeko">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Neeko.png" alt="Neeko" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Neeko</h3>
+      </article>
+      <article class="card champ" data-name="nidalee">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Nidalee.png" alt="Nidalee" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Nidalee</h3>
+      </article>
+      <article class="card champ" data-name="nunu &amp; willump">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Nunu.png" alt="Nunu &amp; Willump" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Nunu &amp; Willump</h3>
+      </article>
+      <article class="card champ" data-name="pantheon">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Pantheon.png" alt="Pantheon" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Pantheon</h3>
+      </article>
+      <article class="card champ" data-name="poppy">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Poppy.png" alt="Poppy" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Poppy</h3>
+      </article>
+      <article class="card champ" data-name="qiyana">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Qiyana.png" alt="Qiyana" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Qiyana</h3>
+      </article>
+      <article class="card champ" data-name="rakan">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Rakan.png" alt="Rakan" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Rakan</h3>
+      </article>
+      <article class="card champ" data-name="rell">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Rell.png" alt="Rell" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Rell</h3>
+      </article>
+      <article class="card champ" data-name="renekton">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Renekton.png" alt="Renekton" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Renekton</h3>
+      </article>
+      <article class="card champ" data-name="rumble">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Rumble.png" alt="Rumble" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Rumble</h3>
+      </article>
+      <article class="card champ" data-name="ryze">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Ryze.png" alt="Ryze" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Ryze</h3>
+      </article>
+      <article class="card champ" data-name="senna">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Senna.png" alt="Senna" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Senna</h3>
+      </article>
+      <article class="card champ" data-name="seraphine">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Seraphine.png" alt="Seraphine" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Seraphine</h3>
+      </article>
+      <article class="card champ" data-name="sett">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Sett.png" alt="Sett" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Sett</h3>
+      </article>
+      <article class="card champ" data-name="shaco">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Shaco.png" alt="Shaco" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Shaco</h3>
+      </article>
+      <article class="card champ" data-name="shyvana">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Shyvana.png" alt="Shyvana" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Shyvana</h3>
+      </article>
+      <article class="card champ" data-name="singed">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Singed.png" alt="Singed" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Singed</h3>
+      </article>
+      <article class="card champ" data-name="sivir">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Sivir.png" alt="Sivir" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Sivir</h3>
+      </article>
+      <article class="card champ" data-name="skarner">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Skarner.png" alt="Skarner" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Skarner</h3>
+      </article>
+      <article class="card champ" data-name="sona">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Sona.png" alt="Sona" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Sona</h3>
+      </article>
+      <article class="card champ" data-name="soraka">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Soraka.png" alt="Soraka" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Soraka</h3>
+      </article>
+      <article class="card champ" data-name="sylas">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Sylas.png" alt="Sylas" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Sylas</h3>
+      </article>
+      <article class="card champ" data-name="syndra">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Syndra.png" alt="Syndra" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Syndra</h3>
+      </article>
+      <article class="card champ" data-name="taliyah">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Taliyah.png" alt="Taliyah" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Taliyah</h3>
+      </article>
+      <article class="card champ" data-name="taric">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Taric.png" alt="Taric" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Taric</h3>
+      </article>
+      <article class="card champ" data-name="teemo">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Teemo.png" alt="Teemo" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Teemo</h3>
+      </article>
+      <article class="card champ" data-name="tristana">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Tristana.png" alt="Tristana" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Tristana</h3>
+      </article>
+      <article class="card champ" data-name="twisted fate">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/TwistedFate.png" alt="Twisted Fate" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Twisted Fate</h3>
+      </article>
+      <article class="card champ" data-name="varus">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Varus.png" alt="Varus" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Varus</h3>
+      </article>
+      <article class="card champ" data-name="veigar">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Veigar.png" alt="Veigar" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Veigar</h3>
+      </article>
+      <article class="card champ" data-name="vex">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Vex.png" alt="Vex" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Vex</h3>
+      </article>
+      <article class="card champ" data-name="warwick">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Warwick.png" alt="Warwick" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Warwick</h3>
+      </article>
+      <article class="card champ" data-name="yasuo">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Yasuo.png" alt="Yasuo" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Yasuo</h3>
+      </article>
+      <article class="card champ" data-name="yone">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Yone.png" alt="Yone" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Yone</h3>
+      </article>
+      <article class="card champ" data-name="yuumi">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Yuumi.png" alt="Yuumi" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Yuumi</h3>
+      </article>
+      <article class="card champ" data-name="zed">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Zed.png" alt="Zed" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Zed</h3>
+      </article>
+      <article class="card champ" data-name="zeri">
+        <div class="art"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Zeri.png" alt="Zeri" width="64" height="64" loading="lazy" decoding="async"></div>
+        <h3>Zeri</h3>
+      </article>
+    </div>
+  </section>
+
+  <div class="empty" id="empty" hidden>
+    <b>No items match your filters</b>
+    Try a different search term or rarity.
+  </div>
+
+  <section class="cta">
+    <div>
+      <h2>Interested in this account?</h2>
+      <p>Everything shown above is included with the account.</p>
+      <ul>
+        <li>Full access email &amp; password</li>
+        <li>Fast delivery</li>
+        <li>24/7 support</li>
+      </ul>
+    </div>
+    <a class="btn" href="https://www.eldorado.gg/users/Go2Game/shop/Account" target="_blank" rel="noopener noreferrer">View on Eldorado</a>
+  </section>
+
+  <p class="legal">&copy; 2026 Go2Game. League of Legends and all related names and images are trademarks of Riot Games, Inc. Go2Game is not affiliated with or endorsed by Riot Games. Public inventory preview only: login, email and recovery details are never shown on this page.</p>
+</div>
+
+<script>
+(() => {
+  const sections = [...document.querySelectorAll('.inv')];
+  const tabs = [...document.querySelectorAll('.tab')];
+  const chips = [...document.querySelectorAll('.rf')];
+  const search = document.getElementById('search');
+  const results = document.getElementById('results');
+  const empty = document.getElementById('empty');
+  const total = sections.reduce((n, s) => n + s.querySelectorAll('.card').length, 0);
+  const state = { section: 'all', rarity: 'all', query: '' };
+  let timer;
+
+  function apply() {
+    let shown = 0;
+    for (const section of sections) {
+      const inSection = state.section === 'all' || section.dataset.section === state.section;
+      let visible = 0;
+      for (const card of section.querySelectorAll('.card')) {
+        const match = inSection
+          && (state.rarity === 'all' || card.dataset.rarity === state.rarity)
+          && (!state.query || card.dataset.name.includes(state.query));
+        card.hidden = !match;
+        if (match) visible++;
+      }
+      section.hidden = visible === 0;
+      const counter = section.querySelector('[data-count]');
+      const sectionTotal = Number(counter.dataset.total);
+      const unit = counter.dataset.unit || 'items';
+      counter.textContent = visible === sectionTotal ? `${sectionTotal} ${unit}` : `${visible} of ${sectionTotal} ${unit}`;
+      shown += visible;
+    }
+    results.textContent = `Showing ${shown} of ${total} items`;
+    empty.hidden = shown !== 0;
+  }
+
+  function press(buttons, active) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b === active)));
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    state.section = tab.dataset.section;
+    press(tabs, tab);
+    apply();
+  }));
+
+  chips.forEach(chip => chip.addEventListener('click', () => setRarity(chip.dataset.rarity)));
+
+  function setRarity(rarity) {
+    state.rarity = state.rarity === rarity && rarity !== 'all' ? 'all' : rarity;
+    press(chips, chips.find(c => c.dataset.rarity === state.rarity));
+    apply();
+  }
+
+  document.querySelectorAll('[data-jump-rarity]').forEach(button => button.addEventListener('click', () => {
+    setRarity(button.dataset.jumpRarity);
+    document.getElementById('locker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.query = search.value.toLowerCase().trim(); apply(); }, 120);
+  });
+
+  // Preferred image first, optional fallback image second, placeholder as last resort.
+  document.addEventListener('error', event => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (img.dataset.fb && img.src !== img.dataset.fb) {
+      img.src = img.dataset.fb;
+    } else {
+      const holder = img.closest('.art');
+      if (holder) holder.classList.add('missing');
+      img.remove();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>

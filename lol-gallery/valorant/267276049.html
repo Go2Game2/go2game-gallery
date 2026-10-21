@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080912">
+<title>GO2GAME · VALORANT · 31 Skins</title>
+<link rel="preconnect" href="https://media.valorant-api.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #07080f;
+  --panel: #0e1120;
+  --panel-2: #141829;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #eef0f8;
+  --muted: #8f97b2;
+  --faint: #5d6482;
+  --accent: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.18);
+  --gold: #e5bd6a;
+  --glow-1: rgba(139, 92, 246, 0.20);
+  --glow-2: rgba(229, 189, 106, 0.10);
+  --bar-bg: rgba(7, 8, 15, 0.84);
+  --btn-bg: #eef0f8;
+  --btn-fg: #0b0d18;
+  --brand-grad: linear-gradient(135deg, #8b5cf6, #5b3fd1);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(139, 92, 246, 0.35);
+  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hl-width: 172px;
+}
+:root {
+  --bg: #080912;
+  --panel: #101321;
+  --panel-2: #171a2b;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 70, 85, 0.42);
+  --text: #f4f5fa;
+  --muted: #9da4b8;
+  --faint: #636b82;
+  --accent: #ff4655;
+  --accent-soft: rgba(255, 70, 85, 0.16);
+  --gold: #f5c451;
+  --glow-1: rgba(255, 70, 85, 0.16);
+  --glow-2: rgba(84, 112, 255, 0.12);
+  --bar-bg: rgba(8, 9, 18, 0.88);
+  --btn-bg: linear-gradient(135deg, #ff5966, #d92f45);
+  --btn-fg: #fff;
+  --brand-grad: linear-gradient(135deg, #ff5966, #d92f45);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(255, 70, 85, 0.3);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 10% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(780px 480px at 100% 0%, var(--glow-2), transparent 55%);
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.container { width: min(1360px, 100% - 40px); margin-inline: auto; }
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: 0.2px; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--brand-grad); color: var(--brand-fg);
+  font-size: 12px; font-weight: 800; box-shadow: 0 6px 20px var(--brand-shadow);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px;
+  background: var(--btn-bg); color: var(--btn-fg); font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line-strong); }
+
+/* Hero */
+.hero { padding: 30px 0 4px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  margin: 10px 0 10px; font-family: var(--font-display); font-size: clamp(30px, 4.6vw, 54px);
+  line-height: 1.07; letter-spacing: -0.025em; font-weight: 800;
+}
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--muted); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 999px;
+  background: var(--panel); border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.chip small { color: var(--muted); font-size: 12px; font-weight: 500; }
+.chip.gold { border-color: rgba(245, 196, 81, 0.45); background: rgba(245, 196, 81, 0.08); color: #f5c451; }
+.chip.good { border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.08); color: #34d399; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px; }
+.stat {
+  position: relative; padding: 18px 18px 16px; overflow: hidden; border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid var(--line);
+  --tone: var(--accent);
+}
+.stat::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--tone); }
+.stat b { display: block; font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Panels */
+.panel {
+  padding: 22px; border-radius: 14px; border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+.panel h2 { font-size: 16px; font-weight: 700; }
+.panel .sub { margin: 4px 0 16px; color: var(--muted); font-size: 13px; }
+.grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+
+.rbar { display: flex; gap: 2px; height: 12px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.06); }
+.rbar i { display: block; min-width: 5px; height: 100%; background: var(--rc); }
+.rbar.thin { height: 8px; }
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-top: 16px; }
+.legend button {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; cursor: pointer; text-align: left;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 13px; transition: border-color 0.15s;
+}
+.legend button:hover { border-color: var(--line-strong); }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rc); box-shadow: 0 0 12px var(--rg); }
+.legend em { margin-left: auto; font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+.matrix { display: grid; gap: 12px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.mrow { display: grid; grid-template-columns: 78px 1fr 36px; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); }
+.mrow b { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+
+.dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; align-content: start; }
+.dl div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.dl dt { color: var(--muted); font-size: 13px; }
+.dl dd { margin: 0; font-size: 14px; font-weight: 600; text-align: right; }
+
+/* Highlights */
+.block-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 38px 0 14px; }
+.block-title h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.block-title p { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.hl {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, var(--hl-width)); gap: 12px; overflow-x: auto;
+  padding: 4px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+}
+.hl .card { scroll-snap-align: start; }
+
+/* Toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 30; margin-top: 38px; padding: 12px 0 10px;
+  background: var(--bar-bg); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.tb-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tb-row + .tb-row { margin-top: 10px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 8px 14px; border-radius: 9px; border: 1px solid transparent; background: transparent;
+  color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.tab span { margin-left: 6px; font-weight: 500; opacity: 0.7; }
+.tab:hover { color: var(--text); }
+.tab[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); }
+.search { position: relative; flex: 1; min-width: 200px; }
+.search svg { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search input {
+  width: 100%; padding: 10px 14px 10px 38px; border-radius: 10px; outline: none; font: inherit; font-size: 14px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+}
+.search input::placeholder { color: var(--faint); }
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.rfilters { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.rf {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600;
+}
+.rf .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rc, var(--text)); }
+.rf em { font-style: normal; opacity: 0.7; font-variant-numeric: tabular-nums; }
+.rf:hover { border-color: var(--line-strong); color: var(--text); }
+.rf[aria-pressed="true"] { border-color: var(--rc, var(--text)); color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.results { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* Inventory */
+.inv { margin-top: 34px; scroll-margin-top: 150px; }
+.inv .block-title { margin-top: 0; }
+.empty { margin-top: 40px; padding: 52px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 14px; }
+.empty b { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; }
+
+/* Footer */
+.cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  margin-top: 60px; padding: 34px; border-radius: 18px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--glow-1), var(--glow-2)), var(--panel);
+}
+.cta h2 { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.cta p { margin-top: 6px; color: var(--muted); }
+.cta ul { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
+.cta li::before { content: "✓"; margin-right: 7px; color: var(--gold); font-weight: 800; }
+.legal { margin: 26px 0 44px; color: var(--faint); font-size: 12px; text-align: center; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .container { width: calc(100% - 28px); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .dl { grid-template-columns: 1fr; }
+  .toolbar { margin-top: 28px; }
+  .results { margin-left: 0; width: 100%; }
+  .cta { padding: 24px; }
+  .btn { width: 100%; justify-content: center; }
+  .topbar .btn { width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+.hero h1 em { background: linear-gradient(90deg, #fff, #ff7c87); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stats { grid-template-columns: repeat(5, 1fr); }
+.stat.skins, .stat.knives { --tone: #ff4655; }
+.stat.agents { --tone: #a78bfa; }
+.stat.level { --tone: #38bdf8; }
+.stat.rank { --tone: #f5c451; }
+.stat.text b { font-size: clamp(19px, 2vw, 25px); line-height: 1.5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 13px; }
+.card {
+  position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 12px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.card::before { content: ""; position: absolute; inset: 0 0 auto; z-index: 2; height: 3px; background: var(--accent); opacity: .8; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 14px 30px rgba(0, 0, 0, .42); }
+.card .art { display: grid; place-items: center; aspect-ratio: 16 / 10; overflow: hidden; background: radial-gradient(ellipse at center, rgba(255, 70, 85, .10), transparent 70%), #0c0e19; }
+.card .art img { width: 100%; height: 100%; object-fit: contain; padding: 12px; transition: transform .3s ease; }
+.card:hover .art img { transform: scale(1.05); }
+.card.skin .art img { padding: 8px; }
+.card.agents .art { aspect-ratio: 4 / 3; background: radial-gradient(ellipse at 50% 75%, rgba(130, 120, 255, .20), transparent 68%), #0c0e19; }
+.card.agents .art img { object-fit: contain; object-position: center bottom; padding: 0 8px; }
+.card.buddies .art { aspect-ratio: 1; }
+.card .meta { min-height: 57px; padding: 11px 12px; border-top: 1px solid var(--line); }
+.card .meta h3 { font-size: 13px; font-weight: 650; line-height: 1.35; }
+.hl { grid-auto-columns: minmax(220px, 280px); }
+.hl .card { scroll-snap-align: start; }
+.category-count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.inv { scroll-margin-top: 150px; }
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) {
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .cards .meta { padding: 9px; }
+  .cards .meta h3 { font-size: 11.5px; }
+  .hl { grid-auto-columns: 220px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">G2G</span>GO2GAME</div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">VALORANT · Account Preview</div>
+    <h1>LA account<br><em>31 weapon skins</em> · 23 agents</h1>
+    <p>Explore the account inventory, featured cosmetics, agents and gun buddies. Account credentials and private recovery details are not shown.</p>
+    <div class="chips">
+      <span class="chip"><small>Region</small>LA</span>
+      <span class="chip"><small>Rank</small>Other</span>
+      <span class="chip"><small>Level</small>153</span>
+      <span class="chip gold">2 knives</span>
+      <span class="chip good">$30.91</span>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Account totals">
+    <div class="stat skins"><b>31</b><span>Weapon skins</span></div>
+    <div class="stat knives"><b>2</b><span>Knives</span></div>
+    <div class="stat agents"><b>23</b><span>Agents</span></div>
+    <div class="stat level"><b>153</b><span>Account level</span></div>
+    <div class="stat rank text"><b>Other</b><span>Current rank</span></div>
+  </section>
+
+  <section class="grid-2">
+    <div class="panel">
+      <h2>Inventory overview</h2>
+      <p class="sub">83 listed items across weapon skins, agents and gun buddies.</p>
+      <div class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Weapon Skins</dt><dd>0</dd></div>
+        <div><dt>Agents</dt><dd>23</dd></div>
+        <div><dt>Gun Buddies</dt><dd>60</dd></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Account details</h2>
+      <p class="sub">Key facts and available balances.</p>
+      <dl class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Region</dt><dd>LA</dd></div>
+        <div><dt>Account level</dt><dd>153</dd></div>
+        <div><dt>Rank</dt><dd>Other</dd></div>
+        <div><dt>Total VP spent</dt><dd>5,325 VP</dd></div>
+        <div><dt>Current VP</dt><dd>191 VP</dd></div>
+        <div><dt>Radianite Points</dt><dd>Unknown</dd></div>
+        <div><dt>Kingdom Credits</dt><dd>Unknown</dd></div>
+      </dl>
+    </div>
+  </section>
+
+
+  <div class="toolbar" id="locker">
+    <div class="tb-row">
+      <div class="tabs" role="group" aria-label="Inventory category">
+        <button type="button" class="tab" data-section="all" aria-pressed="true">All<span>83</span></button>
+        <button type="button" class="tab" data-section="agents" aria-pressed="false">Agents<span>23</span></button>
+        <button type="button" class="tab" data-section="buddies" aria-pressed="false">Gun Buddies<span>60</span></button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="search" placeholder="Search skins, agents and buddies" autocomplete="off" aria-label="Search inventory">
+      </label>
+    </div>
+    <div class="tb-row"><div class="results" id="results" aria-live="polite">Showing 83 of 83 items</div></div>
+  </div>
+
+  <section class="inv" data-section="agents" id="agents">
+    <div class="block-title">
+      <h2>Agents</h2>
+      <p class="category-count" data-count data-total="23" data-unit="items">23 items</p>
+    </div>
+    <div class="cards">
+      <article class="card agents" data-name="df1cb487-4902-002e-5c17-d28e83e78588" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>df1cb487-4902-002e-5c17-d28e83e78588</h3></div>
+      </article>
+      <article class="card agents" data-name="6f2a04ca-43e0-be17-7f36-b3908627744d" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>6f2a04ca-43e0-be17-7f36-b3908627744d</h3></div>
+      </article>
+      <article class="card agents" data-name="117ed9e3-49f3-6512-3ccf-0cada7e3823b" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>117ed9e3-49f3-6512-3ccf-0cada7e3823b</h3></div>
+      </article>
+      <article class="card agents" data-name="601dbbe7-43ce-be57-2a40-4abd24953621" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>601dbbe7-43ce-be57-2a40-4abd24953621</h3></div>
+      </article>
+      <article class="card agents" data-name="1e58de9c-4950-5125-93e9-a0aee9f98746" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1e58de9c-4950-5125-93e9-a0aee9f98746</h3></div>
+      </article>
+      <article class="card agents" data-name="1dbf2edd-4729-0984-3115-daa5eed44993" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1dbf2edd-4729-0984-3115-daa5eed44993</h3></div>
+      </article>
+      <article class="card agents" data-name="e370fa57-4757-3604-3648-499e1f642d3f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e370fa57-4757-3604-3648-499e1f642d3f</h3></div>
+      </article>
+      <article class="card agents" data-name="a3bfb853-43b2-7238-a4f1-ad90e9e46bcc" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>a3bfb853-43b2-7238-a4f1-ad90e9e46bcc</h3></div>
+      </article>
+      <article class="card agents" data-name="efba5359-4016-a1e5-7626-b1ae76895940" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>efba5359-4016-a1e5-7626-b1ae76895940</h3></div>
+      </article>
+      <article class="card agents" data-name="22697a3d-45bf-8dd7-4fec-84a9e28c69d7" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>22697a3d-45bf-8dd7-4fec-84a9e28c69d7</h3></div>
+      </article>
+      <article class="card agents" data-name="5f8d3a7f-467b-97f3-062c-13acf203c006" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5f8d3a7f-467b-97f3-062c-13acf203c006</h3></div>
+      </article>
+      <article class="card agents" data-name="b444168c-4e35-8076-db47-ef9bf368f384" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>b444168c-4e35-8076-db47-ef9bf368f384</h3></div>
+      </article>
+      <article class="card agents" data-name="7f94d92c-4234-0a36-9646-3a87eb8b5c89" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>7f94d92c-4234-0a36-9646-3a87eb8b5c89</h3></div>
+      </article>
+      <article class="card agents" data-name="95b78ed7-4637-86d9-7e41-71ba8c293152" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>95b78ed7-4637-86d9-7e41-71ba8c293152</h3></div>
+      </article>
+      <article class="card agents" data-name="0e38b510-41a8-5780-5e8f-568b2a4f2d6c" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>0e38b510-41a8-5780-5e8f-568b2a4f2d6c</h3></div>
+      </article>
+      <article class="card agents" data-name="bb2a4828-46eb-8cd1-e765-15848195d751" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>bb2a4828-46eb-8cd1-e765-15848195d751</h3></div>
+      </article>
+      <article class="card agents" data-name="cc8b64c8-4b25-4ff9-6e7f-37b4da43d235" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>cc8b64c8-4b25-4ff9-6e7f-37b4da43d235</h3></div>
+      </article>
+      <article class="card agents" data-name="f94c3b30-42be-e959-889c-5aa313dba261" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f94c3b30-42be-e959-889c-5aa313dba261</h3></div>
+      </article>
+      <article class="card agents" data-name="8e253930-4c05-31dd-1b6c-968525494517" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>8e253930-4c05-31dd-1b6c-968525494517</h3></div>
+      </article>
+      <article class="card agents" data-name="41fb69c1-4189-7b37-f117-bcaf1e96f1bf" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>41fb69c1-4189-7b37-f117-bcaf1e96f1bf</h3></div>
+      </article>
+      <article class="card agents" data-name="92eeef5d-43b5-1d4a-8d03-b3927a09034b" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>92eeef5d-43b5-1d4a-8d03-b3927a09034b</h3></div>
+      </article>
+      <article class="card agents" data-name="707eab51-4836-f488-046a-cda6bf494859" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>707eab51-4836-f488-046a-cda6bf494859</h3></div>
+      </article>
+      <article class="card agents" data-name="dade69b4-4f5a-8528-247b-219e5a1facd6" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>dade69b4-4f5a-8528-247b-219e5a1facd6</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="buddies" id="buddies">
+    <div class="block-title">
+      <h2>Gun Buddies</h2>
+      <p class="category-count" data-count data-total="60" data-unit="items">60 items</p>
+    </div>
+    <div class="cards">
+      <article class="card buddies" data-name="59fd71a3-4c6f-30e8-bff3-cd81fe316718" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>59fd71a3-4c6f-30e8-bff3-cd81fe316718</h3></div>
+      </article>
+      <article class="card buddies" data-name="e058e4f5-40c4-a26a-e6c7-33a4baf2e21f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e058e4f5-40c4-a26a-e6c7-33a4baf2e21f</h3></div>
+      </article>
+      <article class="card buddies" data-name="ca289ec7-4747-5d93-8254-40b4baa59e03" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ca289ec7-4747-5d93-8254-40b4baa59e03</h3></div>
+      </article>
+      <article class="card buddies" data-name="f72bfb46-4b57-bb2e-0cfe-bfa9c5089eb3" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f72bfb46-4b57-bb2e-0cfe-bfa9c5089eb3</h3></div>
+      </article>
+      <article class="card buddies" data-name="7a80d833-4aa4-cac3-88dc-00b2d2c0f3a4" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>7a80d833-4aa4-cac3-88dc-00b2d2c0f3a4</h3></div>
+      </article>
+      <article class="card buddies" data-name="8cb83ad7-4e5b-73a1-173d-dc970951af9b" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>8cb83ad7-4e5b-73a1-173d-dc970951af9b</h3></div>
+      </article>
+      <article class="card buddies" data-name="2909e14e-4da8-d1ed-9327-21869f09782d" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>2909e14e-4da8-d1ed-9327-21869f09782d</h3></div>
+      </article>
+      <article class="card buddies" data-name="daec60f4-45c1-f15a-2a31-a98bb120cb93" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>daec60f4-45c1-f15a-2a31-a98bb120cb93</h3></div>
+      </article>
+      <article class="card buddies" data-name="c4f69de5-4440-19b5-8953-36b12ba42bb0" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c4f69de5-4440-19b5-8953-36b12ba42bb0</h3></div>
+      </article>
+      <article class="card buddies" data-name="1789770d-43dc-ace2-bdc0-08bd60eff433" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1789770d-43dc-ace2-bdc0-08bd60eff433</h3></div>
+      </article>
+      <article class="card buddies" data-name="e18d16f4-45fa-3279-fa83-e4970716c58e" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e18d16f4-45fa-3279-fa83-e4970716c58e</h3></div>
+      </article>
+      <article class="card buddies" data-name="1e553d0e-422f-46c6-4378-5299272355c0" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1e553d0e-422f-46c6-4378-5299272355c0</h3></div>
+      </article>
+      <article class="card buddies" data-name="ea398712-4f7a-865a-c937-91bad672fa0d" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ea398712-4f7a-865a-c937-91bad672fa0d</h3></div>
+      </article>
+      <article class="card buddies" data-name="8493f0fd-4d25-7834-86d6-b89ddb1d3f97" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>8493f0fd-4d25-7834-86d6-b89ddb1d3f97</h3></div>
+      </article>
+      <article class="card buddies" data-name="973863f5-44e0-be67-e360-8795a56295b7" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>973863f5-44e0-be67-e360-8795a56295b7</h3></div>
+      </article>
+      <article class="card buddies" data-name="d5061e49-44fa-3e30-242c-fc8d01f01187" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d5061e49-44fa-3e30-242c-fc8d01f01187</h3></div>
+      </article>
+      <article class="card buddies" data-name="87467d06-4508-be0b-821f-ebb2accf933b" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>87467d06-4508-be0b-821f-ebb2accf933b</h3></div>
+      </article>
+      <article class="card buddies" data-name="fe575bbd-4ebc-78b4-84b0-7ea97d6f9833" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>fe575bbd-4ebc-78b4-84b0-7ea97d6f9833</h3></div>
+      </article>
+      <article class="card buddies" data-name="c87ccdc7-4c11-2797-dfb9-dfa3774afb7d" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c87ccdc7-4c11-2797-dfb9-dfa3774afb7d</h3></div>
+      </article>
+      <article class="card buddies" data-name="cf0c35fc-4560-7a57-9dc3-91b65da6cd06" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>cf0c35fc-4560-7a57-9dc3-91b65da6cd06</h3></div>
+      </article>
+      <article class="card buddies" data-name="1cb1cfef-4976-ad93-27bc-7a89b5e6fb2f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1cb1cfef-4976-ad93-27bc-7a89b5e6fb2f</h3></div>
+      </article>
+      <article class="card buddies" data-name="80d46328-45eb-dd4c-39f4-a4a9003d9a31" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>80d46328-45eb-dd4c-39f4-a4a9003d9a31</h3></div>
+      </article>
+      <article class="card buddies" data-name="e9c947f0-43c2-dc31-e7fc-5e9c170bc931" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e9c947f0-43c2-dc31-e7fc-5e9c170bc931</h3></div>
+      </article>
+      <article class="card buddies" data-name="69d2917c-4138-1d9f-552a-b288190f7723" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>69d2917c-4138-1d9f-552a-b288190f7723</h3></div>
+      </article>
+      <article class="card buddies" data-name="52e28e6c-46f1-c370-1ab1-c89ab5f060fa" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>52e28e6c-46f1-c370-1ab1-c89ab5f060fa</h3></div>
+      </article>
+      <article class="card buddies" data-name="ac72bb9a-4368-8502-5dac-698d72021c81" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ac72bb9a-4368-8502-5dac-698d72021c81</h3></div>
+      </article>
+      <article class="card buddies" data-name="53731622-46ad-c7a8-d2d2-5194ac70ee97" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>53731622-46ad-c7a8-d2d2-5194ac70ee97</h3></div>
+      </article>
+      <article class="card buddies" data-name="9cd37dd1-4a3c-6b6d-5683-4c9a6ec008e6" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>9cd37dd1-4a3c-6b6d-5683-4c9a6ec008e6</h3></div>
+      </article>
+      <article class="card buddies" data-name="575ddf35-42a1-1de6-8599-d78dc7fb9a02" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>575ddf35-42a1-1de6-8599-d78dc7fb9a02</h3></div>
+      </article>
+      <article class="card buddies" data-name="a5111d11-4374-23c4-f2e9-eda50de1f475" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>a5111d11-4374-23c4-f2e9-eda50de1f475</h3></div>
+      </article>
+      <article class="card buddies" data-name="064b26f7-4232-9cbf-7e3b-53bc0b28c889" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>064b26f7-4232-9cbf-7e3b-53bc0b28c889</h3></div>
+      </article>
+      <article class="card buddies" data-name="f674accd-43be-712e-8fed-fd88b6438841" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f674accd-43be-712e-8fed-fd88b6438841</h3></div>
+      </article>
+      <article class="card buddies" data-name="c58337a2-4495-e5bf-b571-96b2b62f93cc" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c58337a2-4495-e5bf-b571-96b2b62f93cc</h3></div>
+      </article>
+      <article class="card buddies" data-name="a3506c68-4aa7-6942-fb91-389f0ff8fd07" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>a3506c68-4aa7-6942-fb91-389f0ff8fd07</h3></div>
+      </article>
+      <article class="card buddies" data-name="66c26557-4ee6-6a61-83d4-04bd138ee2e4" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>66c26557-4ee6-6a61-83d4-04bd138ee2e4</h3></div>
+      </article>
+      <article class="card buddies" data-name="cf881b03-4f5d-307a-23eb-eebc254e3dc3" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>cf881b03-4f5d-307a-23eb-eebc254e3dc3</h3></div>
+      </article>
+      <article class="card buddies" data-name="08ef49a4-4747-9208-0b44-42aae768bba2" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>08ef49a4-4747-9208-0b44-42aae768bba2</h3></div>
+      </article>
+      <article class="card buddies" data-name="22d18dd4-45c9-3ce3-ab8e-e5a3ea47390a" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>22d18dd4-45c9-3ce3-ab8e-e5a3ea47390a</h3></div>
+      </article>
+      <article class="card buddies" data-name="3e0319ff-4881-1ab5-e817-eeb2ea509142" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>3e0319ff-4881-1ab5-e817-eeb2ea509142</h3></div>
+      </article>
+      <article class="card buddies" data-name="4827e248-43f0-bc82-e346-91813aefc88f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>4827e248-43f0-bc82-e346-91813aefc88f</h3></div>
+      </article>
+      <article class="card buddies" data-name="469e85db-421d-5d87-43a9-e7995f7e94bb" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>469e85db-421d-5d87-43a9-e7995f7e94bb</h3></div>
+      </article>
+      <article class="card buddies" data-name="d74c34ed-4e90-224b-bf6e-dba9d0fea145" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d74c34ed-4e90-224b-bf6e-dba9d0fea145</h3></div>
+      </article>
+      <article class="card buddies" data-name="f8c59f2f-48f8-a93d-5bef-a7902bde82a5" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f8c59f2f-48f8-a93d-5bef-a7902bde82a5</h3></div>
+      </article>
+      <article class="card buddies" data-name="23511e47-44f8-a1b2-34da-09b2962693e5" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>23511e47-44f8-a1b2-34da-09b2962693e5</h3></div>
+      </article>
+      <article class="card buddies" data-name="8b1100e0-4c4a-5a6e-d21d-b9ba6688f6cb" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>8b1100e0-4c4a-5a6e-d21d-b9ba6688f6cb</h3></div>
+      </article>
+      <article class="card buddies" data-name="d67a75c5-4aaa-e458-96bb-1b9a3ea10325" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d67a75c5-4aaa-e458-96bb-1b9a3ea10325</h3></div>
+      </article>
+      <article class="card buddies" data-name="5d5b910a-4113-53ae-160a-aea270ea5029" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5d5b910a-4113-53ae-160a-aea270ea5029</h3></div>
+      </article>
+      <article class="card buddies" data-name="9a4b137f-48f6-e46b-aef1-0a8a8df17a57" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>9a4b137f-48f6-e46b-aef1-0a8a8df17a57</h3></div>
+      </article>
+      <article class="card buddies" data-name="f4ca17d6-47c6-b1f3-892e-e6aab22d6102" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f4ca17d6-47c6-b1f3-892e-e6aab22d6102</h3></div>
+      </article>
+      <article class="card buddies" data-name="d2fdb49a-4829-0fb8-102a-6d9112e3c367" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d2fdb49a-4829-0fb8-102a-6d9112e3c367</h3></div>
+      </article>
+      <article class="card buddies" data-name="e826de1b-4c4e-5ef7-45bf-a9b360b7daf5" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e826de1b-4c4e-5ef7-45bf-a9b360b7daf5</h3></div>
+      </article>
+      <article class="card buddies" data-name="d782c0e3-47af-494b-8f6e-dfad9cf0f703" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d782c0e3-47af-494b-8f6e-dfad9cf0f703</h3></div>
+      </article>
+      <article class="card buddies" data-name="022534ce-41f1-c4f9-b953-2e9f19e82e24" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>022534ce-41f1-c4f9-b953-2e9f19e82e24</h3></div>
+      </article>
+      <article class="card buddies" data-name="9024d9bf-466b-3592-58c3-deb9b494e7fa" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>9024d9bf-466b-3592-58c3-deb9b494e7fa</h3></div>
+      </article>
+      <article class="card buddies" data-name="c40fd3cc-41d7-20f2-fef4-6b954d8813c5" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c40fd3cc-41d7-20f2-fef4-6b954d8813c5</h3></div>
+      </article>
+      <article class="card buddies" data-name="c4ba9f04-49a2-22e6-a273-27a716eb7d7a" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c4ba9f04-49a2-22e6-a273-27a716eb7d7a</h3></div>
+      </article>
+      <article class="card buddies" data-name="1f9b0c32-405a-aae2-f291-20a752de92e0" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1f9b0c32-405a-aae2-f291-20a752de92e0</h3></div>
+      </article>
+      <article class="card buddies" data-name="ad5a4a0a-4a9e-c61f-d789-04b416bab22d" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ad5a4a0a-4a9e-c61f-d789-04b416bab22d</h3></div>
+      </article>
+      <article class="card buddies" data-name="ed388de0-4f6e-8451-8340-ed991b482fdd" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ed388de0-4f6e-8451-8340-ed991b482fdd</h3></div>
+      </article>
+      <article class="card buddies" data-name="912ec608-41dd-2918-68d6-fa800b9fbdcf" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>912ec608-41dd-2918-68d6-fa800b9fbdcf</h3></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="empty" id="empty" hidden>
+    <b>No items match your filters</b>
+    Try a different search term or rarity.
+  </div>
+
+  <section class="cta">
+    <div>
+      <h2>Interested in this account?</h2>
+      <p>Everything shown above is included with the account.</p>
+      <ul>
+        <li>Full access email &amp; password</li>
+        <li>Fast delivery</li>
+        <li>24/7 support</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="legal">&copy; 2026 GO2GAME. VALORANT and all related names and images are trademarks of Riot Games, Inc. GO2GAME is not affiliated with or endorsed by Riot Games. Public inventory preview only: account credentials and recovery details are never shown on this page.</p>
+</div>
+
+<script>
+(() => {
+  const sections = [...document.querySelectorAll('.inv')];
+  const tabs = [...document.querySelectorAll('.tab')];
+  const chips = [...document.querySelectorAll('.rf')];
+  const search = document.getElementById('search');
+  const results = document.getElementById('results');
+  const empty = document.getElementById('empty');
+  const total = sections.reduce((n, s) => n + s.querySelectorAll('.card').length, 0);
+  const state = { section: 'all', rarity: 'all', query: '' };
+  let timer;
+
+  function apply() {
+    let shown = 0;
+    for (const section of sections) {
+      const inSection = state.section === 'all' || section.dataset.section === state.section;
+      let visible = 0;
+      for (const card of section.querySelectorAll('.card')) {
+        const match = inSection
+          && (state.rarity === 'all' || card.dataset.rarity === state.rarity)
+          && (!state.query || card.dataset.name.includes(state.query));
+        card.hidden = !match;
+        if (match) visible++;
+      }
+      section.hidden = visible === 0;
+      const counter = section.querySelector('[data-count]');
+      const sectionTotal = Number(counter.dataset.total);
+      const unit = counter.dataset.unit || 'items';
+      counter.textContent = visible === sectionTotal ? `${sectionTotal} ${unit}` : `${visible} of ${sectionTotal} ${unit}`;
+      shown += visible;
+    }
+    results.textContent = `Showing ${shown} of ${total} items`;
+    empty.hidden = shown !== 0;
+  }
+
+  function press(buttons, active) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b === active)));
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    state.section = tab.dataset.section;
+    press(tabs, tab);
+    apply();
+  }));
+
+  chips.forEach(chip => chip.addEventListener('click', () => setRarity(chip.dataset.rarity)));
+
+  function setRarity(rarity) {
+    state.rarity = state.rarity === rarity && rarity !== 'all' ? 'all' : rarity;
+    press(chips, chips.find(c => c.dataset.rarity === state.rarity));
+    apply();
+  }
+
+  document.querySelectorAll('[data-jump-rarity]').forEach(button => button.addEventListener('click', () => {
+    setRarity(button.dataset.jumpRarity);
+    document.getElementById('locker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.query = search.value.toLowerCase().trim(); apply(); }, 120);
+  });
+
+  // Preferred image first, optional fallback image second, placeholder as last resort.
+  document.addEventListener('error', event => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (img.dataset.fb && img.src !== img.dataset.fb) {
+      img.src = img.dataset.fb;
+    } else {
+      const holder = img.closest('.art');
+      if (holder) holder.classList.add('missing');
+      img.remove();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>

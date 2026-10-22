@@ -1,0 +1,1620 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07080f">
+<title>Go2Game · Fortnite Account · 232 Items</title>
+<link rel="preconnect" href="https://fortnite-api.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #07080f;
+  --panel: #0e1120;
+  --panel-2: #141829;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #eef0f8;
+  --muted: #8f97b2;
+  --faint: #5d6482;
+  --accent: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.18);
+  --gold: #e5bd6a;
+  --glow-1: rgba(139, 92, 246, 0.20);
+  --glow-2: rgba(229, 189, 106, 0.10);
+  --bar-bg: rgba(7, 8, 15, 0.84);
+  --btn-bg: #eef0f8;
+  --btn-fg: #0b0d18;
+  --brand-grad: linear-gradient(135deg, #8b5cf6, #5b3fd1);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(139, 92, 246, 0.35);
+  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hl-width: 172px;
+}
+:root {
+  --exclusive: #f5c451;  --exclusive-glow: rgba(245, 196, 81, 0.32);
+  --mythic: #f43f5e;     --mythic-glow: rgba(244, 63, 94, 0.28);
+  --legendary: #f97316;  --legendary-glow: rgba(249, 115, 22, 0.28);
+  --epic: #a855f7;       --epic-glow: rgba(168, 85, 247, 0.28);
+  --rare: #3b82f6;       --rare-glow: rgba(59, 130, 246, 0.26);
+  --uncommon: #22c55e;   --uncommon-glow: rgba(34, 197, 94, 0.22);
+  --common: #94a3b8;     --common-glow: rgba(148, 163, 184, 0.18);
+  --other: #64748b;      --other-glow: rgba(100, 116, 139, 0.18);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 10% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(780px 480px at 100% 0%, var(--glow-2), transparent 55%);
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.container { width: min(1360px, 100% - 40px); margin-inline: auto; }
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: 0.2px; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--brand-grad); color: var(--brand-fg);
+  font-size: 12px; font-weight: 800; box-shadow: 0 6px 20px var(--brand-shadow);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px;
+  background: var(--btn-bg); color: var(--btn-fg); font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line-strong); }
+
+/* Hero */
+.hero { padding: 30px 0 4px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  margin: 10px 0 10px; font-family: var(--font-display); font-size: clamp(30px, 4.6vw, 54px);
+  line-height: 1.07; letter-spacing: -0.025em; font-weight: 800;
+}
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--muted); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 999px;
+  background: var(--panel); border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.chip small { color: var(--muted); font-size: 12px; font-weight: 500; }
+.chip.gold { border-color: rgba(245, 196, 81, 0.45); background: rgba(245, 196, 81, 0.08); color: #f5c451; }
+.chip.good { border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.08); color: #34d399; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px; }
+.stat {
+  position: relative; padding: 18px 18px 16px; overflow: hidden; border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid var(--line);
+  --tone: var(--accent);
+}
+.stat::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--tone); }
+.stat b { display: block; font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Panels */
+.panel {
+  padding: 22px; border-radius: 14px; border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+.panel h2 { font-size: 16px; font-weight: 700; }
+.panel .sub { margin: 4px 0 16px; color: var(--muted); font-size: 13px; }
+.grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+
+.rbar { display: flex; gap: 2px; height: 12px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.06); }
+.rbar i { display: block; min-width: 5px; height: 100%; background: var(--rc); }
+.rbar.thin { height: 8px; }
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-top: 16px; }
+.legend button {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; cursor: pointer; text-align: left;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 13px; transition: border-color 0.15s;
+}
+.legend button:hover { border-color: var(--line-strong); }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rc); box-shadow: 0 0 12px var(--rg); }
+.legend em { margin-left: auto; font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+.matrix { display: grid; gap: 12px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.mrow { display: grid; grid-template-columns: 78px 1fr 36px; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); }
+.mrow b { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+
+.dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; align-content: start; }
+.dl div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.dl dt { color: var(--muted); font-size: 13px; }
+.dl dd { margin: 0; font-size: 14px; font-weight: 600; text-align: right; }
+
+/* Highlights */
+.block-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 38px 0 14px; }
+.block-title h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.block-title p { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.hl {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, var(--hl-width)); gap: 12px; overflow-x: auto;
+  padding: 4px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+}
+.hl .card { scroll-snap-align: start; }
+
+/* Toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 30; margin-top: 38px; padding: 12px 0 10px;
+  background: var(--bar-bg); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.tb-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tb-row + .tb-row { margin-top: 10px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 8px 14px; border-radius: 9px; border: 1px solid transparent; background: transparent;
+  color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.tab span { margin-left: 6px; font-weight: 500; opacity: 0.7; }
+.tab:hover { color: var(--text); }
+.tab[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); }
+.search { position: relative; flex: 1; min-width: 200px; }
+.search svg { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search input {
+  width: 100%; padding: 10px 14px 10px 38px; border-radius: 10px; outline: none; font: inherit; font-size: 14px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+}
+.search input::placeholder { color: var(--faint); }
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.rfilters { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.rf {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600;
+}
+.rf .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rc, var(--text)); }
+.rf em { font-style: normal; opacity: 0.7; font-variant-numeric: tabular-nums; }
+.rf:hover { border-color: var(--line-strong); color: var(--text); }
+.rf[aria-pressed="true"] { border-color: var(--rc, var(--text)); color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.results { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* Inventory */
+.inv { margin-top: 34px; scroll-margin-top: 150px; }
+.inv .block-title { margin-top: 0; }
+.empty { margin-top: 40px; padding: 52px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 14px; }
+.empty b { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; }
+
+/* Footer */
+.cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  margin-top: 60px; padding: 34px; border-radius: 18px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--glow-1), var(--glow-2)), var(--panel);
+}
+.cta h2 { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.cta p { margin-top: 6px; color: var(--muted); }
+.cta ul { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
+.cta li::before { content: "✓"; margin-right: 7px; color: var(--gold); font-weight: 800; }
+.legal { margin: 26px 0 44px; color: var(--faint); font-size: 12px; text-align: center; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .container { width: calc(100% - 28px); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .dl { grid-template-columns: 1fr; }
+  .toolbar { margin-top: 28px; }
+  .results { margin-left: 0; width: 100%; }
+  .cta { padding: 24px; }
+  .btn { width: 100%; justify-content: center; }
+  .topbar .btn { width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+.stat.epic { --tone: var(--epic); }
+.stat.rare { --tone: var(--rare); }
+.stat.uncommon { --tone: var(--uncommon); }
+.stat.legendary { --tone: var(--legendary); }
+.stat.vbucks { --tone: var(--gold); }
+.stat.vbucks b { color: var(--gold); }
+
+.seasons { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; max-height: 268px; overflow-y: auto; padding-right: 4px; }
+.season { padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.season b { display: block; color: var(--text); font-size: 14px; }
+.season.pass { border-color: rgba(229, 189, 106, 0.45); background: rgba(229, 189, 106, 0.07); }
+.season .tag { display: block; margin-top: 3px; color: var(--gold); font-size: 11px; font-weight: 700; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 12px; }
+
+.card {
+  --rc: var(--other); --rg: var(--other-glow);
+  position: relative; display: flex; flex-direction: column; overflow: hidden; border-radius: 12px;
+  background: var(--panel); border: 1px solid var(--line);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--rc); z-index: 2; }
+.card:hover { transform: translateY(-3px); border-color: var(--rc); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5); }
+.art {
+  position: relative; aspect-ratio: 1;
+  background: radial-gradient(circle at 50% 42%, var(--rg), transparent 72%), linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+}
+.art img {
+  position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px);
+  object-fit: contain; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
+}
+.art.missing::after { content: "?"; position: absolute; inset: 0; display: grid; place-items: center; font-size: 32px; font-weight: 800; color: var(--faint); }
+.meta { padding: 9px 10px 11px; border-top: 1px solid var(--line); background: rgba(0, 0, 0, 0.18); }
+.meta h3 {
+  min-height: 2.6em; font-size: 12.5px; line-height: 1.3; font-weight: 600;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.meta span {
+  display: flex; align-items: center; gap: 6px; margin-top: 6px;
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rc);
+}
+.meta span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--rc); }
+.r-exclusive { --rc: var(--exclusive); --rg: var(--exclusive-glow); }
+.r-mythic { --rc: var(--mythic); --rg: var(--mythic-glow); }
+.r-legendary { --rc: var(--legendary); --rg: var(--legendary-glow); }
+.r-epic { --rc: var(--epic); --rg: var(--epic-glow); }
+.r-rare { --rc: var(--rare); --rg: var(--rare-glow); }
+.r-uncommon { --rc: var(--uncommon); --rg: var(--uncommon-glow); }
+.r-common { --rc: var(--common); --rg: var(--common-glow); }
+.r-other { --rc: var(--other); --rg: var(--other-glow); }
+.card.r-exclusive { border-color: rgba(245, 196, 81, 0.4); box-shadow: 0 0 26px rgba(245, 196, 81, 0.12); }
+
+@media (max-width: 560px) {
+  .stat.vbucks { grid-column: 1 / -1; }
+  .cards { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 9px; }
+  .meta h3 { font-size: 11.5px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">G2G</span>Go2Game</div>
+    <a class="btn ghost" href="https://www.eldorado.gg/users/Go2Game/shop/Account" target="_blank" rel="noopener noreferrer">View on Eldorado</a>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Fortnite Account Preview</div>
+    <h1>Level <em>999</em> locker<br>232 cosmetics inside</h1>
+    <p>Complete inventory snapshot of this account: every outfit, pickaxe, emote and glider, with rarity and account details.</p>
+    <div class="chips">
+<span class="chip"><small>Platform</small>Epic Games (PC)</span><span class="chip gold">★ 2 Exclusives</span><span class="chip"><small>Battle Passes</small>6</span>    </div>
+  </section>
+
+  <section class="stats" aria-label="Account totals">
+    <div class="stat epic"><b>49</b><span>Outfits</span></div>
+    <div class="stat rare"><b>47</b><span>Pickaxes</span></div>
+    <div class="stat uncommon"><b>77</b><span>Emotes</span></div>
+    <div class="stat legendary"><b>59</b><span>Gliders</span></div>
+    <div class="stat vbucks"><b>450</b><span>V-Bucks</span></div>
+  </section>
+
+  <section class="grid-2">
+    <div class="panel">
+      <h2>Rarity breakdown</h2>
+      <p class="sub">All 232 cosmetics by rarity. Select a rarity to filter the locker below.</p>
+      <div class="rbar" role="img" aria-label="Rarity distribution">
+<i class="r-exclusive" style="flex-grow: 2" title="Exclusive: 2"></i><i class="r-legendary" style="flex-grow: 16" title="Legendary: 16"></i><i class="r-epic" style="flex-grow: 69" title="Epic: 69"></i><i class="r-rare" style="flex-grow: 83" title="Rare: 83"></i><i class="r-uncommon" style="flex-grow: 51" title="Uncommon: 51"></i><i class="r-common" style="flex-grow: 11" title="Common: 11"></i>      </div>
+      <div class="legend">
+        <button type="button" class="r-exclusive" data-jump-rarity="exclusive"><span class="dot"></span>Exclusive<em>2</em></button>
+        <button type="button" class="r-legendary" data-jump-rarity="legendary"><span class="dot"></span>Legendary<em>16</em></button>
+        <button type="button" class="r-epic" data-jump-rarity="epic"><span class="dot"></span>Epic<em>69</em></button>
+        <button type="button" class="r-rare" data-jump-rarity="rare"><span class="dot"></span>Rare<em>83</em></button>
+        <button type="button" class="r-uncommon" data-jump-rarity="uncommon"><span class="dot"></span>Uncommon<em>51</em></button>
+        <button type="button" class="r-common" data-jump-rarity="common"><span class="dot"></span>Common<em>11</em></button>
+      </div>
+      <div class="matrix" aria-label="Rarity by category">
+        <div class="mrow">
+          <span>Outfits</span>
+          <div class="rbar thin">
+<i class="r-exclusive" style="flex-grow: 1" title="Exclusive: 1"></i><i class="r-legendary" style="flex-grow: 14" title="Legendary: 14"></i><i class="r-epic" style="flex-grow: 26" title="Epic: 26"></i><i class="r-rare" style="flex-grow: 7" title="Rare: 7"></i><i class="r-uncommon" style="flex-grow: 1" title="Uncommon: 1"></i>          </div>
+          <b>49</b>
+        </div>
+        <div class="mrow">
+          <span>Pickaxes</span>
+          <div class="rbar thin">
+<i class="r-epic" style="flex-grow: 10" title="Epic: 10"></i><i class="r-rare" style="flex-grow: 33" title="Rare: 33"></i><i class="r-uncommon" style="flex-grow: 3" title="Uncommon: 3"></i><i class="r-common" style="flex-grow: 1" title="Common: 1"></i>          </div>
+          <b>47</b>
+        </div>
+        <div class="mrow">
+          <span>Emotes</span>
+          <div class="rbar thin">
+<i class="r-exclusive" style="flex-grow: 1" title="Exclusive: 1"></i><i class="r-epic" style="flex-grow: 12" title="Epic: 12"></i><i class="r-rare" style="flex-grow: 30" title="Rare: 30"></i><i class="r-uncommon" style="flex-grow: 33" title="Uncommon: 33"></i><i class="r-common" style="flex-grow: 1" title="Common: 1"></i>          </div>
+          <b>77</b>
+        </div>
+        <div class="mrow">
+          <span>Gliders</span>
+          <div class="rbar thin">
+<i class="r-legendary" style="flex-grow: 2" title="Legendary: 2"></i><i class="r-epic" style="flex-grow: 21" title="Epic: 21"></i><i class="r-rare" style="flex-grow: 13" title="Rare: 13"></i><i class="r-uncommon" style="flex-grow: 14" title="Uncommon: 14"></i><i class="r-common" style="flex-grow: 9" title="Common: 9"></i>          </div>
+          <b>59</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Account details</h2>
+      <p class="sub">Key facts about this account.</p>
+      <dl class="dl">
+        <div><dt>Platform</dt><dd>Epic Games (PC)</dd></div>
+        <div><dt>Account level</dt><dd>999</dd></div>
+        <div><dt>V-Bucks balance</dt><dd>450</dd></div>
+        <div><dt>Registered</dt><dd>Apr 29, 2018</dd></div>
+        <div><dt>Lifetime wins</dt><dd>61</dd></div>
+        <div><dt>Current season</dt><dd>Season 42</dd></div>
+        <div><dt>Battle Pass level</dt><dd>1</dd></div>
+        <div><dt>Email change</dt><dd>From Dec 27, 2026</dd></div>
+        <div><dt>Linkable to</dt><dd>Xbox, PlayStation</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-top: 16px;">
+    <h2>Season history</h2>
+    <p class="sub">24 seasons played &middot; 6 Battle Passes owned</p>
+    <div class="seasons">
+      <div class="season">
+        <b>Season 39</b>
+        Lv 1 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 37</b>
+        Lv 1 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 36</b>
+        Lv 1 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 31</b>
+        Lv 1 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 29</b>
+        Lv 7 &middot; 2 wins
+      </div>
+      <div class="season">
+        <b>Season 28</b>
+        Lv 20 &middot; 1 win
+      </div>
+      <div class="season">
+        <b>Season 25</b>
+        Lv 12 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 22</b>
+        Lv 22 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 21</b>
+        Lv 79 &middot; 5 wins
+      </div>
+      <div class="season">
+        <b>Season 19</b>
+        Lv 1 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 18</b>
+        Lv 1 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 15</b>
+        Lv 2 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 14</b>
+        Lv 7 &middot; 1 win
+      </div>
+      <div class="season pass">
+        <b>Season 13</b>
+        Lv 40 &middot; 0 wins
+<span class="tag">★ Battle Pass</span>      </div>
+      <div class="season pass">
+        <b>Season 12</b>
+        Lv 170 &middot; 25 wins
+<span class="tag">★ Battle Pass</span>      </div>
+      <div class="season pass">
+        <b>Season 11</b>
+        Lv 312 &middot; 25 wins
+<span class="tag">★ Battle Pass</span>      </div>
+      <div class="season pass">
+        <b>Season 10</b>
+        Lv 67 &middot; 0 wins
+<span class="tag">★ Battle Pass</span>      </div>
+      <div class="season pass">
+        <b>Season 9</b>
+        Lv 54 &middot; 1 win
+<span class="tag">★ Battle Pass</span>      </div>
+      <div class="season pass">
+        <b>Season 8</b>
+        Lv 64 &middot; 0 wins
+<span class="tag">★ Battle Pass</span>      </div>
+      <div class="season">
+        <b>Season 7</b>
+        Lv 30 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 6</b>
+        Lv 38 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 5</b>
+        Lv 39 &middot; 1 win
+      </div>
+      <div class="season">
+        <b>Season 4</b>
+        Lv 23 &middot; 0 wins
+      </div>
+      <div class="season">
+        <b>Season 3</b>
+        Lv 6 &middot; 0 wins
+      </div>
+    </div>
+  </section>
+
+  <div class="block-title">
+    <h2>Highlights</h2>
+    <p>Exclusive &amp; legendary pieces</p>
+  </div>
+  <div class="hl">
+    <article class="card r-exclusive">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_703_athena_commando_m_cyclone/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_703_athena_commando_m_cyclone/icon.png" alt="Travis Scott" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Travis Scott</h3><span>Exclusive</span></div>
+    </article>
+    <article class="card r-exclusive">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_wir/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_wir/icon.png" alt="Hot Marat" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Hot Marat</h3><span>Exclusive</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_347_athena_commando_m_pirateprogressive/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_347_athena_commando_m_pirateprogressive/icon.png" alt="Blackheart" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Blackheart</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_486_athena_commando_f_streetracerdrift/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_486_athena_commando_f_streetracerdrift/icon.png" alt="Catalyst" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Catalyst</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_705_athena_commando_m_donut/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_705_athena_commando_m_donut/icon.png" alt="Deadpool" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Deadpool</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_777_athena_commando_m_racerzero/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_777_athena_commando_m_racerzero/icon.png" alt="Fade" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Fade</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_572_athena_commando_m_viper/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_572_athena_commando_m_viper/icon.png" alt="Fusion" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Fusion</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_695_athena_commando_f_desertopscamo/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_695_athena_commando_f_desertopscamo/icon.png" alt="Gear Specialist Maya" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Gear Specialist Maya</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_346_athena_commando_m_dragonninja/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_346_athena_commando_m_dragonninja/icon.png" alt="Hybrid" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Hybrid</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_694_athena_commando_m_catburglar/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_694_athena_commando_m_catburglar/icon.png" alt="Midas" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Midas</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_408_athena_commando_f_strawberrypilot/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_408_athena_commando_f_strawberrypilot/icon.png" alt="Rox" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Rox</h3><span>Legendary</span></div>
+    </article>
+    <article class="card r-legendary">
+      <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_378_athena_commando_m_furnaceface/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_378_athena_commando_m_furnaceface/icon.png" alt="Ruin" width="128" height="128" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Ruin</h3><span>Legendary</span></div>
+    </article>
+  </div>
+
+  <div class="toolbar" id="locker">
+    <div class="tb-row">
+      <div class="tabs" role="group" aria-label="Locker category">
+        <button type="button" class="tab" data-section="all" aria-pressed="true">All<span>232</span></button>
+        <button type="button" class="tab" data-section="outfits" aria-pressed="false">Outfits<span>49</span></button>
+        <button type="button" class="tab" data-section="pickaxes" aria-pressed="false">Pickaxes<span>47</span></button>
+        <button type="button" class="tab" data-section="emotes" aria-pressed="false">Emotes<span>77</span></button>
+        <button type="button" class="tab" data-section="gliders" aria-pressed="false">Gliders<span>59</span></button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="search" placeholder="Search items by name" autocomplete="off" aria-label="Search items by name">
+      </label>
+    </div>
+    <div class="tb-row">
+      <div class="rfilters" role="group" aria-label="Rarity filter">
+        <button type="button" class="rf" data-rarity="all" aria-pressed="true">All rarities</button>
+        <button type="button" class="rf r-exclusive" data-rarity="exclusive" aria-pressed="false"><span class="dot"></span>Exclusive<em>2</em></button>
+        <button type="button" class="rf r-legendary" data-rarity="legendary" aria-pressed="false"><span class="dot"></span>Legendary<em>16</em></button>
+        <button type="button" class="rf r-epic" data-rarity="epic" aria-pressed="false"><span class="dot"></span>Epic<em>69</em></button>
+        <button type="button" class="rf r-rare" data-rarity="rare" aria-pressed="false"><span class="dot"></span>Rare<em>83</em></button>
+        <button type="button" class="rf r-uncommon" data-rarity="uncommon" aria-pressed="false"><span class="dot"></span>Uncommon<em>51</em></button>
+        <button type="button" class="rf r-common" data-rarity="common" aria-pressed="false"><span class="dot"></span>Common<em>11</em></button>
+      </div>
+      <div class="results" id="results" aria-live="polite">Showing 232 of 232 items</div>
+    </div>
+  </div>
+
+  <section class="inv" data-section="outfits" id="outfits">
+    <div class="block-title">
+      <h2>Outfits</h2>
+      <p data-count data-total="49">49 items</p>
+    </div>
+    <div class="cards">
+      <article class="card r-exclusive" data-name="travis scott" data-rarity="exclusive">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_703_athena_commando_m_cyclone/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_703_athena_commando_m_cyclone/icon.png" alt="Travis Scott" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Travis Scott</h3><span>Exclusive</span></div>
+      </article>
+      <article class="card r-legendary" data-name="blackheart" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_347_athena_commando_m_pirateprogressive/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_347_athena_commando_m_pirateprogressive/icon.png" alt="Blackheart" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Blackheart</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="catalyst" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_486_athena_commando_f_streetracerdrift/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_486_athena_commando_f_streetracerdrift/icon.png" alt="Catalyst" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Catalyst</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="deadpool" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_705_athena_commando_m_donut/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_705_athena_commando_m_donut/icon.png" alt="Deadpool" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Deadpool</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="fade" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_777_athena_commando_m_racerzero/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_777_athena_commando_m_racerzero/icon.png" alt="Fade" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fade</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="fusion" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_572_athena_commando_m_viper/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_572_athena_commando_m_viper/icon.png" alt="Fusion" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fusion</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="gear specialist maya" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_695_athena_commando_f_desertopscamo/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_695_athena_commando_f_desertopscamo/icon.png" alt="Gear Specialist Maya" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Gear Specialist Maya</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="hybrid" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_346_athena_commando_m_dragonninja/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_346_athena_commando_m_dragonninja/icon.png" alt="Hybrid" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hybrid</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="midas" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_694_athena_commando_m_catburglar/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_694_athena_commando_m_catburglar/icon.png" alt="Midas" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Midas</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="rox" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_408_athena_commando_f_strawberrypilot/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_408_athena_commando_f_strawberrypilot/icon.png" alt="Rox" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Rox</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="ruin" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_378_athena_commando_m_furnaceface/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_378_athena_commando_m_furnaceface/icon.png" alt="Ruin" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ruin</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="sentinel" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_403_athena_commando_m_rooster/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_403_athena_commando_m_rooster/icon.png" alt="Sentinel" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sentinel</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="sorana" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_615_athena_commando_f_bane/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_615_athena_commando_f_bane/icon.png" alt="Sorana" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sorana</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="the scientist" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_540_athena_commando_m_meteormanremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_540_athena_commando_m_meteormanremix/icon.png" alt="The Scientist" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>The Scientist</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="ultima knight" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_484_athena_commando_m_knightremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_484_athena_commando_m_knightremix/icon.png" alt="Ultima Knight" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ultima Knight</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-epic" data-name="8-ball vs scratch" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_566_athena_commando_m_crazyeight/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_566_athena_commando_m_crazyeight/icon.png" alt="8-Ball vs Scratch" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>8-Ball vs Scratch</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="agent peely" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_701_athena_commando_m_bananaagent/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_701_athena_commando_m_bananaagent/icon.png" alt="Agent Peely" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Agent Peely</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="brutus" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_692_athena_commando_m_henchmantough/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_692_athena_commando_m_henchmantough/icon.png" alt="Brutus" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Brutus</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="bunker jonesy" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_409_athena_commando_m_bunkerman/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_409_athena_commando_m_bunkerman/icon.png" alt="Bunker Jonesy" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Bunker Jonesy</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="cameo vs chic" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_571_athena_commando_f_sheath/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_571_athena_commando_f_sheath/icon.png" alt="Cameo vs Chic" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cameo vs Chic</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="ember" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_351_athena_commando_f_fireelf/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_351_athena_commando_f_fireelf/icon.png" alt="Ember" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ember</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="eternal voyager" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_489_athena_commando_m_voyagerremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_489_athena_commando_m_voyagerremix/icon.png" alt="Eternal Voyager" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Eternal Voyager</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="jules" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_770_athena_commando_f_mechanicalengineer/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_770_athena_commando_f_mechanicalengineer/icon.png" alt="Jules" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Jules</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="kylo ren" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_631_athena_commando_m_galileokayak_vxldb/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_631_athena_commando_m_galileokayak_vxldb/icon.png" alt="Kylo Ren" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Kylo Ren</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="loserfruit" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_764_athena_commando_f_loofah/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_764_athena_commando_f_loofah/icon.png" alt="Loserfruit" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Loserfruit</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="lt. evergreen" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_643_athena_commando_m_ornamentsoldier/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_643_athena_commando_m_ornamentsoldier/icon.png" alt="Lt. Evergreen" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lt. Evergreen</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="master key" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_350_athena_commando_m_masterkey/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_350_athena_commando_m_masterkey/icon.png" alt="Master Key" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Master Key</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="meowscles" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_693_athena_commando_m_buffcat/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_693_athena_commando_m_buffcat/icon.png" alt="Meowscles" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Meowscles</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="ocean" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_771_athena_commando_f_oceanrider/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_771_athena_commando_f_oceanrider/icon.png" alt="Ocean" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ocean</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="peely" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_349_athena_commando_m_banana/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_349_athena_commando_m_banana/icon.png" alt="Peely" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Peely</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="scuba jonesy" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_774_athena_commando_m_tacticalscuba/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_774_athena_commando_m_tacticalscuba/icon.png" alt="Scuba Jonesy" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Scuba Jonesy</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="sidewinder" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_348_athena_commando_f_medusa/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_348_athena_commando_f_medusa/icon.png" alt="Sidewinder" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sidewinder</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="sith trooper" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_635_athena_commando_m_galileosled_fhjvm/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_635_athena_commando_m_galileosled_fhjvm/icon.png" alt="Sith Trooper" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sith Trooper</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="skull trooper" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_030_athena_commando_m_halloween/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_030_athena_commando_m_halloween/icon.png" alt="Skull Trooper" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Skull Trooper</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="skye" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_690_athena_commando_f_photographer/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_690_athena_commando_f_photographer/icon.png" alt="Skye" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Skye</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="sparkle supreme" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_485_athena_commando_f_sparkleremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_485_athena_commando_f_sparkleremix/icon.png" alt="Sparkle Supreme" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sparkle Supreme</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="tilted teknique" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_483_athena_commando_f_graffitiremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_483_athena_commando_f_graffitiremix/icon.png" alt="Tilted Teknique" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tilted Teknique</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="tntina" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_691_athena_commando_f_tntina/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_691_athena_commando_f_tntina/icon.png" alt="TNTina" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>TNTina</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="vega" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_404_athena_commando_f_bountyhunter/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_404_athena_commando_f_bountyhunter/icon.png" alt="Vega" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Vega</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="x-lord" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_488_athena_commando_m_rustremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_488_athena_commando_m_rustremix/icon.png" alt="X-Lord" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>X-Lord</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="y0nd3r" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_487_athena_commando_m_djremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_487_athena_commando_m_djremix/icon.png" alt="Y0ND3R" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Y0ND3R</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-rare" data-name="demogorgon" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_466_athena_commando_m_weirdobjectscreature/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_466_athena_commando_m_weirdobjectscreature/icon.png" alt="Demogorgon" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Demogorgon</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="iris" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_674_athena_commando_f_hoodiebandit/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_674_athena_commando_f_hoodiebandit/icon.png" alt="Iris" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Iris</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="journey vs hazard" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_565_athena_commando_f_rockclimber/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_565_athena_commando_f_rockclimber/icon.png" alt="Journey vs Hazard" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Journey vs Hazard</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="remedy vs toxin" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_567_athena_commando_f_rebirthmedic/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_567_athena_commando_f_rebirthmedic/icon.png" alt="Remedy vs Toxin" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Remedy vs Toxin</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="rippley vs sludge" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_570_athena_commando_m_slurpmonster/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_570_athena_commando_m_slurpmonster/icon.png" alt="Rippley vs Sludge" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Rippley vs Sludge</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="turk vs riptide" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_564_athena_commando_m_tacticalfisherman/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_564_athena_commando_m_tacticalfisherman/icon.png" alt="Turk vs Riptide" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Turk vs Riptide</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="wooly warrior" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_645_athena_commando_f_wolly/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_645_athena_commando_f_wolly/icon.png" alt="Wooly Warrior" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Wooly Warrior</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="branded brigadier" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_444_athena_commando_f_bannerc/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_444_athena_commando_f_bannerc/icon.png" alt="Branded Brigadier" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Branded Brigadier</h3><span>Uncommon</span></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="pickaxes" id="pickaxes">
+    <div class="block-title">
+      <h2>Pickaxes</h2>
+      <p data-count data-total="47">47 items</p>
+    </div>
+    <div class="cards">
+      <article class="card r-epic" data-name="aquaman&#39;s trident" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_415_sandcastlemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_415_sandcastlemale/icon.png" alt="Aquaman&#39;s Trident" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Aquaman&#39;s Trident</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="dragon&#39;s claw" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_164_dragonninja/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_164_dragonninja/icon.png" alt="Dragon&#39;s Claw" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dragon&#39;s Claw</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="eon blades" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_414_racerzero/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_414_racerzero/icon.png" alt="Eon Blades" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Eon Blades</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="epic swords of wonder" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_364_photographerfemale1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_364_photographerfemale1h/icon.png" alt="Epic Swords Of Wonder" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epic Swords Of Wonder</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="fruit punchers" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_399_loofahfemale1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_399_loofahfemale1h/icon.png" alt="Fruit Punchers" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fruit Punchers</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="fusion scythe" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_293_viper/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_293_viper/icon.png" alt="Fusion Scythe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fusion Scythe</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="sigil of the empire" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_819_realmmale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_819_realmmale/icon.png" alt="Sigil of the Empire" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sigil of the Empire</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="sludgehammer" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_291_slurpmonster/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_291_slurpmonster/icon.png" alt="Sludgehammer" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sludgehammer</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="swag smasher" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_163_pirateoctopus/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_163_pirateoctopus/icon.png" alt="Swag Smasher" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Swag Smasher</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="vox" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_205_strawberrypilot/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_205_strawberrypilot/icon.png" alt="Vox" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Vox</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-rare" data-name="angler axes" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_292_tacticalfisherman1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_292_tacticalfisherman1h/icon.png" alt="Angler Axes" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Angler Axes</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="bank shots" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_284_crazyeight1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_284_crazyeight1h/icon.png" alt="Bank Shots" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Bank Shots</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="boulder breakers" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_287_rockclimber1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_287_rockclimber1h/icon.png" alt="Boulder Breakers" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Boulder Breakers</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="bunker basher" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_210_bunkerman/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_210_bunkerman/icon.png" alt="Bunker Basher" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Bunker Basher</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="cosmic cleavers" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_245_voyagerremix1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_245_voyagerremix1h/icon.png" alt="Cosmic Cleavers" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cosmic Cleavers</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="crowbar" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_092_bling/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_092_bling/icon.png" alt="Crowbar" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Crowbar</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="dive knives" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_417_tacticalscubamale1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_417_tacticalscubamale1h/icon.png" alt="Dive Knives" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dive Knives</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="dread" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_187_furnaceface/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_187_furnaceface/icon.png" alt="Dread" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dread</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="fang saws" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_244_rustremix1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_244_rustremix1h/icon.png" alt="Fang Saws" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fang Saws</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="frozen axe" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_143_flintlockwinter/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_143_flintlockwinter/icon.png" alt="Frozen Axe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Frozen Axe</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="golden king" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_357_catburglarmale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_357_catburglarmale/icon.png" alt="Golden King" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Golden King</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="guiding glow" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_102_redriding/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_102_redriding/icon.png" alt="Guiding Glow" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Guiding Glow</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="hack &amp; smash" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_361_henchmanmale1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_361_henchmanmale1h/icon.png" alt="Hack &amp; Smash" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hack &amp; Smash</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="highlight strikers" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_290_sheath1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_290_sheath1h/icon.png" alt="Highlight Strikers" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Highlight Strikers</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="lockpick" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_165_masterkey/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_165_masterkey/icon.png" alt="Lockpick" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lockpick</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="lucky lance" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_837_summervividdollfemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_837_summervividdollfemale/icon.png" alt="Lucky Lance" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lucky Lance</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="lug axe" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_071_streetracer/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_071_streetracer/icon.png" alt="Lug Axe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lug Axe</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="medaxe" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_288_rebirthmedicfemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_288_rebirthmedicfemale/icon.png" alt="Medaxe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Medaxe</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="party crashers" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_315_banefemale1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_315_banefemale1h/icon.png" alt="Party Crashers" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Party Crashers</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="peppermint pick" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_332_mintminer/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_332_mintminer/icon.png" alt="Peppermint Pick" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Peppermint Pick</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="pop axe" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_343_hoodiebanditfemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_343_hoodiebanditfemale/icon.png" alt="Pop Axe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pop Axe</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="ripe rippers" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_211_bunkerman_1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_211_bunkerman_1h/icon.png" alt="Ripe Rippers" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ripe Rippers</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="sc3pt3r" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_243_djremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_243_djremix/icon.png" alt="SC3PT3R" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>SC3PT3R</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="secret scimitars" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_voidredemption/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_voidredemption/icon.png" alt="Secret Scimitars" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Secret Scimitars</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="shortbread slicers" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_329_gingerbreadcookie1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_329_gingerbreadcookie1h/icon.png" alt="Shortbread Slicers" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Shortbread Slicers</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="snakebite" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_167_medusa/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_167_medusa/icon.png" alt="Snakebite" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Snakebite</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="snowy" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_334_sweaterweathermale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_334_sweaterweathermale/icon.png" alt="Snowy" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Snowy</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="solid scratch" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_355_buffcatmale1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_355_buffcatmale1h/icon.png" alt="Solid Scratch" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Solid Scratch</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="sparkle scythe" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_242_sparkleremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_242_sparkleremix/icon.png" alt="Sparkle Scythe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sparkle Scythe</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="specialist pickaxe" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_360_desertopscamofemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_360_desertopscamofemale/icon.png" alt="Specialist Pickaxe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Specialist Pickaxe</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="tide axes" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_410_oceanriderfemale1h/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_410_oceanriderfemale1h/icon.png" alt="Tide Axes" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tide Axes</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="tnteeth" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_336_tntinafemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_336_tntinafemale/icon.png" alt="TNTeeth" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>TNTeeth</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="utility claymore" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_814_collectablemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_814_collectablemale/icon.png" alt="Utility Claymore" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Utility Claymore</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="bananaxe" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_368_bananaagent/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_368_bananaagent/icon.png" alt="Bananaxe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Bananaxe</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="birthday slice" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_233_birthday2019/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_233_birthday2019/icon.png" alt="Birthday Slice" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Birthday Slice</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="throwback axe" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_475_chonepickaxe/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/pickaxe_id_475_chonepickaxe/icon.png" alt="Throwback Axe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Throwback Axe</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-common" data-name="default pickaxe" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/defaultpickaxe/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/defaultpickaxe/icon.png" alt="Default Pickaxe" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Default Pickaxe</h3><span>Common</span></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="emotes" id="emotes">
+    <div class="block-title">
+      <h2>Emotes</h2>
+      <p data-count data-total="77">77 items</p>
+    </div>
+    <div class="cards">
+      <article class="card r-exclusive" data-name="hot marat" data-rarity="exclusive">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_wir/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_wir/icon.png" alt="Hot Marat" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hot Marat</h3><span>Exclusive</span></div>
+      </article>
+      <article class="card r-epic" data-name="boing!" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_pogotraversal/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_pogotraversal/icon.png" alt="Boing!" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Boing!</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="boobytrapped" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_pirategold/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_pirategold/icon.png" alt="Boobytrapped" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Boobytrapped</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="boogie down" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_boogiedown/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_boogiedown/icon.png" alt="Boogie Down" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Boogie Down</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="bounce berry" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_loofah/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_loofah/icon.png" alt="Bounce Berry" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Bounce Berry</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="breakneck" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_breakdance2/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_breakdance2/icon.png" alt="Breakneck" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Breakneck</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="crowning achievement" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_coronet/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_coronet/icon.png" alt="Crowning Achievement" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Crowning Achievement</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="daydream" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_hilowwave/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_hilowwave/icon.png" alt="Daydream" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Daydream</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="imperial march" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_realm/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_realm/icon.png" alt="Imperial March" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Imperial March</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="ninja style" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_tourbus/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_tourbus/icon.png" alt="Ninja Style" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ninja Style</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="rage" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_cyclone/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_cyclone/icon.png" alt="Rage" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Rage</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="sign spinner" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_signspinner/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_signspinner/icon.png" alt="Sign Spinner" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sign Spinner</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="springy" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_jumpstyledance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_jumpstyledance/icon.png" alt="Springy" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Springy</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-rare" data-name="air shredder" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_airguitar/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_airguitar/icon.png" alt="Air Shredder" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Air Shredder</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="backstroke" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_armupdance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_armupdance/icon.png" alt="Backstroke" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Backstroke</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="billy bounce" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_billybounce/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_billybounce/icon.png" alt="Billy Bounce" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Billy Bounce</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="blowing bubbles" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_blowingbubbles/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_blowingbubbles/icon.png" alt="Blowing Bubbles" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Blowing Bubbles</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="cluck strut" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_chickenmoves/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_chickenmoves/icon.png" alt="Cluck Strut" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cluck Strut</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="conga" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_conga/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_conga/icon.png" alt="Conga" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Conga</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="deep end" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_swimdance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_swimdance/icon.png" alt="Deep End" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Deep End</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="dragon stance" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_shinobi/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_shinobi/icon.png" alt="Dragon Stance" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dragon Stance</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="dream feet" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_dreamfeet/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_dreamfeet/icon.png" alt="Dream Feet" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dream Feet</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="droop" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_crazydance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_crazydance/icon.png" alt="Droop" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Droop</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="electro swing" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_electroswing/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_electroswing/icon.png" alt="Electro Swing" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Electro Swing</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="extraterrestrial" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_alien/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_alien/icon.png" alt="Extraterrestrial" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Extraterrestrial</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="feelin&#39; jaunty" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_walkiewalk/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_walkiewalk/icon.png" alt="Feelin&#39; Jaunty" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Feelin&#39; Jaunty</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="fishin&#39;" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_jellyfrog/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_jellyfrog/icon.png" alt="Fishin&#39;" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fishin&#39;</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="full tilt" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_speedrun/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_speedrun/icon.png" alt="Full Tilt" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Full Tilt</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="high five" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_hifive/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_hifive/icon.png" alt="High Five" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>High Five</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="hula hoopin&#39;" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_hulahoopchallenge/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_hulahoopchallenge/icon.png" alt="Hula Hoopin&#39;" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hula Hoopin&#39;</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="infectious" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_gothdance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_gothdance/icon.png" alt="Infectious" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Infectious</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="jaywalking" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_jaywalking/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_jaywalking/icon.png" alt="Jaywalking" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Jaywalking</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="jump jets" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_roostermech/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_roostermech/icon.png" alt="Jump Jets" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Jump Jets</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="nana nana" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_banana/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_banana/icon.png" alt="Nana Nana" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Nana Nana</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="no sweat" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_onearmfloss/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_onearmfloss/icon.png" alt="No Sweat" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>No Sweat</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="pandemonium" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_bangthepan/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_bangthepan/icon.png" alt="Pandemonium" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pandemonium</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="paws &amp; claws" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_paws/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_paws/icon.png" alt="Paws &amp; Claws" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Paws &amp; Claws</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="pump me up" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_punctual/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_punctual/icon.png" alt="Pump Me Up" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pump Me Up</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="sad trombone" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_sadtrombone/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_sadtrombone/icon.png" alt="Sad Trombone" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sad Trombone</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="side hustle" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_stepbreakdance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_stepbreakdance/icon.png" alt="Side Hustle" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Side Hustle</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="snoozefest" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_youboreme/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_youboreme/icon.png" alt="Snoozefest" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Snoozefest</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="snowshaker" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_snowglobe/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_snowglobe/icon.png" alt="Snowshaker" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Snowshaker</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="stride" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_treadmilldance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_treadmilldance/icon.png" alt="Stride" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Stride</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="beep beep" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_truckerhorn/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_truckerhorn/icon.png" alt="Beep Beep" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Beep Beep</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="call me" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_callme/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_callme/icon.png" alt="Call me" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Call me</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="coin flip" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_cointoss/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_cointoss/icon.png" alt="Coin Flip" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Coin Flip</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="dabstand" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_handstandlegdab/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_handstandlegdab/icon.png" alt="Dabstand" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dabstand</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="denied" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_disagree/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_disagree/icon.png" alt="Denied" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Denied</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="featherweight" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_dumbbell_lift/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_dumbbell_lift/icon.png" alt="Featherweight" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Featherweight</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="flippin&#39; away" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_superherobackflip/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_superherobackflip/icon.png" alt="Flippin&#39; Away" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Flippin&#39; Away</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="gentleman&#39;s dab" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_stagebow/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_stagebow/icon.png" alt="Gentleman&#39;s Dab" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Gentleman&#39;s Dab</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="golf clap" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_golfclap/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_golfclap/icon.png" alt="Golf Clap" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Golf Clap</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="have a seat" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_chairtime/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_chairtime/icon.png" alt="Have a Seat" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Have a Seat</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="hello friend" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_happywave/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_happywave/icon.png" alt="Hello Friend" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hello Friend</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="i declare!" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_cooloff/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_cooloff/icon.png" alt="I Declare!" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>I Declare!</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="it is finished" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_reverence/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_reverence/icon.png" alt="It is Finished" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>It is Finished</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="jazz hands" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_jazzhands/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_jazzhands/icon.png" alt="Jazz Hands" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Jazz Hands</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="jubilation" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_celebration/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_celebration/icon.png" alt="Jubilation" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Jubilation</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="party hips" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_stringdance/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_stringdance/icon.png" alt="Party Hips" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Party Hips</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="peace out" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_strawberrypilotkpop/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_strawberrypilotkpop/icon.png" alt="Peace Out" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Peace Out</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="raise the roof" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_raisetheroof/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_raisetheroof/icon.png" alt="Raise The Roof" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Raise The Roof</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="regal wave" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_regalwave/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_regalwave/icon.png" alt="Regal Wave" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Regal Wave</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="respect the peace" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_respectthepeace/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_respectthepeace/icon.png" alt="Respect The Peace" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Respect The Peace</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="revel" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_doublesnap/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_doublesnap/icon.png" alt="Revel" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Revel</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="shaolin sip" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_shaolinsipup/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_shaolinsipup/icon.png" alt="Shaolin Sip" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Shaolin Sip</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="sharpshooter" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_fingergunsv2/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_fingergunsv2/icon.png" alt="Sharpshooter" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sharpshooter</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="slow clap" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_slowclap/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_slowclap/icon.png" alt="Slow Clap" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Slow Clap</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="so square" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_dontbesquare/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_dontbesquare/icon.png" alt="So Square" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>So Square</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="t-pose" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_tpose/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_tpose/icon.png" alt="T-Pose" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>T-Pose</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="take the cake" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_happybirthday/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_happybirthday/icon.png" alt="Take The Cake" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Take The Cake</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="take the elf" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_taketheelf/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_taketheelf/icon.png" alt="Take The Elf" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Take The Elf</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="tra la la" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_happyskipping/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_happyskipping/icon.png" alt="Tra La La" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tra La La</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="waterworks" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_cry/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_cry/icon.png" alt="Waterworks" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Waterworks</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="wavy t" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_armwave/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_armwave/icon.png" alt="Wavy T" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Wavy T</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="widow’s pirouette" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_ashtonboardwalk/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_ashtonboardwalk/icon.png" alt="Widow’s Pirouette" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Widow’s Pirouette</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="yay!" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_yayexcited/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_yayexcited/icon.png" alt="Yay!" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Yay!</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-common" data-name="dance moves" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/eid_dancemoves/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/eid_dancemoves/icon.png" alt="Dance Moves" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dance Moves</h3><span>Common</span></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="gliders" id="gliders">
+    <div class="block-title">
+      <h2>Gliders</h2>
+      <p data-count data-total="59">59 items</p>
+    </div>
+    <div class="cards">
+      <article class="card r-legendary" data-name="fusion coil" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_184_viper/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_184_viper/icon.png" alt="Fusion Coil" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fusion Coil</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-legendary" data-name="steelwing" data-rarity="legendary">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_165_knightremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_165_knightremix/icon.png" alt="Steelwing" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Steelwing</h3><span>Legendary</span></div>
+      </article>
+      <article class="card r-epic" data-name="arcana" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_140_shatterfly/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_140_shatterfly/icon.png" alt="Arcana" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Arcana</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="astroworld cyclone" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_196_cyclonemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_196_cyclonemale/icon.png" alt="Astroworld Cyclone" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Astroworld Cyclone</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="avengers quinjet" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_141_ashtonboardwalk/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_141_ashtonboardwalk/icon.png" alt="Avengers Quinjet" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Avengers Quinjet</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="bombs away!" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_201_tntinafemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_201_tntinafemale/icon.png" alt="Bombs Away!" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Bombs Away!</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="booty buoy" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_128_bootybuoy/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_128_bootybuoy/icon.png" alt="Booty Buoy" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Booty Buoy</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="brella" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_buildabrella/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_buildabrella/icon.png" alt="Brella" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Brella</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="convergence" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_222_racerzeromale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_222_racerzeromale/icon.png" alt="Convergence" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Convergence</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="crazy eight" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_179_crazyeight/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_179_crazyeight/icon.png" alt="Crazy Eight" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Crazy Eight</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="dark engine" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_088_evilcowboy/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_088_evilcowboy/icon.png" alt="Dark Engine" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Dark Engine</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="junk bucket" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_166_rustlordremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_166_rustlordremix/icon.png" alt="Junk Bucket" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Junk Bucket</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="lunar skyspan" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_meteorwomen_alt/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_meteorwomen_alt/icon.png" alt="Lunar Skyspan" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lunar Skyspan</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="master mix" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_163_djremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_163_djremix/icon.png" alt="Master Mix" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Master Mix</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="metalmark" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_182_sheath/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_182_sheath/icon.png" alt="Metalmark" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Metalmark</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="millennium falcon" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_188_galileorocket_g7oki/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_188_galileorocket_g7oki/icon.png" alt="Millennium Falcon" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Millennium Falcon</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="ollie" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_200_photographerfemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_200_photographerfemale/icon.png" alt="Ollie" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ollie</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="psionic surfer" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_zirconsweep/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_zirconsweep/icon.png" alt="Psionic Surfer" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Psionic Surfer</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="skellefish" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_195_buffcatmale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_195_buffcatmale/icon.png" alt="Skellefish" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Skellefish</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="sparkle strider" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_167_sparkleremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_167_sparkleremix/icon.png" alt="Sparkle Strider" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sparkle Strider</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="the mcg" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_233_hightowerdefault/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_233_hightowerdefault/icon.png" alt="The MCG" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>The MCG</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="tie whisper" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_187_galileokayak_q8thv/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_187_galileokayak_q8thv/icon.png" alt="TIE Whisper" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>TIE Whisper</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-epic" data-name="turbo spin" data-rarity="epic">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_144_strawberrypilot/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_144_strawberrypilot/icon.png" alt="Turbo Spin" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Turbo Spin</h3><span>Epic</span></div>
+      </article>
+      <article class="card r-rare" data-name="2020" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_190_newyears/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_190_newyears/icon.png" alt="2020" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>2020</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="big haul" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_197_henchmanmale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_197_henchmanmale/icon.png" alt="Big Haul" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Big Haul</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="equalizer" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_106_fortnitedj/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_106_fortnitedj/icon.png" alt="Equalizer" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Equalizer</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="llamacorn express" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_199_llamahero/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_199_llamahero/icon.png" alt="Llamacorn Express" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Llamacorn Express</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="lockstep" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_123_masterkey/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_123_masterkey/icon.png" alt="Lockstep" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lockstep</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="pixel pilot" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_169_voyagerremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_169_voyagerremix/icon.png" alt="Pixel Pilot" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pixel Pilot</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="rift rider" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_168_streetracerdriftremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_168_streetracerdriftremix/icon.png" alt="Rift Rider" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Rift Rider</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="sky serpents" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_124_medusa/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_124_medusa/icon.png" alt="Sky Serpents" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sky Serpents</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="sky trawler" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_183_tacticalfisherman/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_183_tacticalfisherman/icon.png" alt="Sky Trawler" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sky Trawler</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="spray sail" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_164_graffitiremix/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_164_graffitiremix/icon.png" alt="Spray Sail" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Spray Sail</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="top sail" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_219_oceanriderfemale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_219_oceanriderfemale/icon.png" alt="Top Sail" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Top Sail</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="treefall" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_191_pinetree/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_191_pinetree/icon.png" alt="Treefall" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Treefall</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-rare" data-name="water wings" data-rarity="rare">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_225_tacticalscubamale/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_225_tacticalscubamale/icon.png" alt="Water Wings" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Water Wings</h3><span>Rare</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="banana bomber" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_202_bananaagent/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_202_bananaagent/icon.png" alt="Banana Bomber" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Banana Bomber</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="base jumper" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_181_rockclimber/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_181_rockclimber/icon.png" alt="Base Jumper" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Base Jumper</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="catwing" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_177_blackmondayfemale_ho3a9/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_177_blackmondayfemale_ho3a9/icon.png" alt="Catwing" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Catwing</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="cinder" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_129_fireelf/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_129_fireelf/icon.png" alt="Cinder" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cinder</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="crossfire" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_081_cowboygunslinger/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_081_cowboygunslinger/icon.png" alt="Crossfire" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Crossfire</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="downshift" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_055_streetracerblack/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_055_streetracerblack/icon.png" alt="Downshift" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Downshift</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="field flyer" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_032_tacticalwoodland/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_032_tacticalwoodland/icon.png" alt="Field Flyer" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Field Flyer</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="plunder" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_132_pirate01octopus/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_132_pirate01octopus/icon.png" alt="Plunder" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Plunder</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="rebel brella" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_28/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_28/icon.png" alt="Rebel Brella" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Rebel Brella</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="royale air" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_105_snowboard/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_105_snowboard/icon.png" alt="Royale Air" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Royale Air</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="scarlet strike" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_146_masako/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_146_masako/icon.png" alt="Scarlet Strike" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Scarlet Strike</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="storm crash" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_375_darkstormyellow/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_375_darkstormyellow/icon.png" alt="Storm Crash" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Storm Crash</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="the olympian" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_29/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_29/icon.png" alt="The Olympian" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>The Olympian</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-uncommon" data-name="wild blast" data-rarity="uncommon">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/glider_id_198_kaboom/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/glider_id_198_kaboom/icon.png" alt="Wild Blast" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Wild Blast</h3><span>Uncommon</span></div>
+      </article>
+      <article class="card r-common" data-name="battle bloom" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_21/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_21/icon.png" alt="Battle Bloom" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Battle Bloom</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="beach umbrella" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_05/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_05/icon.png" alt="Beach Umbrella" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Beach Umbrella</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="classified" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_12/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_12/icon.png" alt="CLASSIFIED" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>CLASSIFIED</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="downpour" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_11/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_11/icon.png" alt="Downpour" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Downpour</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="glider" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/defaultglider/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/defaultglider/icon.png" alt="Glider" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Glider</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="holographic" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_09/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_09/icon.png" alt="Holographic" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Holographic</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="mighty marvel &#39;brella" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_season_14/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_season_14/icon.png" alt="Mighty Marvel &#39;Brella" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Mighty Marvel &#39;Brella</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="storm sail" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/umbrella_storm/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/umbrella_storm/icon.png" alt="Storm Sail" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Storm Sail</h3><span>Common</span></div>
+      </article>
+      <article class="card r-common" data-name="the umbrella" data-rarity="common">
+        <div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/solo_umbrella/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/solo_umbrella/icon.png" alt="The Umbrella" width="128" height="128" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>The Umbrella</h3><span>Common</span></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="empty" id="empty" hidden>
+    <b>No items match your filters</b>
+    Try a different search term or rarity.
+  </div>
+
+  <section class="cta">
+    <div>
+      <h2>Interested in this account?</h2>
+      <p>Everything shown above is included with the account.</p>
+      <ul>
+        <li>Full access email &amp; password</li>
+        <li>Fast delivery</li>
+        <li>24/7 support</li>
+      </ul>
+    </div>
+    <a class="btn" href="https://www.eldorado.gg/users/Go2Game/shop/Account" target="_blank" rel="noopener noreferrer">View on Eldorado</a>
+  </section>
+
+  <p class="legal">&copy; 2026 Go2Game. Fortnite and all related names and images are trademarks of Epic Games, Inc. Go2Game is not affiliated with or endorsed by Epic Games.</p>
+</div>
+
+<script>
+(() => {
+  const sections = [...document.querySelectorAll('.inv')];
+  const tabs = [...document.querySelectorAll('.tab')];
+  const chips = [...document.querySelectorAll('.rf')];
+  const search = document.getElementById('search');
+  const results = document.getElementById('results');
+  const empty = document.getElementById('empty');
+  const total = sections.reduce((n, s) => n + s.querySelectorAll('.card').length, 0);
+  const state = { section: 'all', rarity: 'all', query: '' };
+  let timer;
+
+  function apply() {
+    let shown = 0;
+    for (const section of sections) {
+      const inSection = state.section === 'all' || section.dataset.section === state.section;
+      let visible = 0;
+      for (const card of section.querySelectorAll('.card')) {
+        const match = inSection
+          && (state.rarity === 'all' || card.dataset.rarity === state.rarity)
+          && (!state.query || card.dataset.name.includes(state.query));
+        card.hidden = !match;
+        if (match) visible++;
+      }
+      section.hidden = visible === 0;
+      const counter = section.querySelector('[data-count]');
+      const sectionTotal = Number(counter.dataset.total);
+      const unit = counter.dataset.unit || 'items';
+      counter.textContent = visible === sectionTotal ? `${sectionTotal} ${unit}` : `${visible} of ${sectionTotal} ${unit}`;
+      shown += visible;
+    }
+    results.textContent = `Showing ${shown} of ${total} items`;
+    empty.hidden = shown !== 0;
+  }
+
+  function press(buttons, active) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b === active)));
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    state.section = tab.dataset.section;
+    press(tabs, tab);
+    apply();
+  }));
+
+  chips.forEach(chip => chip.addEventListener('click', () => setRarity(chip.dataset.rarity)));
+
+  function setRarity(rarity) {
+    state.rarity = state.rarity === rarity && rarity !== 'all' ? 'all' : rarity;
+    press(chips, chips.find(c => c.dataset.rarity === state.rarity));
+    apply();
+  }
+
+  document.querySelectorAll('[data-jump-rarity]').forEach(button => button.addEventListener('click', () => {
+    setRarity(button.dataset.jumpRarity);
+    document.getElementById('locker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.query = search.value.toLowerCase().trim(); apply(); }, 120);
+  });
+
+  // Preferred image first, optional fallback image second, placeholder as last resort.
+  document.addEventListener('error', event => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (img.dataset.fb && img.src !== img.dataset.fb) {
+      img.src = img.dataset.fb;
+    } else {
+      const holder = img.closest('.art');
+      if (holder) holder.classList.add('missing');
+      img.remove();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>

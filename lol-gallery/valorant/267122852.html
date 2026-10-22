@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080912">
+<title>GO2GAME · VALORANT · 37 Skins</title>
+<link rel="preconnect" href="https://media.valorant-api.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #07080f;
+  --panel: #0e1120;
+  --panel-2: #141829;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #eef0f8;
+  --muted: #8f97b2;
+  --faint: #5d6482;
+  --accent: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.18);
+  --gold: #e5bd6a;
+  --glow-1: rgba(139, 92, 246, 0.20);
+  --glow-2: rgba(229, 189, 106, 0.10);
+  --bar-bg: rgba(7, 8, 15, 0.84);
+  --btn-bg: #eef0f8;
+  --btn-fg: #0b0d18;
+  --brand-grad: linear-gradient(135deg, #8b5cf6, #5b3fd1);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(139, 92, 246, 0.35);
+  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hl-width: 172px;
+}
+:root {
+  --bg: #080912;
+  --panel: #101321;
+  --panel-2: #171a2b;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 70, 85, 0.42);
+  --text: #f4f5fa;
+  --muted: #9da4b8;
+  --faint: #636b82;
+  --accent: #ff4655;
+  --accent-soft: rgba(255, 70, 85, 0.16);
+  --gold: #f5c451;
+  --glow-1: rgba(255, 70, 85, 0.16);
+  --glow-2: rgba(84, 112, 255, 0.12);
+  --bar-bg: rgba(8, 9, 18, 0.88);
+  --btn-bg: linear-gradient(135deg, #ff5966, #d92f45);
+  --btn-fg: #fff;
+  --brand-grad: linear-gradient(135deg, #ff5966, #d92f45);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(255, 70, 85, 0.3);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 10% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(780px 480px at 100% 0%, var(--glow-2), transparent 55%);
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.container { width: min(1360px, 100% - 40px); margin-inline: auto; }
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: 0.2px; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--brand-grad); color: var(--brand-fg);
+  font-size: 12px; font-weight: 800; box-shadow: 0 6px 20px var(--brand-shadow);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px;
+  background: var(--btn-bg); color: var(--btn-fg); font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line-strong); }
+
+/* Hero */
+.hero { padding: 30px 0 4px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  margin: 10px 0 10px; font-family: var(--font-display); font-size: clamp(30px, 4.6vw, 54px);
+  line-height: 1.07; letter-spacing: -0.025em; font-weight: 800;
+}
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--muted); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 999px;
+  background: var(--panel); border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.chip small { color: var(--muted); font-size: 12px; font-weight: 500; }
+.chip.gold { border-color: rgba(245, 196, 81, 0.45); background: rgba(245, 196, 81, 0.08); color: #f5c451; }
+.chip.good { border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.08); color: #34d399; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px; }
+.stat {
+  position: relative; padding: 18px 18px 16px; overflow: hidden; border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid var(--line);
+  --tone: var(--accent);
+}
+.stat::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--tone); }
+.stat b { display: block; font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Panels */
+.panel {
+  padding: 22px; border-radius: 14px; border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+.panel h2 { font-size: 16px; font-weight: 700; }
+.panel .sub { margin: 4px 0 16px; color: var(--muted); font-size: 13px; }
+.grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+
+.rbar { display: flex; gap: 2px; height: 12px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.06); }
+.rbar i { display: block; min-width: 5px; height: 100%; background: var(--rc); }
+.rbar.thin { height: 8px; }
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-top: 16px; }
+.legend button {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; cursor: pointer; text-align: left;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 13px; transition: border-color 0.15s;
+}
+.legend button:hover { border-color: var(--line-strong); }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rc); box-shadow: 0 0 12px var(--rg); }
+.legend em { margin-left: auto; font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+.matrix { display: grid; gap: 12px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.mrow { display: grid; grid-template-columns: 78px 1fr 36px; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); }
+.mrow b { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+
+.dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; align-content: start; }
+.dl div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.dl dt { color: var(--muted); font-size: 13px; }
+.dl dd { margin: 0; font-size: 14px; font-weight: 600; text-align: right; }
+
+/* Highlights */
+.block-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 38px 0 14px; }
+.block-title h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.block-title p { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.hl {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, var(--hl-width)); gap: 12px; overflow-x: auto;
+  padding: 4px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+}
+.hl .card { scroll-snap-align: start; }
+
+/* Toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 30; margin-top: 38px; padding: 12px 0 10px;
+  background: var(--bar-bg); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.tb-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tb-row + .tb-row { margin-top: 10px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 8px 14px; border-radius: 9px; border: 1px solid transparent; background: transparent;
+  color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.tab span { margin-left: 6px; font-weight: 500; opacity: 0.7; }
+.tab:hover { color: var(--text); }
+.tab[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); }
+.search { position: relative; flex: 1; min-width: 200px; }
+.search svg { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search input {
+  width: 100%; padding: 10px 14px 10px 38px; border-radius: 10px; outline: none; font: inherit; font-size: 14px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+}
+.search input::placeholder { color: var(--faint); }
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.rfilters { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.rf {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600;
+}
+.rf .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rc, var(--text)); }
+.rf em { font-style: normal; opacity: 0.7; font-variant-numeric: tabular-nums; }
+.rf:hover { border-color: var(--line-strong); color: var(--text); }
+.rf[aria-pressed="true"] { border-color: var(--rc, var(--text)); color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.results { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* Inventory */
+.inv { margin-top: 34px; scroll-margin-top: 150px; }
+.inv .block-title { margin-top: 0; }
+.empty { margin-top: 40px; padding: 52px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 14px; }
+.empty b { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; }
+
+/* Footer */
+.cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  margin-top: 60px; padding: 34px; border-radius: 18px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--glow-1), var(--glow-2)), var(--panel);
+}
+.cta h2 { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.cta p { margin-top: 6px; color: var(--muted); }
+.cta ul { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
+.cta li::before { content: "✓"; margin-right: 7px; color: var(--gold); font-weight: 800; }
+.legal { margin: 26px 0 44px; color: var(--faint); font-size: 12px; text-align: center; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .container { width: calc(100% - 28px); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .dl { grid-template-columns: 1fr; }
+  .toolbar { margin-top: 28px; }
+  .results { margin-left: 0; width: 100%; }
+  .cta { padding: 24px; }
+  .btn { width: 100%; justify-content: center; }
+  .topbar .btn { width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+.hero h1 em { background: linear-gradient(90deg, #fff, #ff7c87); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stats { grid-template-columns: repeat(5, 1fr); }
+.stat.skins, .stat.knives { --tone: #ff4655; }
+.stat.agents { --tone: #a78bfa; }
+.stat.level { --tone: #38bdf8; }
+.stat.rank { --tone: #f5c451; }
+.stat.text b { font-size: clamp(19px, 2vw, 25px); line-height: 1.5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 13px; }
+.card {
+  position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 12px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.card::before { content: ""; position: absolute; inset: 0 0 auto; z-index: 2; height: 3px; background: var(--accent); opacity: .8; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 14px 30px rgba(0, 0, 0, .42); }
+.card .art { display: grid; place-items: center; aspect-ratio: 16 / 10; overflow: hidden; background: radial-gradient(ellipse at center, rgba(255, 70, 85, .10), transparent 70%), #0c0e19; }
+.card .art img { width: 100%; height: 100%; object-fit: contain; padding: 12px; transition: transform .3s ease; }
+.card:hover .art img { transform: scale(1.05); }
+.card.skin .art img { padding: 8px; }
+.card.agents .art { aspect-ratio: 4 / 3; background: radial-gradient(ellipse at 50% 75%, rgba(130, 120, 255, .20), transparent 68%), #0c0e19; }
+.card.agents .art img { object-fit: contain; object-position: center bottom; padding: 0 8px; }
+.card.buddies .art { aspect-ratio: 1; }
+.card .meta { min-height: 57px; padding: 11px 12px; border-top: 1px solid var(--line); }
+.card .meta h3 { font-size: 13px; font-weight: 650; line-height: 1.35; }
+.hl { grid-auto-columns: minmax(220px, 280px); }
+.hl .card { scroll-snap-align: start; }
+.category-count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.inv { scroll-margin-top: 150px; }
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) {
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .cards .meta { padding: 9px; }
+  .cards .meta h3 { font-size: 11.5px; }
+  .hl { grid-auto-columns: 220px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">G2G</span>GO2GAME</div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">VALORANT · Account Preview</div>
+    <h1>AP account<br><em>37 weapon skins</em> · 24 agents</h1>
+    <p>Explore the account inventory, featured cosmetics, agents and gun buddies. Account credentials and private recovery details are not shown.</p>
+    <div class="chips">
+      <span class="chip"><small>Region</small>AP</span>
+      <span class="chip"><small>Rank</small>Other</span>
+      <span class="chip"><small>Level</small>123</span>
+      <span class="chip gold">3 knives</span>
+      <span class="chip good">$37.62</span>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Account totals">
+    <div class="stat skins"><b>37</b><span>Weapon skins</span></div>
+    <div class="stat knives"><b>3</b><span>Knives</span></div>
+    <div class="stat agents"><b>24</b><span>Agents</span></div>
+    <div class="stat level"><b>123</b><span>Account level</span></div>
+    <div class="stat rank text"><b>Other</b><span>Current rank</span></div>
+  </section>
+
+  <section class="grid-2">
+    <div class="panel">
+      <h2>Inventory overview</h2>
+      <p class="sub">133 listed items across weapon skins, agents and gun buddies.</p>
+      <div class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Weapon Skins</dt><dd>37</dd></div>
+        <div><dt>Agents</dt><dd>24</dd></div>
+        <div><dt>Gun Buddies</dt><dd>72</dd></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Account details</h2>
+      <p class="sub">Key facts and available balances.</p>
+      <dl class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Region</dt><dd>AP</dd></div>
+        <div><dt>Account level</dt><dd>123</dd></div>
+        <div><dt>Rank</dt><dd>Other</dd></div>
+        <div><dt>Total VP spent</dt><dd>3,550 VP</dd></div>
+        <div><dt>Current VP</dt><dd>254 VP</dd></div>
+        <div><dt>Radianite Points</dt><dd>Unknown</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="block-title">
+    <h2>Highlights</h2>
+    <p>Featured and premium cosmetics</p>
+  </div>
+  <div class="hl">
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-03.png" alt="Prime Axe" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Prime Axe</h3></div>
+    </article>
+  </div>
+
+  <div class="toolbar" id="locker">
+    <div class="tb-row">
+      <div class="tabs" role="group" aria-label="Inventory category">
+        <button type="button" class="tab" data-section="all" aria-pressed="true">All<span>133</span></button>
+        <button type="button" class="tab" data-section="skins" aria-pressed="false">Weapon Skins<span>37</span></button>
+        <button type="button" class="tab" data-section="agents" aria-pressed="false">Agents<span>24</span></button>
+        <button type="button" class="tab" data-section="buddies" aria-pressed="false">Gun Buddies<span>72</span></button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="search" placeholder="Search skins, agents and buddies" autocomplete="off" aria-label="Search inventory">
+      </label>
+    </div>
+    <div class="tb-row"><div class="results" id="results" aria-live="polite">Showing 133 of 133 items</div></div>
+  </div>
+
+  <section class="inv" data-section="skins" id="skins">
+    <div class="block-title">
+      <h2>Weapon Skins</h2>
+      <p class="category-count" data-count data-total="37" data-unit="items">37 items</p>
+    </div>
+    <div class="cards">
+      <article class="card skins" data-name="atlas // cmd baton" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-01.png" alt="ATLAS // CMD Baton" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>ATLAS // CMD Baton</h3></div>
+      </article>
+      <article class="card skins" data-name="heart splitter" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-02.png" alt="Heart Splitter" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heart Splitter</h3></div>
+      </article>
+      <article class="card skins" data-name="prime axe" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-03.png" alt="Prime Axe" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Prime Axe</h3></div>
+      </article>
+      <article class="card skins" data-name="heartstopper ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-04.png" alt="Heartstopper Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartstopper Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="transition stinger" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-05.png" alt="Transition Stinger" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Transition Stinger</h3></div>
+      </article>
+      <article class="card skins" data-name="heartstopper vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-06.png" alt="Heartstopper Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartstopper Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="transition bulldog" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-07.png" alt="Transition Bulldog" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Transition Bulldog</h3></div>
+      </article>
+      <article class="card skins" data-name="atlas // cmd outlaw" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-08.png" alt="ATLAS // CMD Outlaw" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>ATLAS // CMD Outlaw</h3></div>
+      </article>
+      <article class="card skins" data-name="atlas // cmd spectre" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-09.png" alt="ATLAS // CMD Spectre" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>ATLAS // CMD Spectre</h3></div>
+      </article>
+      <article class="card skins" data-name="transition vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-10.png" alt="Transition Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Transition Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="atlas // cmd classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-11.png" alt="ATLAS // CMD Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>ATLAS // CMD Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="atlas // cmd vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-12.png" alt="ATLAS // CMD Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>ATLAS // CMD Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="space piercer sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-13.png" alt="Space Piercer Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Space Piercer Sheriff</h3></div>
+      </article>
+      <article class="card skins" data-name="heartbreaker bulldog" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-14.png" alt="Heartbreaker Bulldog" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartbreaker Bulldog</h3></div>
+      </article>
+      <article class="card skins" data-name="heartseeker phantom" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-15.png" alt="Heartseeker Phantom" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartseeker Phantom</h3></div>
+      </article>
+      <article class="card skins" data-name="heartseeker shorty" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-16.png" alt="Heartseeker Shorty" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartseeker Shorty</h3></div>
+      </article>
+      <article class="card skins" data-name="heartseeker outlaw" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-17.png" alt="Heartseeker Outlaw" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartseeker Outlaw</h3></div>
+      </article>
+      <article class="card skins" data-name="freehand ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-18.png" alt="Freehand Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Freehand Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="perch bulldog" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-19.png" alt="Perch Bulldog" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Perch Bulldog</h3></div>
+      </article>
+      <article class="card skins" data-name="panoramic bucky" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-20.png" alt="Panoramic Bucky" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Panoramic Bucky</h3></div>
+      </article>
+      <article class="card skins" data-name="space piercer judge" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-21.png" alt="Space Piercer Judge" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Space Piercer Judge</h3></div>
+      </article>
+      <article class="card skins" data-name="perch marshal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-22.png" alt="Perch Marshal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Perch Marshal</h3></div>
+      </article>
+      <article class="card skins" data-name="space piercer ares" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-23.png" alt="Space Piercer Ares" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Space Piercer Ares</h3></div>
+      </article>
+      <article class="card skins" data-name="heartbreaker odin" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-24.png" alt="Heartbreaker Odin" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartbreaker Odin</h3></div>
+      </article>
+      <article class="card skins" data-name="panoramic guardian" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-25.png" alt="Panoramic Guardian" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Panoramic Guardian</h3></div>
+      </article>
+      <article class="card skins" data-name="perch phantom" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-26.png" alt="Perch Phantom" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Perch Phantom</h3></div>
+      </article>
+      <article class="card skins" data-name="panoramic classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-27.png" alt="Panoramic Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Panoramic Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="soulburst bandit" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-28.png" alt="Soulburst Bandit" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Soulburst Bandit</h3></div>
+      </article>
+      <article class="card skins" data-name="freehand spectre" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-29.png" alt="Freehand Spectre" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Freehand Spectre</h3></div>
+      </article>
+      <article class="card skins" data-name="space piercer guardian" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-30.png" alt="Space Piercer Guardian" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Space Piercer Guardian</h3></div>
+      </article>
+      <article class="card skins" data-name="perch shorty" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-31.png" alt="Perch Shorty" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Perch Shorty</h3></div>
+      </article>
+      <article class="card skins" data-name="heartbreaker sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-32.png" alt="Heartbreaker Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartbreaker Sheriff</h3></div>
+      </article>
+      <article class="card skins" data-name="freehand odin" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-33.png" alt="Freehand Odin" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Freehand Odin</h3></div>
+      </article>
+      <article class="card skins" data-name="freehand marshal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-34.png" alt="Freehand Marshal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Freehand Marshal</h3></div>
+      </article>
+      <article class="card skins" data-name="heartseeker stinger" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-35.png" alt="Heartseeker Stinger" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartseeker Stinger</h3></div>
+      </article>
+      <article class="card skins" data-name="heartbreaker operator" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-36.png" alt="Heartbreaker Operator" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartbreaker Operator</h3></div>
+      </article>
+      <article class="card skins" data-name="heartseeker guardian" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/267122852/skin-37.png" alt="Heartseeker Guardian" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heartseeker Guardian</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="agents" id="agents">
+    <div class="block-title">
+      <h2>Agents</h2>
+      <p class="category-count" data-count data-total="24" data-unit="items">24 items</p>
+    </div>
+    <div class="cards">
+      <article class="card agents" data-name="a3bfb853-43b2-7238-a4f1-ad90e9e46bcc" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>a3bfb853-43b2-7238-a4f1-ad90e9e46bcc</h3></div>
+      </article>
+      <article class="card agents" data-name="cc8b64c8-4b25-4ff9-6e7f-37b4da43d235" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>cc8b64c8-4b25-4ff9-6e7f-37b4da43d235</h3></div>
+      </article>
+      <article class="card agents" data-name="22697a3d-45bf-8dd7-4fec-84a9e28c69d7" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>22697a3d-45bf-8dd7-4fec-84a9e28c69d7</h3></div>
+      </article>
+      <article class="card agents" data-name="f94c3b30-42be-e959-889c-5aa313dba261" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f94c3b30-42be-e959-889c-5aa313dba261</h3></div>
+      </article>
+      <article class="card agents" data-name="41fb69c1-4189-7b37-f117-bcaf1e96f1bf" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>41fb69c1-4189-7b37-f117-bcaf1e96f1bf</h3></div>
+      </article>
+      <article class="card agents" data-name="1e58de9c-4950-5125-93e9-a0aee9f98746" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1e58de9c-4950-5125-93e9-a0aee9f98746</h3></div>
+      </article>
+      <article class="card agents" data-name="7c8a4701-4de6-9355-b254-e09bc2a34b72" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>7c8a4701-4de6-9355-b254-e09bc2a34b72</h3></div>
+      </article>
+      <article class="card agents" data-name="efba5359-4016-a1e5-7626-b1ae76895940" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>efba5359-4016-a1e5-7626-b1ae76895940</h3></div>
+      </article>
+      <article class="card agents" data-name="dade69b4-4f5a-8528-247b-219e5a1facd6" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>dade69b4-4f5a-8528-247b-219e5a1facd6</h3></div>
+      </article>
+      <article class="card agents" data-name="6f2a04ca-43e0-be17-7f36-b3908627744d" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>6f2a04ca-43e0-be17-7f36-b3908627744d</h3></div>
+      </article>
+      <article class="card agents" data-name="601dbbe7-43ce-be57-2a40-4abd24953621" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>601dbbe7-43ce-be57-2a40-4abd24953621</h3></div>
+      </article>
+      <article class="card agents" data-name="df1cb487-4902-002e-5c17-d28e83e78588" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>df1cb487-4902-002e-5c17-d28e83e78588</h3></div>
+      </article>
+      <article class="card agents" data-name="95b78ed7-4637-86d9-7e41-71ba8c293152" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>95b78ed7-4637-86d9-7e41-71ba8c293152</h3></div>
+      </article>
+      <article class="card agents" data-name="117ed9e3-49f3-6512-3ccf-0cada7e3823b" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>117ed9e3-49f3-6512-3ccf-0cada7e3823b</h3></div>
+      </article>
+      <article class="card agents" data-name="5f8d3a7f-467b-97f3-062c-13acf203c006" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5f8d3a7f-467b-97f3-062c-13acf203c006</h3></div>
+      </article>
+      <article class="card agents" data-name="707eab51-4836-f488-046a-cda6bf494859" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>707eab51-4836-f488-046a-cda6bf494859</h3></div>
+      </article>
+      <article class="card agents" data-name="0e38b510-41a8-5780-5e8f-568b2a4f2d6c" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>0e38b510-41a8-5780-5e8f-568b2a4f2d6c</h3></div>
+      </article>
+      <article class="card agents" data-name="7f94d92c-4234-0a36-9646-3a87eb8b5c89" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>7f94d92c-4234-0a36-9646-3a87eb8b5c89</h3></div>
+      </article>
+      <article class="card agents" data-name="e370fa57-4757-3604-3648-499e1f642d3f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e370fa57-4757-3604-3648-499e1f642d3f</h3></div>
+      </article>
+      <article class="card agents" data-name="b444168c-4e35-8076-db47-ef9bf368f384" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>b444168c-4e35-8076-db47-ef9bf368f384</h3></div>
+      </article>
+      <article class="card agents" data-name="8e253930-4c05-31dd-1b6c-968525494517" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>8e253930-4c05-31dd-1b6c-968525494517</h3></div>
+      </article>
+      <article class="card agents" data-name="1dbf2edd-4729-0984-3115-daa5eed44993" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1dbf2edd-4729-0984-3115-daa5eed44993</h3></div>
+      </article>
+      <article class="card agents" data-name="bb2a4828-46eb-8cd1-e765-15848195d751" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>bb2a4828-46eb-8cd1-e765-15848195d751</h3></div>
+      </article>
+      <article class="card agents" data-name="92eeef5d-43b5-1d4a-8d03-b3927a09034b" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>92eeef5d-43b5-1d4a-8d03-b3927a09034b</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="buddies" id="buddies">
+    <div class="block-title">
+      <h2>Gun Buddies</h2>
+      <p class="category-count" data-count data-total="72" data-unit="items">72 items</p>
+    </div>
+    <div class="cards">
+      <article class="card buddies" data-name="542bbefc-4f38-02f8-2a2c-42bd4d4170f2" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>542bbefc-4f38-02f8-2a2c-42bd4d4170f2</h3></div>
+      </article>
+      <article class="card buddies" data-name="d35dda28-4912-24af-3c72-b4adf236b537" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d35dda28-4912-24af-3c72-b4adf236b537</h3></div>
+      </article>
+      <article class="card buddies" data-name="c3dfc971-4c08-956f-ca4e-6282315ed771" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c3dfc971-4c08-956f-ca4e-6282315ed771</h3></div>
+      </article>
+      <article class="card buddies" data-name="108a36d5-44ef-9b4c-b783-b29a6a9ae340" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>108a36d5-44ef-9b4c-b783-b29a6a9ae340</h3></div>
+      </article>
+      <article class="card buddies" data-name="d27bee0c-47bd-db44-4a06-0e9be602a9e8" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d27bee0c-47bd-db44-4a06-0e9be602a9e8</h3></div>
+      </article>
+      <article class="card buddies" data-name="bf83de96-4cd7-28de-e4e7-07b6d071fd19" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>bf83de96-4cd7-28de-e4e7-07b6d071fd19</h3></div>
+      </article>
+      <article class="card buddies" data-name="4b151cfd-453d-3919-d415-35958e30e40e" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>4b151cfd-453d-3919-d415-35958e30e40e</h3></div>
+      </article>
+      <article class="card buddies" data-name="0854b92d-4b95-7bbf-c3c0-4986c84afdc0" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>0854b92d-4b95-7bbf-c3c0-4986c84afdc0</h3></div>
+      </article>
+      <article class="card buddies" data-name="2fced8c3-40d1-997a-9b4e-39a15db65ed1" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>2fced8c3-40d1-997a-9b4e-39a15db65ed1</h3></div>
+      </article>
+      <article class="card buddies" data-name="af1165cf-4ebb-d9aa-d98c-e8bdd11064e4" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>af1165cf-4ebb-d9aa-d98c-e8bdd11064e4</h3></div>
+      </article>
+      <article class="card buddies" data-name="b2a43277-4ee1-d0a6-d434-b294ef6469e9" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>b2a43277-4ee1-d0a6-d434-b294ef6469e9</h3></div>
+      </article>
+      <article class="card buddies" data-name="c58337a2-4495-e5bf-b571-96b2b62f93cc" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c58337a2-4495-e5bf-b571-96b2b62f93cc</h3></div>
+      </article>
+      <article class="card buddies" data-name="59fd71a3-4c6f-30e8-bff3-cd81fe316718" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>59fd71a3-4c6f-30e8-bff3-cd81fe316718</h3></div>
+      </article>
+      <article class="card buddies" data-name="e411c0f6-4287-0e2f-4b5f-2e8170ffd805" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e411c0f6-4287-0e2f-4b5f-2e8170ffd805</h3></div>
+      </article>
+      <article class="card buddies" data-name="fee36e9f-4136-4d78-9ea4-fd8f89fa040a" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>fee36e9f-4136-4d78-9ea4-fd8f89fa040a</h3></div>
+      </article>
+      <article class="card buddies" data-name="f4599250-454f-b027-282b-b0b5e972c6db" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f4599250-454f-b027-282b-b0b5e972c6db</h3></div>
+      </article>
+      <article class="card buddies" data-name="89ac98ec-495d-680b-22cb-d3afe04eae6e" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>89ac98ec-495d-680b-22cb-d3afe04eae6e</h3></div>
+      </article>
+      <article class="card buddies" data-name="f674accd-43be-712e-8fed-fd88b6438841" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f674accd-43be-712e-8fed-fd88b6438841</h3></div>
+      </article>
+      <article class="card buddies" data-name="84693baf-4a2f-8f25-7091-f3868bc430f8" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>84693baf-4a2f-8f25-7091-f3868bc430f8</h3></div>
+      </article>
+      <article class="card buddies" data-name="f72bfb46-4b57-bb2e-0cfe-bfa9c5089eb3" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f72bfb46-4b57-bb2e-0cfe-bfa9c5089eb3</h3></div>
+      </article>
+      <article class="card buddies" data-name="d5061e49-44fa-3e30-242c-fc8d01f01187" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d5061e49-44fa-3e30-242c-fc8d01f01187</h3></div>
+      </article>
+      <article class="card buddies" data-name="f609e15e-4cf4-af19-7488-b88886298750" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f609e15e-4cf4-af19-7488-b88886298750</h3></div>
+      </article>
+      <article class="card buddies" data-name="5f77afcd-4fe2-7869-ed3f-068e8bacaa0c" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5f77afcd-4fe2-7869-ed3f-068e8bacaa0c</h3></div>
+      </article>
+      <article class="card buddies" data-name="7a80d833-4aa4-cac3-88dc-00b2d2c0f3a4" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>7a80d833-4aa4-cac3-88dc-00b2d2c0f3a4</h3></div>
+      </article>
+      <article class="card buddies" data-name="5d4e4f23-40c8-95a9-55b7-b9bb4c55470f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5d4e4f23-40c8-95a9-55b7-b9bb4c55470f</h3></div>
+      </article>
+      <article class="card buddies" data-name="6ca8162e-4399-b767-68e0-3ebad5ec5b18" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>6ca8162e-4399-b767-68e0-3ebad5ec5b18</h3></div>
+      </article>
+      <article class="card buddies" data-name="5786e2f0-4641-c831-3e6f-0e911904dbb2" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5786e2f0-4641-c831-3e6f-0e911904dbb2</h3></div>
+      </article>
+      <article class="card buddies" data-name="52e28e6c-46f1-c370-1ab1-c89ab5f060fa" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>52e28e6c-46f1-c370-1ab1-c89ab5f060fa</h3></div>
+      </article>
+      <article class="card buddies" data-name="d782c0e3-47af-494b-8f6e-dfad9cf0f703" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>d782c0e3-47af-494b-8f6e-dfad9cf0f703</h3></div>
+      </article>
+      <article class="card buddies" data-name="35434633-4a4c-dcf2-803d-01a6f2927ab8" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>35434633-4a4c-dcf2-803d-01a6f2927ab8</h3></div>
+      </article>
+      <article class="card buddies" data-name="2539ef35-419e-1c46-782f-398e97d212fa" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>2539ef35-419e-1c46-782f-398e97d212fa</h3></div>
+      </article>
+      <article class="card buddies" data-name="9a4b137f-48f6-e46b-aef1-0a8a8df17a57" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>9a4b137f-48f6-e46b-aef1-0a8a8df17a57</h3></div>
+      </article>
+      <article class="card buddies" data-name="2e7eaec5-4acd-6d51-4e73-a9bb30450480" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>2e7eaec5-4acd-6d51-4e73-a9bb30450480</h3></div>
+      </article>
+      <article class="card buddies" data-name="5d5b910a-4113-53ae-160a-aea270ea5029" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5d5b910a-4113-53ae-160a-aea270ea5029</h3></div>
+      </article>
+      <article class="card buddies" data-name="a5111d11-4374-23c4-f2e9-eda50de1f475" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>a5111d11-4374-23c4-f2e9-eda50de1f475</h3></div>
+      </article>
+      <article class="card buddies" data-name="c14745d0-4958-26d9-60e6-7c863080fef1" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>c14745d0-4958-26d9-60e6-7c863080fef1</h3></div>
+      </article>
+      <article class="card buddies" data-name="66c26557-4ee6-6a61-83d4-04bd138ee2e4" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>66c26557-4ee6-6a61-83d4-04bd138ee2e4</h3></div>
+      </article>
+      <article class="card buddies" data-name="ed388de0-4f6e-8451-8340-ed991b482fdd" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ed388de0-4f6e-8451-8340-ed991b482fdd</h3></div>
+      </article>
+      <article class="card buddies" data-name="ca289ec7-4747-5d93-8254-40b4baa59e03" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ca289ec7-4747-5d93-8254-40b4baa59e03</h3></div>
+      </article>
+      <article class="card buddies" data-name="fb5a1cb7-4508-bcb8-f8e4-75b6d2145317" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>fb5a1cb7-4508-bcb8-f8e4-75b6d2145317</h3></div>
+      </article>
+      <article class="card buddies" data-name="3d1a73a2-47cf-d82a-c884-b486084c5b42" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>3d1a73a2-47cf-d82a-c884-b486084c5b42</h3></div>
+      </article>
+      <article class="card buddies" data-name="72229aec-40b8-7117-0a17-b38be68c9e46" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>72229aec-40b8-7117-0a17-b38be68c9e46</h3></div>
+      </article>
+      <article class="card buddies" data-name="ab361eac-4cc7-c896-b3ae-0e8a17a97e14" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ab361eac-4cc7-c896-b3ae-0e8a17a97e14</h3></div>
+      </article>
+      <article class="card buddies" data-name="304808a0-425b-452d-cf63-3abd74138964" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>304808a0-425b-452d-cf63-3abd74138964</h3></div>
+      </article>
+      <article class="card buddies" data-name="e9c947f0-43c2-dc31-e7fc-5e9c170bc931" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>e9c947f0-43c2-dc31-e7fc-5e9c170bc931</h3></div>
+      </article>
+      <article class="card buddies" data-name="33663d99-405b-fe21-a4ce-c9a38371e296" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>33663d99-405b-fe21-a4ce-c9a38371e296</h3></div>
+      </article>
+      <article class="card buddies" data-name="7e48cfb7-4ca8-c978-06a9-28aefa84c69a" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>7e48cfb7-4ca8-c978-06a9-28aefa84c69a</h3></div>
+      </article>
+      <article class="card buddies" data-name="ac72bb9a-4368-8502-5dac-698d72021c81" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>ac72bb9a-4368-8502-5dac-698d72021c81</h3></div>
+      </article>
+      <article class="card buddies" data-name="b8475e7a-4c10-8c8a-bca0-ae860ae3eec8" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>b8475e7a-4c10-8c8a-bca0-ae860ae3eec8</h3></div>
+      </article>
+      <article class="card buddies" data-name="b7937008-47f1-660e-c567-9ca0a0dc3370" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>b7937008-47f1-660e-c567-9ca0a0dc3370</h3></div>
+      </article>
+      <article class="card buddies" data-name="71a62d6c-4515-044d-0c86-47af6f3d3c8f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>71a62d6c-4515-044d-0c86-47af6f3d3c8f</h3></div>
+      </article>
+      <article class="card buddies" data-name="fe575bbd-4ebc-78b4-84b0-7ea97d6f9833" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>fe575bbd-4ebc-78b4-84b0-7ea97d6f9833</h3></div>
+      </article>
+      <article class="card buddies" data-name="4f818b02-4018-30b1-8072-d79d85b2bf99" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>4f818b02-4018-30b1-8072-d79d85b2bf99</h3></div>
+      </article>
+      <article class="card buddies" data-name="fdea7d2b-4cc7-e129-1e14-3da6e4d710e5" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>fdea7d2b-4cc7-e129-1e14-3da6e4d710e5</h3></div>
+      </article>
+      <article class="card buddies" data-name="3b056085-4578-fc8c-553f-2db7aac380fb" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>3b056085-4578-fc8c-553f-2db7aac380fb</h3></div>
+      </article>
+      <article class="card buddies" data-name="a53b80ff-4f51-d8a2-89a6-daa8f1122704" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>a53b80ff-4f51-d8a2-89a6-daa8f1122704</h3></div>
+      </article>
+      <article class="card buddies" data-name="9024d9bf-466b-3592-58c3-deb9b494e7fa" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>9024d9bf-466b-3592-58c3-deb9b494e7fa</h3></div>
+      </article>
+      <article class="card buddies" data-name="5bb0e196-47b4-f20b-bd1c-428f41e02190" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5bb0e196-47b4-f20b-bd1c-428f41e02190</h3></div>
+      </article>
+      <article class="card buddies" data-name="1bf92981-42da-5148-6be2-bfbddf7a9818" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1bf92981-42da-5148-6be2-bfbddf7a9818</h3></div>
+      </article>
+      <article class="card buddies" data-name="5dcc7d9e-4ef4-2189-698d-539e6257ea9e" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>5dcc7d9e-4ef4-2189-698d-539e6257ea9e</h3></div>
+      </article>
+      <article class="card buddies" data-name="1e553d0e-422f-46c6-4378-5299272355c0" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1e553d0e-422f-46c6-4378-5299272355c0</h3></div>
+      </article>
+      <article class="card buddies" data-name="78c4cd56-43ee-96c5-06f8-eeb81f30181d" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>78c4cd56-43ee-96c5-06f8-eeb81f30181d</h3></div>
+      </article>
+      <article class="card buddies" data-name="639932bc-4391-ea01-ea96-cd8dcab7088a" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>639932bc-4391-ea01-ea96-cd8dcab7088a</h3></div>
+      </article>
+      <article class="card buddies" data-name="bd57203c-45d3-e5c0-7c61-6793f368de1a" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>bd57203c-45d3-e5c0-7c61-6793f368de1a</h3></div>
+      </article>
+      <article class="card buddies" data-name="f95bee22-4015-efde-9349-4bb455c1b702" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>f95bee22-4015-efde-9349-4bb455c1b702</h3></div>
+      </article>
+      <article class="card buddies" data-name="23511e47-44f8-a1b2-34da-09b2962693e5" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>23511e47-44f8-a1b2-34da-09b2962693e5</h3></div>
+      </article>
+      <article class="card buddies" data-name="8fd7deb8-4696-6452-aa4d-7cb35efacd69" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>8fd7deb8-4696-6452-aa4d-7cb35efacd69</h3></div>
+      </article>
+      <article class="card buddies" data-name="bc4ed542-484d-1766-84df-46948a390bec" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>bc4ed542-484d-1766-84df-46948a390bec</h3></div>
+      </article>
+      <article class="card buddies" data-name="1cb1cfef-4976-ad93-27bc-7a89b5e6fb2f" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>1cb1cfef-4976-ad93-27bc-7a89b5e6fb2f</h3></div>
+      </article>
+      <article class="card buddies" data-name="9cd37dd1-4a3c-6b6d-5683-4c9a6ec008e6" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>9cd37dd1-4a3c-6b6d-5683-4c9a6ec008e6</h3></div>
+      </article>
+      <article class="card buddies" data-name="8efb8d51-453b-2acb-75f5-049f4d33bdfb" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>8efb8d51-453b-2acb-75f5-049f4d33bdfb</h3></div>
+      </article>
+      <article class="card buddies" data-name="996795a4-408a-0e71-2e23-5ea4aeecf76b" data-rarity="all">
+        <div class="art"><span class="empty">Artwork unavailable</span></div>
+        <div class="meta"><h3>996795a4-408a-0e71-2e23-5ea4aeecf76b</h3></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="empty" id="empty" hidden>
+    <b>No items match your filters</b>
+    Try a different search term or rarity.
+  </div>
+
+  <section class="cta">
+    <div>
+      <h2>Interested in this account?</h2>
+      <p>Everything shown above is included with the account.</p>
+      <ul>
+        <li>Full access email &amp; password</li>
+        <li>Fast delivery</li>
+        <li>24/7 support</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="legal">&copy; 2026 GO2GAME. VALORANT and all related names and images are trademarks of Riot Games, Inc. GO2GAME is not affiliated with or endorsed by Riot Games. Public inventory preview only: account credentials and recovery details are never shown on this page.</p>
+</div>
+
+<script>
+(() => {
+  const sections = [...document.querySelectorAll('.inv')];
+  const tabs = [...document.querySelectorAll('.tab')];
+  const chips = [...document.querySelectorAll('.rf')];
+  const search = document.getElementById('search');
+  const results = document.getElementById('results');
+  const empty = document.getElementById('empty');
+  const total = sections.reduce((n, s) => n + s.querySelectorAll('.card').length, 0);
+  const state = { section: 'all', rarity: 'all', query: '' };
+  let timer;
+
+  function apply() {
+    let shown = 0;
+    for (const section of sections) {
+      const inSection = state.section === 'all' || section.dataset.section === state.section;
+      let visible = 0;
+      for (const card of section.querySelectorAll('.card')) {
+        const match = inSection
+          && (state.rarity === 'all' || card.dataset.rarity === state.rarity)
+          && (!state.query || card.dataset.name.includes(state.query));
+        card.hidden = !match;
+        if (match) visible++;
+      }
+      section.hidden = visible === 0;
+      const counter = section.querySelector('[data-count]');
+      const sectionTotal = Number(counter.dataset.total);
+      const unit = counter.dataset.unit || 'items';
+      counter.textContent = visible === sectionTotal ? `${sectionTotal} ${unit}` : `${visible} of ${sectionTotal} ${unit}`;
+      shown += visible;
+    }
+    results.textContent = `Showing ${shown} of ${total} items`;
+    empty.hidden = shown !== 0;
+  }
+
+  function press(buttons, active) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b === active)));
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    state.section = tab.dataset.section;
+    press(tabs, tab);
+    apply();
+  }));
+
+  chips.forEach(chip => chip.addEventListener('click', () => setRarity(chip.dataset.rarity)));
+
+  function setRarity(rarity) {
+    state.rarity = state.rarity === rarity && rarity !== 'all' ? 'all' : rarity;
+    press(chips, chips.find(c => c.dataset.rarity === state.rarity));
+    apply();
+  }
+
+  document.querySelectorAll('[data-jump-rarity]').forEach(button => button.addEventListener('click', () => {
+    setRarity(button.dataset.jumpRarity);
+    document.getElementById('locker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.query = search.value.toLowerCase().trim(); apply(); }, 120);
+  });
+
+  // Preferred image first, optional fallback image second, placeholder as last resort.
+  document.addEventListener('error', event => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (img.dataset.fb && img.src !== img.dataset.fb) {
+      img.src = img.dataset.fb;
+    } else {
+      const holder = img.closest('.art');
+      if (holder) holder.classList.add('missing');
+      img.remove();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>

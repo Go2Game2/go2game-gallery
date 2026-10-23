@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080912">
+<title>GO2GAME · VALORANT · 23 Skins</title>
+<link rel="preconnect" href="https://media.valorant-api.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #07080f;
+  --panel: #0e1120;
+  --panel-2: #141829;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #eef0f8;
+  --muted: #8f97b2;
+  --faint: #5d6482;
+  --accent: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.18);
+  --gold: #e5bd6a;
+  --glow-1: rgba(139, 92, 246, 0.20);
+  --glow-2: rgba(229, 189, 106, 0.10);
+  --bar-bg: rgba(7, 8, 15, 0.84);
+  --btn-bg: #eef0f8;
+  --btn-fg: #0b0d18;
+  --brand-grad: linear-gradient(135deg, #8b5cf6, #5b3fd1);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(139, 92, 246, 0.35);
+  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hl-width: 172px;
+}
+:root {
+  --bg: #080912;
+  --panel: #101321;
+  --panel-2: #171a2b;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 70, 85, 0.42);
+  --text: #f4f5fa;
+  --muted: #9da4b8;
+  --faint: #636b82;
+  --accent: #ff4655;
+  --accent-soft: rgba(255, 70, 85, 0.16);
+  --gold: #f5c451;
+  --glow-1: rgba(255, 70, 85, 0.16);
+  --glow-2: rgba(84, 112, 255, 0.12);
+  --bar-bg: rgba(8, 9, 18, 0.88);
+  --btn-bg: linear-gradient(135deg, #ff5966, #d92f45);
+  --btn-fg: #fff;
+  --brand-grad: linear-gradient(135deg, #ff5966, #d92f45);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(255, 70, 85, 0.3);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 10% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(780px 480px at 100% 0%, var(--glow-2), transparent 55%);
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.container { width: min(1360px, 100% - 40px); margin-inline: auto; }
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: 0.2px; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--brand-grad); color: var(--brand-fg);
+  font-size: 12px; font-weight: 800; box-shadow: 0 6px 20px var(--brand-shadow);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px;
+  background: var(--btn-bg); color: var(--btn-fg); font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line-strong); }
+
+/* Hero */
+.hero { padding: 30px 0 4px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  margin: 10px 0 10px; font-family: var(--font-display); font-size: clamp(30px, 4.6vw, 54px);
+  line-height: 1.07; letter-spacing: -0.025em; font-weight: 800;
+}
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--muted); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 999px;
+  background: var(--panel); border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.chip small { color: var(--muted); font-size: 12px; font-weight: 500; }
+.chip.gold { border-color: rgba(245, 196, 81, 0.45); background: rgba(245, 196, 81, 0.08); color: #f5c451; }
+.chip.good { border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.08); color: #34d399; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px; }
+.stat {
+  position: relative; padding: 18px 18px 16px; overflow: hidden; border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid var(--line);
+  --tone: var(--accent);
+}
+.stat::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--tone); }
+.stat b { display: block; font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Panels */
+.panel {
+  padding: 22px; border-radius: 14px; border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+.panel h2 { font-size: 16px; font-weight: 700; }
+.panel .sub { margin: 4px 0 16px; color: var(--muted); font-size: 13px; }
+.grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+
+.rbar { display: flex; gap: 2px; height: 12px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.06); }
+.rbar i { display: block; min-width: 5px; height: 100%; background: var(--rc); }
+.rbar.thin { height: 8px; }
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-top: 16px; }
+.legend button {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; cursor: pointer; text-align: left;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 13px; transition: border-color 0.15s;
+}
+.legend button:hover { border-color: var(--line-strong); }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rc); box-shadow: 0 0 12px var(--rg); }
+.legend em { margin-left: auto; font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+.matrix { display: grid; gap: 12px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.mrow { display: grid; grid-template-columns: 78px 1fr 36px; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); }
+.mrow b { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+
+.dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; align-content: start; }
+.dl div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.dl dt { color: var(--muted); font-size: 13px; }
+.dl dd { margin: 0; font-size: 14px; font-weight: 600; text-align: right; }
+
+/* Highlights */
+.block-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 38px 0 14px; }
+.block-title h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.block-title p { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.hl {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, var(--hl-width)); gap: 12px; overflow-x: auto;
+  padding: 4px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+}
+.hl .card { scroll-snap-align: start; }
+
+/* Toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 30; margin-top: 38px; padding: 12px 0 10px;
+  background: var(--bar-bg); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.tb-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tb-row + .tb-row { margin-top: 10px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 8px 14px; border-radius: 9px; border: 1px solid transparent; background: transparent;
+  color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.tab span { margin-left: 6px; font-weight: 500; opacity: 0.7; }
+.tab:hover { color: var(--text); }
+.tab[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); }
+.search { position: relative; flex: 1; min-width: 200px; }
+.search svg { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search input {
+  width: 100%; padding: 10px 14px 10px 38px; border-radius: 10px; outline: none; font: inherit; font-size: 14px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+}
+.search input::placeholder { color: var(--faint); }
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.rfilters { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.rf {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600;
+}
+.rf .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rc, var(--text)); }
+.rf em { font-style: normal; opacity: 0.7; font-variant-numeric: tabular-nums; }
+.rf:hover { border-color: var(--line-strong); color: var(--text); }
+.rf[aria-pressed="true"] { border-color: var(--rc, var(--text)); color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.results { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* Inventory */
+.inv { margin-top: 34px; scroll-margin-top: 150px; }
+.inv .block-title { margin-top: 0; }
+.empty { margin-top: 40px; padding: 52px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 14px; }
+.empty b { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; }
+
+/* Footer */
+.cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  margin-top: 60px; padding: 34px; border-radius: 18px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--glow-1), var(--glow-2)), var(--panel);
+}
+.cta h2 { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.cta p { margin-top: 6px; color: var(--muted); }
+.cta ul { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
+.cta li::before { content: "✓"; margin-right: 7px; color: var(--gold); font-weight: 800; }
+.legal { margin: 26px 0 44px; color: var(--faint); font-size: 12px; text-align: center; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .container { width: calc(100% - 28px); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .dl { grid-template-columns: 1fr; }
+  .toolbar { margin-top: 28px; }
+  .results { margin-left: 0; width: 100%; }
+  .cta { padding: 24px; }
+  .btn { width: 100%; justify-content: center; }
+  .topbar .btn { width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+.hero h1 em { background: linear-gradient(90deg, #fff, #ff7c87); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stats { grid-template-columns: repeat(5, 1fr); }
+.stat.skins, .stat.knives { --tone: #ff4655; }
+.stat.agents { --tone: #a78bfa; }
+.stat.level { --tone: #38bdf8; }
+.stat.rank { --tone: #f5c451; }
+.stat.text b { font-size: clamp(19px, 2vw, 25px); line-height: 1.5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 13px; }
+.card {
+  position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 12px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.card::before { content: ""; position: absolute; inset: 0 0 auto; z-index: 2; height: 3px; background: var(--accent); opacity: .8; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 14px 30px rgba(0, 0, 0, .42); }
+.card .art { display: grid; place-items: center; aspect-ratio: 16 / 10; overflow: hidden; background: radial-gradient(ellipse at center, rgba(255, 70, 85, .10), transparent 70%), #0c0e19; }
+.card .art img { width: 100%; height: 100%; object-fit: contain; padding: 12px; transition: transform .3s ease; }
+.card:hover .art img { transform: scale(1.05); }
+.card.skin .art img { padding: 8px; }
+.card.agents .art { aspect-ratio: 4 / 3; background: radial-gradient(ellipse at 50% 75%, rgba(130, 120, 255, .20), transparent 68%), #0c0e19; }
+.card.agents .art img { object-fit: contain; object-position: center bottom; padding: 0 8px; }
+.card.buddies .art { aspect-ratio: 1; }
+.card .meta { min-height: 57px; padding: 11px 12px; border-top: 1px solid var(--line); }
+.card .meta h3 { font-size: 13px; font-weight: 650; line-height: 1.35; }
+.hl { grid-auto-columns: minmax(220px, 280px); }
+.hl .card { scroll-snap-align: start; }
+.category-count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.inv { scroll-margin-top: 150px; }
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) {
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .cards .meta { padding: 9px; }
+  .cards .meta h3 { font-size: 11.5px; }
+  .hl { grid-auto-columns: 220px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">G2G</span>GO2GAME</div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">VALORANT · Account Preview</div>
+    <h1>AP account<br><em>23 weapon skins</em> · 20 agents</h1>
+    <p>Explore the account inventory, featured cosmetics, agents and gun buddies. Account credentials and private recovery details are not shown.</p>
+    <div class="chips">
+      <span class="chip"><small>Region</small>AP</span>
+      <span class="chip"><small>Rank</small>Other</span>
+      <span class="chip"><small>Level</small>227</span>
+      <span class="chip gold">0 knives</span>
+      <span class="chip good">$24.30</span>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Account totals">
+    <div class="stat skins"><b>23</b><span>Weapon skins</span></div>
+    <div class="stat knives"><b>0</b><span>Knives</span></div>
+    <div class="stat agents"><b>20</b><span>Agents</span></div>
+    <div class="stat level"><b>227</b><span>Account level</span></div>
+    <div class="stat rank text"><b>Other</b><span>Current rank</span></div>
+  </section>
+
+  <section class="grid-2">
+    <div class="panel">
+      <h2>Inventory overview</h2>
+      <p class="sub">122 listed items across weapon skins, agents and gun buddies.</p>
+      <div class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Weapon Skins</dt><dd>23</dd></div>
+        <div><dt>Agents</dt><dd>20</dd></div>
+        <div><dt>Gun Buddies</dt><dd>79</dd></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Account details</h2>
+      <p class="sub">Key facts and available balances.</p>
+      <dl class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Region</dt><dd>AP</dd></div>
+        <div><dt>Account level</dt><dd>227</dd></div>
+        <div><dt>Rank</dt><dd>Other</dd></div>
+        <div><dt>Total VP spent</dt><dd>7,100 VP</dd></div>
+        <div><dt>Current VP</dt><dd>153 VP</dd></div>
+        <div><dt>Radianite Points</dt><dd>495</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="block-title">
+    <h2>Highlights</h2>
+    <p>Featured and premium cosmetics</p>
+  </div>
+  <div class="hl">
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-01.png" alt="Gaia&#39;s Vengeance Ghost" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Gaia&#39;s Vengeance Ghost</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-02.png" alt="Prime//2.0 Phantom" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Prime//2.0 Phantom</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-03.png" alt="Reaver Vandal" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Reaver Vandal</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-04.png" alt="Forsaken Spectre" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Forsaken Spectre</h3></div>
+    </article>
+  </div>
+
+  <div class="toolbar" id="locker">
+    <div class="tb-row">
+      <div class="tabs" role="group" aria-label="Inventory category">
+        <button type="button" class="tab" data-section="all" aria-pressed="true">All<span>122</span></button>
+        <button type="button" class="tab" data-section="skins" aria-pressed="false">Weapon Skins<span>23</span></button>
+        <button type="button" class="tab" data-section="agents" aria-pressed="false">Agents<span>20</span></button>
+        <button type="button" class="tab" data-section="buddies" aria-pressed="false">Gun Buddies<span>79</span></button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="search" placeholder="Search skins, agents and buddies" autocomplete="off" aria-label="Search inventory">
+      </label>
+    </div>
+    <div class="tb-row"><div class="results" id="results" aria-live="polite">Showing 122 of 122 items</div></div>
+  </div>
+
+  <section class="inv" data-section="skins" id="skins">
+    <div class="block-title">
+      <h2>Weapon Skins</h2>
+      <p class="category-count" data-count data-total="23" data-unit="items">23 items</p>
+    </div>
+    <div class="cards">
+      <article class="card skins" data-name="gaia&#39;s vengeance ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-01.png" alt="Gaia&#39;s Vengeance Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Gaia&#39;s Vengeance Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="prime//2.0 phantom" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-02.png" alt="Prime//2.0 Phantom" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Prime//2.0 Phantom</h3></div>
+      </article>
+      <article class="card skins" data-name="reaver vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-03.png" alt="Reaver Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Reaver Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="forsaken spectre" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-04.png" alt="Forsaken Spectre" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Forsaken Spectre</h3></div>
+      </article>
+      <article class="card skins" data-name="velocity shorty" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-05.png" alt="Velocity Shorty" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Velocity Shorty</h3></div>
+      </article>
+      <article class="card skins" data-name="overlay sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-06.png" alt="Overlay Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Overlay Sheriff</h3></div>
+      </article>
+      <article class="card skins" data-name="finesse classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-07.png" alt="Finesse Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Finesse Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="wunderkind shorty" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-08.png" alt="Wunderkind Shorty" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Wunderkind Shorty</h3></div>
+      </article>
+      <article class="card skins" data-name="hush ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-09.png" alt="Hush Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hush Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="aero frenzy" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-10.png" alt="Aero Frenzy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Aero Frenzy</h3></div>
+      </article>
+      <article class="card skins" data-name="sidekick shorty" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-11.png" alt="Sidekick Shorty" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sidekick Shorty</h3></div>
+      </article>
+      <article class="card skins" data-name="game over sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-12.png" alt="Game Over Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Game Over Sheriff</h3></div>
+      </article>
+      <article class="card skins" data-name="karabasan shorty" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-13.png" alt="Karabasan Shorty" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Karabasan Shorty</h3></div>
+      </article>
+      <article class="card skins" data-name="fire/arm classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-14.png" alt="FIRE/arm Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>FIRE/arm Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="soul silencer ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-15.png" alt="Soul Silencer Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Soul Silencer Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="coalition: cobra frenzy" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-16.png" alt="Coalition: Cobra Frenzy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Coalition: Cobra Frenzy</h3></div>
+      </article>
+      <article class="card skins" data-name="striker classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-17.png" alt="Striker Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Striker Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="jigsaw ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-18.png" alt="Jigsaw Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Jigsaw Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="shimmer classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-19.png" alt="Shimmer Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Shimmer Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="spitfire frenzy" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-20.png" alt="Spitfire Frenzy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Spitfire Frenzy</h3></div>
+      </article>
+      <article class="card skins" data-name="live wire frenzy" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-21.png" alt="Live Wire Frenzy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Live Wire Frenzy</h3></div>
+      </article>
+      <article class="card skins" data-name="protektor sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-22.png" alt="Protektor Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Protektor Sheriff</h3></div>
+      </article>
+      <article class="card skins" data-name="wayfarer sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/L608l/skin-23.png" alt="Wayfarer Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Wayfarer Sheriff</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="agents" id="agents">
+    <div class="block-title">
+      <h2>Agents</h2>
+      <p class="category-count" data-count data-total="20" data-unit="items">20 items</p>
+    </div>
+    <div class="cards">
+      <article class="card agents" data-name="harbor" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/fullportrait.png" alt="Harbor" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Harbor</h3></div>
+      </article>
+      <article class="card agents" data-name="clove" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/fullportrait.png" alt="Clove" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Clove</h3></div>
+      </article>
+      <article class="card agents" data-name="skye" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/fullportrait.png" alt="Skye" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Skye</h3></div>
+      </article>
+      <article class="card agents" data-name="chamber" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/fullportrait.png" alt="Chamber" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Chamber</h3></div>
+      </article>
+      <article class="card agents" data-name="neon" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/fullportrait.png" alt="Neon" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Neon</h3></div>
+      </article>
+      <article class="card agents" data-name="deadlock" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/fullportrait.png" alt="Deadlock" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Deadlock</h3></div>
+      </article>
+      <article class="card agents" data-name="kay/o" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/fullportrait.png" alt="KAY/O" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>KAY/O</h3></div>
+      </article>
+      <article class="card agents" data-name="vyse" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/fullportrait.png" alt="Vyse" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Vyse</h3></div>
+      </article>
+      <article class="card agents" data-name="yoru" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/fullportrait.png" alt="Yoru" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Yoru</h3></div>
+      </article>
+      <article class="card agents" data-name="omen" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png" alt="Omen" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Omen</h3></div>
+      </article>
+      <article class="card agents" data-name="reyna" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png" alt="Reyna" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Reyna</h3></div>
+      </article>
+      <article class="card agents" data-name="killjoy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png" alt="Killjoy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Killjoy</h3></div>
+      </article>
+      <article class="card agents" data-name="iso" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/fullportrait.png" alt="Iso" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Iso</h3></div>
+      </article>
+      <article class="card agents" data-name="viper" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/fullportrait.png" alt="Viper" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Viper</h3></div>
+      </article>
+      <article class="card agents" data-name="breach" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/fullportrait.png" alt="Breach" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Breach</h3></div>
+      </article>
+      <article class="card agents" data-name="cypher" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/fullportrait.png" alt="Cypher" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cypher</h3></div>
+      </article>
+      <article class="card agents" data-name="astra" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png" alt="Astra" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Astra</h3></div>
+      </article>
+      <article class="card agents" data-name="gekko" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png" alt="Gekko" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Gekko</h3></div>
+      </article>
+      <article class="card agents" data-name="raze" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/fullportrait.png" alt="Raze" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Raze</h3></div>
+      </article>
+      <article class="card agents" data-name="fade" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/fullportrait.png" alt="Fade" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fade</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="buddies" id="buddies">
+    <div class="block-title">
+      <h2>Gun Buddies</h2>
+      <p class="category-count" data-count data-total="79" data-unit="items">79 items</p>
+    </div>
+    <div class="cards">
+      <article class="card buddies" data-name="ep5: gold buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/35dfad07-4785-3baf-eb33-2fa29d705344/displayicon.png" alt="EP5: Gold Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP5: Gold Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="get the picture buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/f2f9607f-44b9-c50e-3635-fe9806b6bcb7/displayicon.png" alt="Get The Picture Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Get The Picture Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="memory chip buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/7cec4eb4-4078-4dc4-7f00-d6b7348e347a/displayicon.png" alt="Memory Chip Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Memory Chip Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="bot buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/12372dbb-4f09-4b26-6fe5-779488aaa9f9/displayicon.png" alt="Bot Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Bot Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 8 // 2 coin buddy " data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/5d4e4f23-40c8-95a9-55b7-b9bb4c55470f/displayicon.png" alt="Ep 8 // 2 Coin Buddy " loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 8 // 2 Coin Buddy </h3></div>
+      </article>
+      <article class="card buddies" data-name="monster cookie buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/3b056085-4578-fc8c-553f-2db7aac380fb/displayicon.png" alt="Monster Cookie Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Monster Cookie Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="big announcement buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/8493f0fd-4d25-7834-86d6-b89ddb1d3f97/displayicon.png" alt="Big Announcement Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Big Announcement Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="beckoner buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/bf997358-4a99-c1f8-37b0-5fa64200cdce/displayicon.png" alt="Beckoner Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Beckoner Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="chicken out buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/69af0ee3-410a-6cfd-6065-09a1b493b6fd/displayicon.png" alt="Chicken Out Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Chicken Out Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 7 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/23511e47-44f8-a1b2-34da-09b2962693e5/displayicon.png" alt="Ep 7 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 7 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="all-purpose slipper buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/99f75010-444e-e009-014b-4ead5d1deee3/displayicon.png" alt="All-purpose Slipper Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>All-purpose Slipper Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="white hat buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/e058e4f5-40c4-a26a-e6c7-33a4baf2e21f/displayicon.png" alt="White Hat Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>White Hat Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="hot bling buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/b9feb6b6-493c-b76e-ce8e-6fb371ca2cf5/displayicon.png" alt="Hot Bling Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hot Bling Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="call me buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/5cb098fa-4a93-24e8-4b6c-2396d262de1e/displayicon.png" alt="Call Me Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Call Me Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep3: silver buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/7ab11a34-4aff-7865-03a5-859f6aa20baa/displayicon.png" alt="EP3: Silver Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP3: Silver Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="pride buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/2e7eaec5-4acd-6d51-4e73-a9bb30450480/displayicon.png" alt="Pride Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pride Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="epilogue: eco the bulldog buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/f537e5e5-462d-2492-f0c1-02872ae12daf/displayicon.png" alt="Epilogue: Eco the Bulldog Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epilogue: Eco the Bulldog Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="white snake buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/7d2614f5-4811-a2b8-5e5a-4c8d8d1c558f/displayicon.png" alt="White Snake Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>White Snake Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="epilogue: pocket sized sheriff buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/3826b22c-4f99-587f-a06d-e48db47d3fc4/displayicon.png" alt="Epilogue: Pocket Sized Sheriff Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epilogue: Pocket Sized Sheriff Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ragna-rock out buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/54bdfb80-4e4d-50eb-6db6-74b284a76835/displayicon.png" alt="Ragna-Rock Out Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ragna-Rock Out Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="owl charm buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/ebbced2d-4851-6b5d-ff3f-5baaea322dbf/displayicon.png" alt="Owl Charm Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Owl Charm Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 7 // 2 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/72229aec-40b8-7117-0a17-b38be68c9e46/displayicon.png" alt="Ep 7 // 2 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 7 // 2 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="octobuddy buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/934164fc-49dd-1e67-0896-6c8e645fd081/displayicon.png" alt="Octobuddy Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Octobuddy Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="v25 act i coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/8b1100e0-4c4a-5a6e-d21d-b9ba6688f6cb/displayicon.png" alt="V25 ACT I Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>V25 ACT I Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 4 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/8955df3c-4021-3ad5-ef40-9f80e18618e7/displayicon.png" alt="EP 4 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP 4 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="artisan buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/3275436e-4b32-5d1f-6056-2d80132c88f8/displayicon.png" alt="Artisan Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Artisan Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="paracord buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/1e553d0e-422f-46c6-4378-5299272355c0/displayicon.png" alt="Paracord Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Paracord Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 5 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/02bb2322-4bf5-24d1-1406-eba33a0ef7dc/displayicon.png" alt="Ep 5 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 5 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 3 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/0a31022f-4e2e-d59b-d0f3-a4b8e0da0564/displayicon.png" alt="Ep 3 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 3 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="lava lamp buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/68519176-433c-214c-2339-0d9299516ced/displayicon.png" alt="Lava Lamp Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lava Lamp Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 5 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/d2fdb49a-4829-0fb8-102a-6d9112e3c367/displayicon.png" alt="Ep 5 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 5 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep9: platinum buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/757829fd-4d56-c9f0-dcbb-9b8d1eb23acf/displayicon.png" alt="EP9: Platinum Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP9: Platinum Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="walis tambo buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/575ddf35-42a1-1de6-8599-d78dc7fb9a02/displayicon.png" alt="Walis Tambo Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Walis Tambo Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="time&#39;s up buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/c47cc20c-48eb-c5cf-95f5-0bbd1fb641d3/displayicon.png" alt="Time&#39;s Up Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Time&#39;s Up Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep8: gold buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/56f0903e-49ba-7eaa-1632-3ab5b5dd57fc/displayicon.png" alt="EP8: Gold Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP8: Gold Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="magic hummingbird buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/52f2b3de-4f8d-76ba-3231-ea9cf4a37687/displayicon.png" alt="Magic Hummingbird Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Magic Hummingbird Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep6: platinum buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/299c52e2-4e57-8ef1-4783-9cbc82504fa3/displayicon.png" alt="EP6: Platinum Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP6: Platinum Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ultrabright torch buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/4231564e-4354-3120-66c6-e6a3d9abab70/displayicon.png" alt="UltraBright Torch Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>UltraBright Torch Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="epilogue: dumpster fire buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/6e7d4b62-402b-9e2a-c531-58b5091d8dc8/displayicon.png" alt="Epilogue: Dumpster Fire Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epilogue: Dumpster Fire Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="luna buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/756be48e-4769-542d-45ad-53ac67c5b872/displayicon.png" alt="Luna Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Luna Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="icy crate buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/90c69d6b-4cd2-9d0c-8c3f-ada26e881ea9/displayicon.png" alt="Icy Crate Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Icy Crate Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 6 // 2 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/c58337a2-4495-e5bf-b571-96b2b62f93cc/displayicon.png" alt="Ep 6 // 2 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 6 // 2 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="utility belt buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/10cc794b-4180-4e7e-e546-7abe50039d80/displayicon.png" alt="Utility Belt Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Utility Belt Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 2 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/12b3da72-47ec-a773-5da4-a390e6321cb6/displayicon.png" alt="EP 2 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP 2 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="grim delight buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/7cf1fc2c-4456-fa8f-b9f6-c9be7092163f/displayicon.png" alt="Grim Delight Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Grim Delight Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 8 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/fdea7d2b-4cc7-e129-1e14-3da6e4d710e5/displayicon.png" alt="Ep 8 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 8 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="perfect pattern buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/25c6099b-411e-573e-673c-b594cba84c10/displayicon.png" alt="Perfect Pattern Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Perfect Pattern Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="edible ornament buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/30f2297a-48ed-7a0d-edbb-6fb9769ad6b1/displayicon.png" alt="Edible Ornament Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Edible Ornament Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="pocket knife buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/a2e04067-4ea8-ff47-be4a-f780bdf5e1f7/displayicon.png" alt="Pocket Knife Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pocket Knife Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="epilogue: prize size kay/o buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/8c3bfdc9-4199-66c4-e87e-0f954029dcee/displayicon.png" alt="Epilogue: Prize Size KAY/O Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epilogue: Prize Size KAY/O Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="cat-eye buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/59fd71a3-4c6f-30e8-bff3-cd81fe316718/displayicon.png" alt="Cat-Eye Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cat-Eye Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="the key to ancient mysteries buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/b39fbd41-4ec6-242d-02a6-dfbe7322c579/displayicon.png" alt="The Key to Ancient Mysteries Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>The Key to Ancient Mysteries Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 4 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/06cccd4f-4502-ca82-9b56-e884e611ca2c/displayicon.png" alt="Ep 4 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 4 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="champions 2022 dad hat buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/9a6231c0-41e5-c42d-9745-cc9010877fdc/displayicon.png" alt="Champions 2022 Dad Hat Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Champions 2022 Dad Hat Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 4 // 2 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/31e9874a-4e7b-da49-8f3c-2f8e0dff43ac/displayicon.png" alt="Ep 4 // 2 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 4 // 2 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep4: silver buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/85a9ad0f-4a3b-e748-d8d5-68b9c66f3d8d/displayicon.png" alt="EP4: Silver Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP4: Silver Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 3 // 2 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/d2fadb86-42f0-625c-79f7-339ec97e7cac/displayicon.png" alt="Ep 3 // 2 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 3 // 2 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="cruiser buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/8a431014-470c-d11f-24e0-35a992e427d2/displayicon.png" alt="Cruiser Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cruiser Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 5 // 2 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/e411c0f6-4287-0e2f-4b5f-2e8170ffd805/displayicon.png" alt="Ep 5 // 2 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 5 // 2 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="valorant coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/ac72bb9a-4368-8502-5dac-698d72021c81/displayicon.png" alt="VALORANT Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>VALORANT Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="big ol&#39; barrel buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/0de92897-4ad5-9941-b3e8-f4bff93a81f7/displayicon.png" alt="Big ol&#39; Barrel Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Big ol&#39; Barrel Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 6 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/fe575bbd-4ebc-78b4-84b0-7ea97d6f9833/displayicon.png" alt="Ep 6 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 6 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 6 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/66c26557-4ee6-6a61-83d4-04bd138ee2e4/displayicon.png" alt="Ep 6 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 6 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 9 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/a5111d11-4374-23c4-f2e9-eda50de1f475/displayicon.png" alt="Ep 9 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 9 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="can&#39;t break me buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/022534ce-41f1-c4f9-b953-2e9f19e82e24/displayicon.png" alt="Can&#39;t Break Me Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Can&#39;t Break Me Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="exquisitely wrapped buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/ada5f921-4d81-f439-0017-0e86877a02bd/displayicon.png" alt="Exquisitely Wrapped Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Exquisitely Wrapped Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="tactic kappa buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/c4e6f0b2-493c-8ff2-128d-2dab80e74a60/displayicon.png" alt="Tactic Kappa Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tactic Kappa Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="v25 act iv coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/9024d9bf-466b-3592-58c3-deb9b494e7fa/displayicon.png" alt="V25 ACT IV Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>V25 ACT IV Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 9 // 2 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/859682f6-4aae-eae3-9c93-9d96f59eaa8d/displayicon.png" alt="Ep 9 // 2 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 9 // 2 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="happy dumpling buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/0911b78d-48a7-fb01-3ccd-0ca9a3996f75/displayicon.png" alt="Happy Dumpling Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Happy Dumpling Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="cup o&#39; crown buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/271c1309-4185-d000-c8bf-56a170c17e1c/displayicon.png" alt="Cup o&#39; Crown Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cup o&#39; Crown Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="nazar bead buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/f8c59f2f-48f8-a93d-5bef-a7902bde82a5/displayicon.png" alt="Nazar Bead Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Nazar Bead Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 9 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/5d5b910a-4113-53ae-160a-aea270ea5029/displayicon.png" alt="Ep 9 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 9 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="light stick buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/9219f3fa-4c89-7d7d-f2dc-ed8ad3c7bf6e/displayicon.png" alt="Light Stick Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Light Stick Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="matryoshka buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/3166a9a9-4778-5003-9dcf-8abfe5341d87/displayicon.png" alt="Matryoshka Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Matryoshka Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="surge protector buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/89dac44e-42b3-3fd3-50ec-7982980d2b53/displayicon.png" alt="Surge Protector Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Surge Protector Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 3 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/84953dce-470e-a3a2-30c1-569f960c50c3/displayicon.png" alt="EP 3 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP 3 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="arcane cupcake buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/2092c352-47d8-be17-724c-14807ea7041a/displayicon.png" alt="Arcane Cupcake Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Arcane Cupcake Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="heavy lifting buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/e97d4c30-4ca4-d433-f24c-789abcfdf059/displayicon.png" alt="Heavy Lifting Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Heavy Lifting Buddy</h3></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="empty" id="empty" hidden>
+    <b>No items match your filters</b>
+    Try a different search term or rarity.
+  </div>
+
+  <section class="cta">
+    <div>
+      <h2>Interested in this account?</h2>
+      <p>Everything shown above is included with the account.</p>
+      <ul>
+        <li>Full access email &amp; password</li>
+        <li>Fast delivery</li>
+        <li>24/7 support</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="legal">&copy; 2026 GO2GAME. VALORANT and all related names and images are trademarks of Riot Games, Inc. GO2GAME is not affiliated with or endorsed by Riot Games. Public inventory preview only: account credentials and recovery details are never shown on this page.</p>
+</div>
+
+<script>
+(() => {
+  const sections = [...document.querySelectorAll('.inv')];
+  const tabs = [...document.querySelectorAll('.tab')];
+  const chips = [...document.querySelectorAll('.rf')];
+  const search = document.getElementById('search');
+  const results = document.getElementById('results');
+  const empty = document.getElementById('empty');
+  const total = sections.reduce((n, s) => n + s.querySelectorAll('.card').length, 0);
+  const state = { section: 'all', rarity: 'all', query: '' };
+  let timer;
+
+  function apply() {
+    let shown = 0;
+    for (const section of sections) {
+      const inSection = state.section === 'all' || section.dataset.section === state.section;
+      let visible = 0;
+      for (const card of section.querySelectorAll('.card')) {
+        const match = inSection
+          && (state.rarity === 'all' || card.dataset.rarity === state.rarity)
+          && (!state.query || card.dataset.name.includes(state.query));
+        card.hidden = !match;
+        if (match) visible++;
+      }
+      section.hidden = visible === 0;
+      const counter = section.querySelector('[data-count]');
+      const sectionTotal = Number(counter.dataset.total);
+      const unit = counter.dataset.unit || 'items';
+      counter.textContent = visible === sectionTotal ? `${sectionTotal} ${unit}` : `${visible} of ${sectionTotal} ${unit}`;
+      shown += visible;
+    }
+    results.textContent = `Showing ${shown} of ${total} items`;
+    empty.hidden = shown !== 0;
+  }
+
+  function press(buttons, active) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b === active)));
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    state.section = tab.dataset.section;
+    press(tabs, tab);
+    apply();
+  }));
+
+  chips.forEach(chip => chip.addEventListener('click', () => setRarity(chip.dataset.rarity)));
+
+  function setRarity(rarity) {
+    state.rarity = state.rarity === rarity && rarity !== 'all' ? 'all' : rarity;
+    press(chips, chips.find(c => c.dataset.rarity === state.rarity));
+    apply();
+  }
+
+  document.querySelectorAll('[data-jump-rarity]').forEach(button => button.addEventListener('click', () => {
+    setRarity(button.dataset.jumpRarity);
+    document.getElementById('locker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.query = search.value.toLowerCase().trim(); apply(); }, 120);
+  });
+
+  // Preferred image first, optional fallback image second, placeholder as last resort.
+  document.addEventListener('error', event => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (img.dataset.fb && img.src !== img.dataset.fb) {
+      img.src = img.dataset.fb;
+    } else {
+      const holder = img.closest('.art');
+      if (holder) holder.classList.add('missing');
+      img.remove();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>

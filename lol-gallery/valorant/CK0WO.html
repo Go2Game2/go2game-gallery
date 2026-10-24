@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080912">
+<title>GO2GAME · VALORANT · 24 Skins</title>
+<link rel="preconnect" href="https://media.valorant-api.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #07080f;
+  --panel: #0e1120;
+  --panel-2: #141829;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #eef0f8;
+  --muted: #8f97b2;
+  --faint: #5d6482;
+  --accent: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.18);
+  --gold: #e5bd6a;
+  --glow-1: rgba(139, 92, 246, 0.20);
+  --glow-2: rgba(229, 189, 106, 0.10);
+  --bar-bg: rgba(7, 8, 15, 0.84);
+  --btn-bg: #eef0f8;
+  --btn-fg: #0b0d18;
+  --brand-grad: linear-gradient(135deg, #8b5cf6, #5b3fd1);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(139, 92, 246, 0.35);
+  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hl-width: 172px;
+}
+:root {
+  --bg: #080912;
+  --panel: #101321;
+  --panel-2: #171a2b;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 70, 85, 0.42);
+  --text: #f4f5fa;
+  --muted: #9da4b8;
+  --faint: #636b82;
+  --accent: #ff4655;
+  --accent-soft: rgba(255, 70, 85, 0.16);
+  --gold: #f5c451;
+  --glow-1: rgba(255, 70, 85, 0.16);
+  --glow-2: rgba(84, 112, 255, 0.12);
+  --bar-bg: rgba(8, 9, 18, 0.88);
+  --btn-bg: linear-gradient(135deg, #ff5966, #d92f45);
+  --btn-fg: #fff;
+  --brand-grad: linear-gradient(135deg, #ff5966, #d92f45);
+  --brand-fg: #fff;
+  --brand-shadow: rgba(255, 70, 85, 0.3);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 10% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(780px 480px at 100% 0%, var(--glow-2), transparent 55%);
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.container { width: min(1360px, 100% - 40px); margin-inline: auto; }
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: 0.2px; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--brand-grad); color: var(--brand-fg);
+  font-size: 12px; font-weight: 800; box-shadow: 0 6px 20px var(--brand-shadow);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px;
+  background: var(--btn-bg); color: var(--btn-fg); font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line-strong); }
+
+/* Hero */
+.hero { padding: 30px 0 4px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  margin: 10px 0 10px; font-family: var(--font-display); font-size: clamp(30px, 4.6vw, 54px);
+  line-height: 1.07; letter-spacing: -0.025em; font-weight: 800;
+}
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--muted); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 999px;
+  background: var(--panel); border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.chip small { color: var(--muted); font-size: 12px; font-weight: 500; }
+.chip.gold { border-color: rgba(245, 196, 81, 0.45); background: rgba(245, 196, 81, 0.08); color: #f5c451; }
+.chip.good { border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.08); color: #34d399; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px; }
+.stat {
+  position: relative; padding: 18px 18px 16px; overflow: hidden; border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid var(--line);
+  --tone: var(--accent);
+}
+.stat::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--tone); }
+.stat b { display: block; font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Panels */
+.panel {
+  padding: 22px; border-radius: 14px; border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+.panel h2 { font-size: 16px; font-weight: 700; }
+.panel .sub { margin: 4px 0 16px; color: var(--muted); font-size: 13px; }
+.grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+
+.rbar { display: flex; gap: 2px; height: 12px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.06); }
+.rbar i { display: block; min-width: 5px; height: 100%; background: var(--rc); }
+.rbar.thin { height: 8px; }
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-top: 16px; }
+.legend button {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; cursor: pointer; text-align: left;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 13px; transition: border-color 0.15s;
+}
+.legend button:hover { border-color: var(--line-strong); }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rc); box-shadow: 0 0 12px var(--rg); }
+.legend em { margin-left: auto; font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+.matrix { display: grid; gap: 12px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.mrow { display: grid; grid-template-columns: 78px 1fr 36px; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); }
+.mrow b { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+
+.dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0; align-content: start; }
+.dl div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.dl dt { color: var(--muted); font-size: 13px; }
+.dl dd { margin: 0; font-size: 14px; font-weight: 600; text-align: right; }
+
+/* Highlights */
+.block-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 38px 0 14px; }
+.block-title h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.block-title p { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.hl {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, var(--hl-width)); gap: 12px; overflow-x: auto;
+  padding: 4px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+}
+.hl .card { scroll-snap-align: start; }
+
+/* Toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 30; margin-top: 38px; padding: 12px 0 10px;
+  background: var(--bar-bg); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.tb-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tb-row + .tb-row { margin-top: 10px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 8px 14px; border-radius: 9px; border: 1px solid transparent; background: transparent;
+  color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.tab span { margin-left: 6px; font-weight: 500; opacity: 0.7; }
+.tab:hover { color: var(--text); }
+.tab[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); }
+.search { position: relative; flex: 1; min-width: 200px; }
+.search svg { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search input {
+  width: 100%; padding: 10px 14px 10px 38px; border-radius: 10px; outline: none; font: inherit; font-size: 14px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+}
+.search input::placeholder { color: var(--faint); }
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.rfilters { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.rf {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600;
+}
+.rf .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rc, var(--text)); }
+.rf em { font-style: normal; opacity: 0.7; font-variant-numeric: tabular-nums; }
+.rf:hover { border-color: var(--line-strong); color: var(--text); }
+.rf[aria-pressed="true"] { border-color: var(--rc, var(--text)); color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.results { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* Inventory */
+.inv { margin-top: 34px; scroll-margin-top: 150px; }
+.inv .block-title { margin-top: 0; }
+.empty { margin-top: 40px; padding: 52px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 14px; }
+.empty b { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; }
+
+/* Footer */
+.cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  margin-top: 60px; padding: 34px; border-radius: 18px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--glow-1), var(--glow-2)), var(--panel);
+}
+.cta h2 { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.cta p { margin-top: 6px; color: var(--muted); }
+.cta ul { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
+.cta li::before { content: "✓"; margin-right: 7px; color: var(--gold); font-weight: 800; }
+.legal { margin: 26px 0 44px; color: var(--faint); font-size: 12px; text-align: center; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .container { width: calc(100% - 28px); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .dl { grid-template-columns: 1fr; }
+  .toolbar { margin-top: 28px; }
+  .results { margin-left: 0; width: 100%; }
+  .cta { padding: 24px; }
+  .btn { width: 100%; justify-content: center; }
+  .topbar .btn { width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+.hero h1 em { background: linear-gradient(90deg, #fff, #ff7c87); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stats { grid-template-columns: repeat(5, 1fr); }
+.stat.skins, .stat.knives { --tone: #ff4655; }
+.stat.agents { --tone: #a78bfa; }
+.stat.level { --tone: #38bdf8; }
+.stat.rank { --tone: #f5c451; }
+.stat.text b { font-size: clamp(19px, 2vw, 25px); line-height: 1.5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 13px; }
+.card {
+  position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 12px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.card::before { content: ""; position: absolute; inset: 0 0 auto; z-index: 2; height: 3px; background: var(--accent); opacity: .8; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 14px 30px rgba(0, 0, 0, .42); }
+.card .art { display: grid; place-items: center; aspect-ratio: 16 / 10; overflow: hidden; background: radial-gradient(ellipse at center, rgba(255, 70, 85, .10), transparent 70%), #0c0e19; }
+.card .art img { width: 100%; height: 100%; object-fit: contain; padding: 12px; transition: transform .3s ease; }
+.card:hover .art img { transform: scale(1.05); }
+.card.skin .art img { padding: 8px; }
+.card.agents .art { aspect-ratio: 4 / 3; background: radial-gradient(ellipse at 50% 75%, rgba(130, 120, 255, .20), transparent 68%), #0c0e19; }
+.card.agents .art img { object-fit: contain; object-position: center bottom; padding: 0 8px; }
+.card.buddies .art { aspect-ratio: 1; }
+.card .meta { min-height: 57px; padding: 11px 12px; border-top: 1px solid var(--line); }
+.card .meta h3 { font-size: 13px; font-weight: 650; line-height: 1.35; }
+.hl { grid-auto-columns: minmax(220px, 280px); }
+.hl .card { scroll-snap-align: start; }
+.category-count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.inv { scroll-margin-top: 150px; }
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) {
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .cards .meta { padding: 9px; }
+  .cards .meta h3 { font-size: 11.5px; }
+  .hl { grid-auto-columns: 220px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">G2G</span>GO2GAME</div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">VALORANT · Account Preview</div>
+    <h1>EU account<br><em>24 weapon skins</em> · 12 agents</h1>
+    <p>Explore the account inventory, featured cosmetics, agents and gun buddies. Account credentials and private recovery details are not shown.</p>
+    <div class="chips">
+      <span class="chip"><small>Region</small>EU</span>
+      <span class="chip"><small>Rank</small>Unranked</span>
+      <span class="chip"><small>Level</small>80</span>
+      <span class="chip gold">4 knives</span>
+      <span class="chip good">$99.99</span>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Account totals">
+    <div class="stat skins"><b>24</b><span>Weapon skins</span></div>
+    <div class="stat knives"><b>4</b><span>Knives</span></div>
+    <div class="stat agents"><b>12</b><span>Agents</span></div>
+    <div class="stat level"><b>80</b><span>Account level</span></div>
+    <div class="stat rank text"><b>Unranked</b><span>Current rank</span></div>
+  </section>
+
+  <section class="grid-2">
+    <div class="panel">
+      <h2>Inventory overview</h2>
+      <p class="sub">71 listed items across weapon skins, agents and gun buddies.</p>
+      <div class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Weapon Skins</dt><dd>24</dd></div>
+        <div><dt>Agents</dt><dd>12</dd></div>
+        <div><dt>Gun Buddies</dt><dd>35</dd></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Account details</h2>
+      <p class="sub">Key facts and available balances.</p>
+      <dl class="dl" style="grid-template-columns: 1fr;">
+        <div><dt>Region</dt><dd>EU</dd></div>
+        <div><dt>Account level</dt><dd>80</dd></div>
+        <div><dt>Rank</dt><dd>Unranked</dd></div>
+        <div><dt>Total VP spent</dt><dd>27,100 VP</dd></div>
+        <div><dt>Current VP</dt><dd>185 VP</dd></div>
+        <div><dt>Radianite Points</dt><dd>100</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="block-title">
+    <h2>Highlights</h2>
+    <p>Featured and premium cosmetics</p>
+  </div>
+  <div class="hl">
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-01.png" alt="Champions 2025 Butterfly Knife" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Champions 2025 Butterfly Knife</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-02.png" alt="Nocturnum Scythe" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Nocturnum Scythe</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-03.png" alt="Kuronami Vandal" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Kuronami Vandal</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-04.png" alt="Comet Sword" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Comet Sword</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-05.png" alt="Champions 2025 Vandal" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Champions 2025 Vandal</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-06.png" alt="Magepunk Sparkswitch" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Magepunk Sparkswitch</h3></div>
+    </article>
+  </div>
+
+  <div class="toolbar" id="locker">
+    <div class="tb-row">
+      <div class="tabs" role="group" aria-label="Inventory category">
+        <button type="button" class="tab" data-section="all" aria-pressed="true">All<span>71</span></button>
+        <button type="button" class="tab" data-section="skins" aria-pressed="false">Weapon Skins<span>24</span></button>
+        <button type="button" class="tab" data-section="agents" aria-pressed="false">Agents<span>12</span></button>
+        <button type="button" class="tab" data-section="buddies" aria-pressed="false">Gun Buddies<span>35</span></button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="search" placeholder="Search skins, agents and buddies" autocomplete="off" aria-label="Search inventory">
+      </label>
+    </div>
+    <div class="tb-row"><div class="results" id="results" aria-live="polite">Showing 71 of 71 items</div></div>
+  </div>
+
+  <section class="inv" data-section="skins" id="skins">
+    <div class="block-title">
+      <h2>Weapon Skins</h2>
+      <p class="category-count" data-count data-total="24" data-unit="items">24 items</p>
+    </div>
+    <div class="cards">
+      <article class="card skins" data-name="champions 2025 butterfly knife" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-01.png" alt="Champions 2025 Butterfly Knife" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Champions 2025 Butterfly Knife</h3></div>
+      </article>
+      <article class="card skins" data-name="nocturnum scythe" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-02.png" alt="Nocturnum Scythe" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Nocturnum Scythe</h3></div>
+      </article>
+      <article class="card skins" data-name="kuronami vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-03.png" alt="Kuronami Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Kuronami Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="comet sword" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-04.png" alt="Comet Sword" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Comet Sword</h3></div>
+      </article>
+      <article class="card skins" data-name="champions 2025 vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-05.png" alt="Champions 2025 Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Champions 2025 Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="magepunk sparkswitch" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-06.png" alt="Magepunk Sparkswitch" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Magepunk Sparkswitch</h3></div>
+      </article>
+      <article class="card skins" data-name="prelude to chaos vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-07.png" alt="Prelude to Chaos Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Prelude to Chaos Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="mystbloom sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-08.png" alt="Mystbloom Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Mystbloom Sheriff</h3></div>
+      </article>
+      <article class="card skins" data-name="xerøfang ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-09.png" alt="XERØFANG Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>XERØFANG Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="comet vandal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-10.png" alt="Comet Vandal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Comet Vandal</h3></div>
+      </article>
+      <article class="card skins" data-name="comet spectre" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-11.png" alt="Comet Spectre" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Comet Spectre</h3></div>
+      </article>
+      <article class="card skins" data-name="comet ghost" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-12.png" alt="Comet Ghost" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Comet Ghost</h3></div>
+      </article>
+      <article class="card skins" data-name="comet odin" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-13.png" alt="Comet Odin" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Comet Odin</h3></div>
+      </article>
+      <article class="card skins" data-name="interhelm classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-14.png" alt="Interhelm Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Interhelm Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="tacti-series marshal" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-15.png" alt="Tacti-Series Marshal" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tacti-Series Marshal</h3></div>
+      </article>
+      <article class="card skins" data-name="tacti-series frenzy" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-16.png" alt="Tacti-Series Frenzy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tacti-Series Frenzy</h3></div>
+      </article>
+      <article class="card skins" data-name="tacti-series guardian" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-17.png" alt="Tacti-Series Guardian" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tacti-Series Guardian</h3></div>
+      </article>
+      <article class="card skins" data-name="cloudweaver shorty" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-18.png" alt="Cloudweaver Shorty" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cloudweaver Shorty</h3></div>
+      </article>
+      <article class="card skins" data-name="cloudweaver outlaw" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-19.png" alt="Cloudweaver Outlaw" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cloudweaver Outlaw</h3></div>
+      </article>
+      <article class="card skins" data-name="infantry operator" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-20.png" alt="Infantry Operator" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Infantry Operator</h3></div>
+      </article>
+      <article class="card skins" data-name="retrowave sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-21.png" alt="Retrowave Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Retrowave Sheriff</h3></div>
+      </article>
+      <article class="card skins" data-name="tacti-series classic" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-22.png" alt="Tacti-Series Classic" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tacti-Series Classic</h3></div>
+      </article>
+      <article class="card skins" data-name="cloudweaver stinger" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-23.png" alt="Cloudweaver Stinger" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cloudweaver Stinger</h3></div>
+      </article>
+      <article class="card skins" data-name="cloudweaver sheriff" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/CK0WO/skin-24.png" alt="Cloudweaver Sheriff" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cloudweaver Sheriff</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="agents" id="agents">
+    <div class="block-title">
+      <h2>Agents</h2>
+      <p class="category-count" data-count data-total="12" data-unit="items">12 items</p>
+    </div>
+    <div class="cards">
+      <article class="card agents" data-name="vyse" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/fullportrait.png" alt="Vyse" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Vyse</h3></div>
+      </article>
+      <article class="card agents" data-name="killjoy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png" alt="Killjoy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Killjoy</h3></div>
+      </article>
+      <article class="card agents" data-name="yoru" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/fullportrait.png" alt="Yoru" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Yoru</h3></div>
+      </article>
+      <article class="card agents" data-name="waylay" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/fullportrait.png" alt="Waylay" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Waylay</h3></div>
+      </article>
+      <article class="card agents" data-name="reyna" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png" alt="Reyna" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Reyna</h3></div>
+      </article>
+      <article class="card agents" data-name="clove" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/fullportrait.png" alt="Clove" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Clove</h3></div>
+      </article>
+      <article class="card agents" data-name="tejo" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/fullportrait.png" alt="Tejo" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tejo</h3></div>
+      </article>
+      <article class="card agents" data-name="chamber" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/fullportrait.png" alt="Chamber" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Chamber</h3></div>
+      </article>
+      <article class="card agents" data-name="omen" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png" alt="Omen" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Omen</h3></div>
+      </article>
+      <article class="card agents" data-name="cypher" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/fullportrait.png" alt="Cypher" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Cypher</h3></div>
+      </article>
+      <article class="card agents" data-name="gekko" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png" alt="Gekko" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Gekko</h3></div>
+      </article>
+      <article class="card agents" data-name="veto" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/fullportrait.png" alt="Veto" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Veto</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="buddies" id="buddies">
+    <div class="block-title">
+      <h2>Gun Buddies</h2>
+      <p class="category-count" data-count data-total="35" data-unit="items">35 items</p>
+    </div>
+    <div class="cards">
+      <article class="card buddies" data-name="hot new engine buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/af1165cf-4ebb-d9aa-d98c-e8bdd11064e4/displayicon.png" alt="Hot New Engine Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Hot New Engine Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="head in the clouds buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/670cda0d-418c-ff78-91d7-82814c13b672/displayicon.png" alt="Head in the Clouds Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Head in the Clouds Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 8 // 3 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/fdea7d2b-4cc7-e129-1e14-3da6e4d710e5/displayicon.png" alt="Ep 8 // 3 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 8 // 3 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="epilogue: mini mecha buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/54013952-46e2-183a-c278-29ac484bf097/displayicon.png" alt="Epilogue: Mini Mecha Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epilogue: Mini Mecha Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="champions 2025 buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/7e0ce273-42e7-ca78-6dc2-8f86bca56b46/displayicon.png" alt="Champions 2025 Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Champions 2025 Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep9: bronze buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/720c4d4d-4f94-cb57-68c7-0090e23a77e5/displayicon.png" alt="EP9: Bronze Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP9: Bronze Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="beary good fortune buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/07b4a3c8-4fd5-91ca-ee18-5babc3b2c43c/displayicon.png" alt="Beary Good Fortune Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Beary Good Fortune Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="valorant coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/ac72bb9a-4368-8502-5dac-698d72021c81/displayicon.png" alt="VALORANT Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>VALORANT Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 8 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/f72bfb46-4b57-bb2e-0cfe-bfa9c5089eb3/displayicon.png" alt="Ep 8 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 8 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="aemondir buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/c40e6c7d-4180-3aeb-2c3d-b78f1f7e692e/displayicon.png" alt="Aemondir Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Aemondir Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="v25 act iv coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/9024d9bf-466b-3592-58c3-deb9b494e7fa/displayicon.png" alt="V25 ACT IV Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>V25 ACT IV Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="pocket jett buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/c3dfc971-4c08-956f-ca4e-6282315ed771/displayicon.png" alt="Pocket Jett Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Pocket Jett Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="message in a bottle buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/df7fdf8c-4c92-b44a-9020-e1b6e4ccd50f/displayicon.png" alt="Message in a Bottle Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Message in a Bottle Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="v25 act v coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/d35dda28-4912-24af-3c72-b4adf236b537/displayicon.png" alt="V25 ACT V Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>V25 ACT V Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="mr.takoyaki buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/b60a7f7f-4ea6-04c4-4e5d-39badf60f879/displayicon.png" alt="Mr.Takoyaki Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Mr.Takoyaki Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="fortune paws buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/d5061e49-44fa-3e30-242c-fc8d01f01187/displayicon.png" alt="Fortune Paws Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Fortune Paws Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="shoot here buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/f674accd-43be-712e-8fed-fd88b6438841/displayicon.png" alt="Shoot Here Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Shoot Here Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 9 // 1 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/5d5b910a-4113-53ae-160a-aea270ea5029/displayicon.png" alt="Ep 9 // 1 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 9 // 1 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="frgmt x wngmn+ buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/de3371c9-4b91-7525-6607-34acb4696637/displayicon.png" alt="FRGMT x WNGMN+ Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>FRGMT x WNGMN+ Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="tactic kappa buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/c4e6f0b2-493c-8ff2-128d-2dab80e74a60/displayicon.png" alt="Tactic Kappa Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Tactic Kappa Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="epilogue: twisted treat buddy " data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/44725e0f-4313-3540-4fa9-5b926f4e568b/displayicon.png" alt="Epilogue: Twisted Treat Buddy " loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epilogue: Twisted Treat Buddy </h3></div>
+      </article>
+      <article class="card buddies" data-name="duck chillin&#39; buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/ab361eac-4cc7-c896-b3ae-0e8a17a97e14/displayicon.png" alt="Duck Chillin&#39; Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Duck Chillin&#39; Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="lethal dose buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/84693baf-4a2f-8f25-7091-f3868bc430f8/displayicon.png" alt="Lethal Dose Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lethal Dose Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="lava lamp buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/68519176-433c-214c-2339-0d9299516ced/displayicon.png" alt="Lava Lamp Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lava Lamp Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 9 // 2 coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/859682f6-4aae-eae3-9c93-9d96f59eaa8d/displayicon.png" alt="Ep 9 // 2 Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 9 // 2 Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="v25 act vi coin buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/d27bee0c-47bd-db44-4a06-0e9be602a9e8/displayicon.png" alt="V25 ACT VI Coin Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>V25 ACT VI Coin Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep8: bronze buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/3a84f7f9-427b-91fa-2f6f-e8a7aeff8157/displayicon.png" alt="EP8: Bronze Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>EP8: Bronze Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="epilogue: mosh vial buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/0d6f3bb6-44dd-a312-50af-d992b5f72aad/displayicon.png" alt="Epilogue: Mosh Vial Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Epilogue: Mosh Vial Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="light stick buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/9219f3fa-4c89-7d7d-f2dc-ed8ad3c7bf6e/displayicon.png" alt="Light Stick Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Light Stick Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="mini espresso buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/7ab545a7-407b-f4b4-ccc0-b6b642e6273a/displayicon.png" alt="Mini Espresso Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Mini Espresso Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="comet buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/e826de1b-4c4e-5ef7-45bf-a9b360b7daf5/displayicon.png" alt="Comet Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Comet Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="mini mecha buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/7c80cd43-4f82-5d07-c8cf-aa82fada4e2d/displayicon.png" alt="Mini Mecha Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Mini Mecha Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="lotus buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/249a8970-4df0-9db6-4824-1981c4d10a44/displayicon.png" alt="Lotus Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Lotus Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="sleepy bruno buddy" data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/4af8fe99-4140-ed95-54a2-8d9c09566fb0/displayicon.png" alt="Sleepy Bruno Buddy" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Sleepy Bruno Buddy</h3></div>
+      </article>
+      <article class="card buddies" data-name="ep 8 // 2 coin buddy " data-rarity="all">
+        <div class="art"><img src="https://media.valorant-api.com/buddies/5d4e4f23-40c8-95a9-55b7-b9bb4c55470f/displayicon.png" alt="Ep 8 // 2 Coin Buddy " loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Ep 8 // 2 Coin Buddy </h3></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="empty" id="empty" hidden>
+    <b>No items match your filters</b>
+    Try a different search term or rarity.
+  </div>
+
+  <section class="cta">
+    <div>
+      <h2>Interested in this account?</h2>
+      <p>Everything shown above is included with the account.</p>
+      <ul>
+        <li>Full access email &amp; password</li>
+        <li>Fast delivery</li>
+        <li>24/7 support</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="legal">&copy; 2026 GO2GAME. VALORANT and all related names and images are trademarks of Riot Games, Inc. GO2GAME is not affiliated with or endorsed by Riot Games. Public inventory preview only: account credentials and recovery details are never shown on this page.</p>
+</div>
+
+<script>
+(() => {
+  const sections = [...document.querySelectorAll('.inv')];
+  const tabs = [...document.querySelectorAll('.tab')];
+  const chips = [...document.querySelectorAll('.rf')];
+  const search = document.getElementById('search');
+  const results = document.getElementById('results');
+  const empty = document.getElementById('empty');
+  const total = sections.reduce((n, s) => n + s.querySelectorAll('.card').length, 0);
+  const state = { section: 'all', rarity: 'all', query: '' };
+  let timer;
+
+  function apply() {
+    let shown = 0;
+    for (const section of sections) {
+      const inSection = state.section === 'all' || section.dataset.section === state.section;
+      let visible = 0;
+      for (const card of section.querySelectorAll('.card')) {
+        const match = inSection
+          && (state.rarity === 'all' || card.dataset.rarity === state.rarity)
+          && (!state.query || card.dataset.name.includes(state.query));
+        card.hidden = !match;
+        if (match) visible++;
+      }
+      section.hidden = visible === 0;
+      const counter = section.querySelector('[data-count]');
+      const sectionTotal = Number(counter.dataset.total);
+      const unit = counter.dataset.unit || 'items';
+      counter.textContent = visible === sectionTotal ? `${sectionTotal} ${unit}` : `${visible} of ${sectionTotal} ${unit}`;
+      shown += visible;
+    }
+    results.textContent = `Showing ${shown} of ${total} items`;
+    empty.hidden = shown !== 0;
+  }
+
+  function press(buttons, active) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b === active)));
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    state.section = tab.dataset.section;
+    press(tabs, tab);
+    apply();
+  }));
+
+  chips.forEach(chip => chip.addEventListener('click', () => setRarity(chip.dataset.rarity)));
+
+  function setRarity(rarity) {
+    state.rarity = state.rarity === rarity && rarity !== 'all' ? 'all' : rarity;
+    press(chips, chips.find(c => c.dataset.rarity === state.rarity));
+    apply();
+  }
+
+  document.querySelectorAll('[data-jump-rarity]').forEach(button => button.addEventListener('click', () => {
+    setRarity(button.dataset.jumpRarity);
+    document.getElementById('locker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.query = search.value.toLowerCase().trim(); apply(); }, 120);
+  });
+
+  // Preferred image first, optional fallback image second, placeholder as last resort.
+  document.addEventListener('error', event => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (img.dataset.fb && img.src !== img.dataset.fb) {
+      img.src = img.dataset.fb;
+    } else {
+      const holder = img.closest('.art');
+      if (holder) holder.classList.add('missing');
+      img.remove();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>

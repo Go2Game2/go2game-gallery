@@ -310,8 +310,8 @@ button { font: inherit; color: inherit; }
       <h2>Inventory overview</h2>
       <p class="sub">79 listed items across weapon skins, agents and gun buddies.</p>
       <div class="dl" style="grid-template-columns: 1fr;">
-        <div><dt>Knives</dt><dd>0</dd></div>
-        <div><dt>Weapon Skins</dt><dd>31</dd></div>
+        <div><dt>Knives</dt><dd>4</dd></div>
+        <div><dt>Weapon Skins</dt><dd>27</dd></div>
         <div><dt>Agents</dt><dd>24</dd></div>
         <div><dt>Gun Buddies</dt><dd>24</dd></div>
       </div>
@@ -344,14 +344,6 @@ button { font: inherit; color: inherit; }
       <div class="meta"><h3>Ion Karambit</h3></div>
     </article>
     <article class="card skin">
-      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-03.png" alt="Kuronami Marshal" loading="lazy" decoding="async"></div>
-      <div class="meta"><h3>Kuronami Marshal</h3></div>
-    </article>
-    <article class="card skin">
-      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-04.png" alt="VCT x NAVI Classic" loading="lazy" decoding="async"></div>
-      <div class="meta"><h3>VCT x NAVI Classic</h3></div>
-    </article>
-    <article class="card skin">
       <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-05.png" alt="Nebula Knife" loading="lazy" decoding="async"></div>
       <div class="meta"><h3>Nebula Knife</h3></div>
     </article>
@@ -359,13 +351,22 @@ button { font: inherit; color: inherit; }
       <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-06.png" alt="Black.Market Butterfly Knife" loading="lazy" decoding="async"></div>
       <div class="meta"><h3>Black.Market Butterfly Knife</h3></div>
     </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-03.png" alt="Kuronami Marshal" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>Kuronami Marshal</h3></div>
+    </article>
+    <article class="card skin">
+      <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-04.png" alt="VCT x NAVI Classic" loading="lazy" decoding="async"></div>
+      <div class="meta"><h3>VCT x NAVI Classic</h3></div>
+    </article>
   </div>
 
   <div class="toolbar" id="locker">
     <div class="tb-row">
       <div class="tabs" role="group" aria-label="Inventory category">
         <button type="button" class="tab" data-section="all" aria-pressed="true">All<span>79</span></button>
-        <button type="button" class="tab" data-section="skins" aria-pressed="false">Weapon Skins<span>31</span></button>
+        <button type="button" class="tab" data-section="knives" aria-pressed="false">Knives<span>4</span></button>
+        <button type="button" class="tab" data-section="skins" aria-pressed="false">Weapon Skins<span>27</span></button>
         <button type="button" class="tab" data-section="agents" aria-pressed="false">Agents<span>24</span></button>
         <button type="button" class="tab" data-section="buddies" aria-pressed="false">Gun Buddies<span>24</span></button>
       </div>
@@ -377,20 +378,36 @@ button { font: inherit; color: inherit; }
     <div class="tb-row"><div class="results" id="results" aria-live="polite">Showing 79 of 79 items</div></div>
   </div>
 
-  <section class="inv" data-section="skins" id="skins">
+  <section class="inv" data-section="knives" id="knives">
     <div class="block-title">
-      <h2>Weapon Skins</h2>
-      <p class="category-count" data-count data-total="31" data-unit="items">31 items</p>
+      <h2>Knives</h2>
+      <p class="category-count" data-count data-total="4" data-unit="items">4 items</p>
     </div>
     <div class="cards">
-      <article class="card skins" data-name="comet sword" data-rarity="all">
+      <article class="card knives" data-name="comet sword" data-rarity="all">
         <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-01.png" alt="Comet Sword" loading="lazy" decoding="async"></div>
         <div class="meta"><h3>Comet Sword</h3></div>
       </article>
-      <article class="card skins" data-name="ion karambit" data-rarity="all">
+      <article class="card knives" data-name="ion karambit" data-rarity="all">
         <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-02.png" alt="Ion Karambit" loading="lazy" decoding="async"></div>
         <div class="meta"><h3>Ion Karambit</h3></div>
       </article>
+      <article class="card knives" data-name="nebula knife" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-05.png" alt="Nebula Knife" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Nebula Knife</h3></div>
+      </article>
+      <article class="card knives" data-name="black.market butterfly knife" data-rarity="all">
+        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-06.png" alt="Black.Market Butterfly Knife" loading="lazy" decoding="async"></div>
+        <div class="meta"><h3>Black.Market Butterfly Knife</h3></div>
+      </article>
+    </div>
+  </section>
+  <section class="inv" data-section="skins" id="skins">
+    <div class="block-title">
+      <h2>Weapon Skins</h2>
+      <p class="category-count" data-count data-total="27" data-unit="items">27 items</p>
+    </div>
+    <div class="cards">
       <article class="card skins" data-name="kuronami marshal" data-rarity="all">
         <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-03.png" alt="Kuronami Marshal" loading="lazy" decoding="async"></div>
         <div class="meta"><h3>Kuronami Marshal</h3></div>
@@ -398,14 +415,6 @@ button { font: inherit; color: inherit; }
       <article class="card skins" data-name="vct x navi classic" data-rarity="all">
         <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-04.png" alt="VCT x NAVI Classic" loading="lazy" decoding="async"></div>
         <div class="meta"><h3>VCT x NAVI Classic</h3></div>
-      </article>
-      <article class="card skins" data-name="nebula knife" data-rarity="all">
-        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-05.png" alt="Nebula Knife" loading="lazy" decoding="async"></div>
-        <div class="meta"><h3>Nebula Knife</h3></div>
-      </article>
-      <article class="card skins" data-name="black.market butterfly knife" data-rarity="all">
-        <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-06.png" alt="Black.Market Butterfly Knife" loading="lazy" decoding="async"></div>
-        <div class="meta"><h3>Black.Market Butterfly Knife</h3></div>
       </article>
       <article class="card skins" data-name="neo frontier sheriff" data-rarity="all">
         <div class="art"><img src="https://go2game2.github.io/go2game-gallery/lol-gallery/valorant/assets/8Rznr/skin-07.png" alt="Neo Frontier Sheriff" loading="lazy" decoding="async"></div>

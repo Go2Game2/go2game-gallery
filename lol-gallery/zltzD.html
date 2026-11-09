@@ -243,6 +243,10 @@ button { font: inherit; color: inherit; }
 .season .tag { display: block; margin-top: 3px; color: var(--gold); font-size: 11px; font-weight: 700; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 12px; }
+.collection-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.collection-group { padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.025); }
+.collection-group h3 { margin-bottom: 7px; color: var(--gold); font-size: 12px; letter-spacing: 0.06em; }
+.collection-group p { color: var(--muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
 
 .card {
   --rc: var(--other); --rg: var(--other-glow);
@@ -369,6 +373,25 @@ button { font: inherit; color: inherit; }
         <div><dt>Email change</dt><dd>From Feb 02, 2027</dd></div>
         <div><dt>Linkable to</dt><dd>Xbox</dd></div>
       </dl>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-top: 16px;">
+    <h2>Skin Collection</h2>
+    <p class="sub">Special series and selected outfit rarities.</p>
+    <div class="collection-groups">
+      <div class="collection-group">
+        <h3>LEGENDARY (X8)</h3>
+        <p>The Cube Queen, Spire Assassin, Predator, Raz, Mandalorian, Kymera, Menace, Torin</p>
+      </div>
+      <div class="collection-group">
+        <h3>EPIC (X30)</h3>
+        <p>Selene, Cuddle Team Rider, Pig the Butcher, Agent Jones, Vengeance Jones, Yuki Yubari, Montague, Kondor, Solid Snake, Sunny, Nisha, Reese, J.B. Chimpanski, Tarana, Mave, Cluck, Charlotte, Kor, Oscar, Neymar Jr, Lexa, Snowmando, Lara Croft, Toona Fish, Rebirth Raven, Mancake, Geralt of Rivia, Clark Kent, Hope, Fabio Sparklemane</p>
+      </div>
+      <div class="collection-group">
+        <h3>RARE (X4)</h3>
+        <p>Holiday Boxy, Winterfest Bushranger, Frost Squad, Ruby</p>
+      </div>
     </div>
   </section>
 

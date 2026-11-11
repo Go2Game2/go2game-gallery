@@ -243,10 +243,33 @@ button { font: inherit; color: inherit; }
 .season .tag { display: block; margin-top: 3px; color: var(--gold); font-size: 11px; font-weight: 700; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 12px; }
-.collection-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
-.collection-group { padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.025); }
-.collection-group h3 { margin-bottom: 7px; color: var(--gold); font-size: 12px; letter-spacing: 0.06em; }
-.collection-group p { color: var(--muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.collection-badges { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px; }
+.collection-entry { flex: 1 1 220px; min-width: 0; }
+.collection-badge {
+  --badge: #94a3b8; --glow: rgba(148, 163, 184, 0.3);
+  display: inline-flex; align-items: center; gap: 9px; min-height: 44px;
+  padding: 8px 14px; border: 1px solid var(--badge); border-radius: 999px;
+  background: linear-gradient(110deg, color-mix(in srgb, var(--badge) 16%, transparent), rgba(13, 17, 31, 0.96));
+  box-shadow: 0 0 18px var(--glow), inset 0 0 12px color-mix(in srgb, var(--badge) 10%, transparent);
+  color: #f5f7ff; font-size: 10px; font-weight: 850; letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+.collection-badge::before { content: ""; width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: var(--badge); box-shadow: 0 0 10px var(--badge); }
+.collection-badge b { color: var(--badge); font-size: 18px; letter-spacing: 0; }
+.collection-badge.marvel { --badge: #ff1744; --glow: rgba(255, 23, 68, 0.4); }
+.collection-badge.star-wars { --badge: #ffe500; --glow: rgba(255, 229, 0, 0.35); }
+.collection-badge.icon { --badge: #19d8e5; --glow: rgba(25, 216, 229, 0.35); }
+.collection-badge.gaming-legends { --badge: #ffb000; --glow: rgba(255, 176, 0, 0.35); }
+.collection-badge.legendary { --badge: #ff8200; --glow: rgba(255, 130, 0, 0.35); }
+.collection-badge.epic { --badge: #bf45ff; --glow: rgba(191, 69, 255, 0.4); }
+.collection-badge.rare { --badge: #3498ff; --glow: rgba(52, 152, 255, 0.4); }
+.collection-badge.uncommon { --badge: #48d52a; --glow: rgba(72, 213, 42, 0.35); }
+.collection-skin-names {
+  max-height: 132px; overflow-y: auto; margin: 8px 0 0; padding: 0 8px 0 22px;
+  color: var(--muted); font-size: 12px; line-height: 1.65;
+}
+.collection-skin-names li { padding-left: 2px; }
+.collection-heading { margin-top: 20px; font-size: 13px; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; }
 
 .card {
   --rc: var(--other); --rg: var(--other-glow);
@@ -290,6 +313,39 @@ button { font: inherit; color: inherit; }
   .cards { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 9px; }
   .meta h3 { font-size: 11.5px; }
 }
+.fortnite-hero {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  align-items: center; gap: 24px; min-height: 340px; padding: 28px 34px; overflow: hidden;
+  border: 1px solid var(--line); border-radius: 20px;
+  background: linear-gradient(110deg, rgba(14, 17, 32, 0.98) 24%, rgba(14, 17, 32, 0.72) 58%, rgba(14, 17, 32, 0.2));
+}
+.fortnite-hero-copy { position: relative; z-index: 1; }
+.hero-featured { position: relative; display: grid; min-height: 280px; place-items: center; }
+.hero-featured::before {
+  content: ""; position: absolute; width: min(100%, 300px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, var(--featured-glow, rgba(245, 196, 81, 0.34)), transparent 68%);
+}
+.hero-featured img {
+  position: relative; width: min(100%, 310px); max-height: 310px; object-fit: contain;
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.5));
+}
+.hero-featured-label {
+  position: absolute; right: 0; bottom: 8px; z-index: 1; padding: 10px 14px;
+  border: 1px solid var(--line-strong); border-radius: 12px; background: rgba(7, 8, 15, 0.82);
+  backdrop-filter: blur(10px);
+}
+.hero-featured-label span { display: block; color: var(--gold); font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.hero-featured-label b { display: block; margin-top: 2px; font-size: 14px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.hero-actions .btn { min-width: 140px; justify-content: center; }
+.hero-actions .btn.ghost { background: rgba(7, 8, 15, 0.4); }
+@media (max-width: 700px) {
+  .fortnite-hero { grid-template-columns: 1fr; gap: 4px; padding: 24px; }
+  .fortnite-hero-copy { grid-row: 2; }
+  .hero-featured { grid-row: 1; min-height: 210px; }
+  .hero-featured img { max-height: 220px; width: min(100%, 220px); }
+  .hero-featured-label { right: 2px; bottom: 2px; }
+}
 </style>
 </head>
 <body>
@@ -300,12 +356,21 @@ button { font: inherit; color: inherit; }
     <a class="btn ghost" href="https://www.eldorado.gg/users/Go2Game/shop/Account" target="_blank" rel="noopener noreferrer">View on Eldorado</a>
   </header>
 
-  <section class="hero">
-    <div class="eyebrow">Fortnite Account Preview</div>
-    <h1>Level <em>2,907</em> locker<br>564 cosmetics inside</h1>
-    <p>Complete inventory snapshot of this account: every outfit, pickaxe, emote and glider, with rarity and account details.</p>
-    <div class="chips">
-<span class="chip"><small>Platform</small>Epic Games (PC)</span><span class="chip gold">★ 4 Exclusives</span><span class="chip"><small>Battle Passes</small>7</span>    </div>
+  <section class="hero fortnite-hero">
+    <div class="fortnite-hero-copy">
+      <div class="eyebrow">Fortnite Account Preview</div>
+      <h1>Level <em>2,907</em> locker<br>564 cosmetics inside</h1>
+      <p>Complete inventory snapshot of this account: every outfit, pickaxe, emote and glider, with rarity and account details.</p>
+      <div class="chips">
+<span class="chip"><small>Platform</small>Epic Games (PC)</span><span class="chip gold">★ 4 Exclusives</span><span class="chip"><small>Battle Passes</small>7</span><span class="chip"><small>Lifetime wins</small>173</span>      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="#locker">View locker</a>
+<a class="btn" href="https://www.eldorado.gg/users/Go2Game/shop/Account" target="_blank" rel="noopener noreferrer">Buy on Eldorado</a>      </div>
+    </div>
+    <div class="hero-featured" style="--featured-glow: var(--exclusive-glow)">
+      <img src="https://fortnite-api.com/images/cosmetics/br/cid_926_athena_commando_f_streetfashiondiamond/icon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_926_athena_commando_f_streetfashiondiamond/smallicon.png" alt="Cloud Striker" width="310" height="310" fetchpriority="high" decoding="async">
+      <div class="hero-featured-label"><span>Featured Exclusive</span><b>Cloud Striker</b></div>
+    </div>
   </section>
 
   <section class="stats" aria-label="Account totals">
@@ -378,19 +443,28 @@ button { font: inherit; color: inherit; }
 
   <section class="panel" style="margin-top: 16px;">
     <h2>Skin Collection</h2>
-    <p class="sub">Special series and selected outfit rarities.</p>
-    <div class="collection-groups">
-      <div class="collection-group">
-        <h3>LEGENDARY (X12)</h3>
-        <p>Deadpool, Mizuki, Fade, Gear Specialist Maya, Renzo the Destroyer, Raz, Midas, Blaze, Ronin, The Foundation, Kado Thorne, Eternal Knight</p>
+    <h3 class="collection-heading">Rarity groups</h3>
+    <p class="sub">Outfits grouped by in-game rarity</p>
+    <div class="collection-badges" aria-label="Skin rarity counts">
+      <div class="collection-entry">
+        <span class="collection-badge legendary"><span>LEGENDARY</span><b>12</b></span>
+        <ul class="collection-skin-names" aria-label="LEGENDARY skins">
+<li>Deadpool</li><li>Mizuki</li><li>Fade</li><li>Gear Specialist Maya</li><li>Renzo the Destroyer</li><li>Raz</li><li>Midas</li><li>Blaze</li><li>Ronin</li><li>The Foundation</li><li>Kado Thorne</li><li>Eternal Knight</li>        </ul>
       </div>
-      <div class="collection-group">
-        <h3>EPIC (X57)</h3>
-        <p>Storm, Kingsley, Ahsoka Tano, Highwire, Meowscles, Corrupted Insight, Chaos Agent, Corrupted Shogun, Lt. John Llama, Dark Bomber, Neymar Jr, Ocean, Polar Peely, Gumbo, Fish Thicc, Stray, Thor, Felina, Santa Dogg, T-800, Skye, Agent Peely, Cluck, Mae, Doctor Doom, Spider-Man, TNTina, Siona, Pig the Butcher, Aquaman, Haven, Mystica, Brutus, Yulejacket, Thunder, Antonia, Mystique, Tarana, Shanta, Harlowe, Khaby Lame, Nolan Chance, Lara Croft, Groot, Sage, Jennifer Walters, Tony Stark, Agent Jones, Kit, Lt. Evergreen, Corrupted Arachne, Piper Pace, Jules, Imani, Wolverine, Scuba Jonesy, The Weeknd Combat</p>
+      <div class="collection-entry">
+        <span class="collection-badge epic"><span>EPIC</span><b>57</b></span>
+        <ul class="collection-skin-names" aria-label="EPIC skins">
+<li>Storm</li><li>Kingsley</li><li>Ahsoka Tano</li><li>Highwire</li><li>Meowscles</li><li>Corrupted Insight</li><li>Chaos Agent</li><li>Corrupted Shogun</li><li>Lt. John Llama</li><li>Dark Bomber</li><li>Neymar Jr</li><li>Ocean</li><li>Polar Peely</li><li>Gumbo</li><li>Fish Thicc</li><li>Stray</li><li>Thor</li><li>Felina</li><li>Santa Dogg</li><li>T-800</li><li>Skye</li><li>Agent Peely</li><li>Cluck</li><li>Mae</li><li>Doctor Doom</li><li>Spider-Man</li><li>TNTina</li><li>Siona</li><li>Pig the Butcher</li><li>Aquaman</li><li>Haven</li><li>Mystica</li><li>Brutus</li><li>Yulejacket</li><li>Thunder</li><li>Antonia</li><li>Mystique</li><li>Tarana</li><li>Shanta</li><li>Harlowe</li><li>Khaby Lame</li><li>Nolan Chance</li><li>Lara Croft</li><li>Groot</li><li>Sage</li><li>Jennifer Walters</li><li>Tony Stark</li><li>Agent Jones</li><li>Kit</li><li>Lt. Evergreen</li><li>Corrupted Arachne</li><li>Piper Pace</li><li>Jules</li><li>Imani</li><li>Wolverine</li><li>Scuba Jonesy</li><li>The Weeknd Combat</li>        </ul>
       </div>
-      <div class="collection-group">
-        <h3>RARE (X12)</h3>
-        <p>Underworld Desdemona, Vivi Chroma, Seeker, Zoe Clash, Sled Ready Guff, Bandolette, Holiday Boxy, Krisabelle, Arctic Adeline, Wooly Warrior, Subzero Cryptic, Winterfest Bushranger</p>
+      <div class="collection-entry">
+        <span class="collection-badge rare"><span>RARE</span><b>12</b></span>
+        <ul class="collection-skin-names" aria-label="RARE skins">
+<li>Underworld Desdemona</li><li>Vivi Chroma</li><li>Seeker</li><li>Zoe Clash</li><li>Sled Ready Guff</li><li>Bandolette</li><li>Holiday Boxy</li><li>Krisabelle</li><li>Arctic Adeline</li><li>Wooly Warrior</li><li>Subzero Cryptic</li><li>Winterfest Bushranger</li>        </ul>
+      </div>
+      <div class="collection-entry">
+        <span class="collection-badge uncommon"><span>UNCOMMON</span><b>5</b></span>
+        <ul class="collection-skin-names" aria-label="UNCOMMON skins">
+<li>Runway Racer</li><li>Swirl Girl</li><li>Brainiac</li><li>Scarlet Defender</li><li>Manic</li>        </ul>
       </div>
     </div>
   </section>

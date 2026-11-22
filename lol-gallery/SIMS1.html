@@ -247,8 +247,10 @@ button { font: inherit; color: inherit; }
 .series-group p { margin-top: 4px; color: var(--muted); font-size: 12px; }
 .rf.r-marvel .dot { background: #ef4444; }
 .rf.r-dc .dot { background: #3b82f6; }
-.rf.r-star-wars .dot, .rf.r-gaming-legends .dot { background: #e5bd6a; }
+.rf.r-star-wars .dot { background: #e5bd6a; }
+.rf.r-gaming-legends .dot { background: #a855f7; }
 .rf.r-icon .dot { background: #60a5fa; }
+.series-filter-label { align-self: center; margin-left: 4px; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 12px; }
 .card {
@@ -404,23 +406,23 @@ button { font: inherit; color: inherit; }
       </div>
       <div class="series-groups">
         <h3>Special series</h3>
-        <div class="series-group">
+        <div class="series-group" data-series-summary="marvel">
           <h3>🕷️ MARVEL <span>(8)</span></h3>
           <p>Deadpool, Doctor Doom, Storm, Spider-Man, Groot, Thor, Wolverine, Jennifer Walters</p>
         </div>
-        <div class="series-group">
+        <div class="series-group" data-series-summary="dc">
           <h3>🦇 DC <span>(1)</span></h3>
           <p>Rebirth Raven</p>
         </div>
-        <div class="series-group">
+        <div class="series-group" data-series-summary="star-wars">
           <h3>⭐ STAR WARS <span>(1)</span></h3>
           <p>Mandalorian</p>
         </div>
-        <div class="series-group">
+        <div class="series-group" data-series-summary="icon">
           <h3>🎤 ICON SERIES <span>(5)</span></h3>
           <p>Neymar Jr, Santa Dogg, Slayer Juice WRLD, Khaby Lame, Lewis Hamilton</p>
         </div>
-        <div class="series-group">
+        <div class="series-group" data-series-summary="gaming-legends">
           <h3>🎮 GAMING LEGENDS <span>(2)</span></h3>
           <p>Lara Croft, Solid Snake</p>
         </div>
@@ -693,11 +695,12 @@ button { font: inherit; color: inherit; }
         <button type="button" class="rf r-rare" data-rarity="rare" aria-pressed="false"><span class="dot"></span>Rare<em>206</em></button>
         <button type="button" class="rf r-uncommon" data-rarity="uncommon" aria-pressed="false"><span class="dot"></span>Uncommon<em>66</em></button>
         <button type="button" class="rf r-common" data-rarity="common" aria-pressed="false"><span class="dot"></span>Common<em>30</em></button>
-        <button type="button" class="rf r-marvel" data-rarity="marvel" aria-pressed="false"><span class="dot"></span>MARVEL<em>8</em></button>
-        <button type="button" class="rf r-dc" data-rarity="dc" aria-pressed="false"><span class="dot"></span>DC<em>1</em></button>
-        <button type="button" class="rf r-star-wars" data-rarity="star-wars" aria-pressed="false"><span class="dot"></span>STAR WARS<em>1</em></button>
-        <button type="button" class="rf r-icon" data-rarity="icon" aria-pressed="false"><span class="dot"></span>ICON SERIES<em>5</em></button>
-        <button type="button" class="rf r-gaming-legends" data-rarity="gaming-legends" aria-pressed="false"><span class="dot"></span>GAMING LEGENDS<em>2</em></button>
+        <span class="series-filter-label">Series</span>
+        <button type="button" class="rf r-marvel" data-rarity="marvel" data-filter-type="series" aria-label="Show MARVEL series" aria-pressed="false"><span class="dot"></span>MARVEL<em>8</em></button>
+        <button type="button" class="rf r-dc" data-rarity="dc" data-filter-type="series" aria-label="Show DC series" aria-pressed="false"><span class="dot"></span>DC<em>1</em></button>
+        <button type="button" class="rf r-star-wars" data-rarity="star-wars" data-filter-type="series" aria-label="Show STAR WARS series" aria-pressed="false"><span class="dot"></span>STAR WARS<em>1</em></button>
+        <button type="button" class="rf r-icon" data-rarity="icon" data-filter-type="series" aria-label="Show ICON SERIES series" aria-pressed="false"><span class="dot"></span>ICON SERIES<em>5</em></button>
+        <button type="button" class="rf r-gaming-legends" data-rarity="gaming-legends" data-filter-type="series" aria-label="Show GAMING LEGENDS series" aria-pressed="false"><span class="dot"></span>GAMING LEGENDS<em>2</em></button>
       </div>
       <div class="results" id="results" aria-live="polite">Showing 512 of 512 items</div>
     </div>

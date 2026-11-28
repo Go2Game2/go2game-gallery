@@ -318,7 +318,13 @@ button { font: inherit; color: inherit; }
 }
 .fortnite-showcase{background:#030508!important;color:#f3ead8}
 .fortnite-showcase::before{display:none}
-.fortnite-showcase .container{width:min(1460px,calc(100% - 28px));max-width:none}
+.fortnite-showcase .fortnite-ambient{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.fortnite-showcase .fortnite-ambient::before{content:"";position:absolute;inset:-20%;background:radial-gradient(ellipse at 18% 35%,rgba(16,30,74,.72),transparent 55%),radial-gradient(ellipse at 84% 18%,rgba(48,17,78,.42),transparent 48%),radial-gradient(ellipse at 50% 92%,rgba(200,155,60,.07),transparent 55%);animation:fortnite-bg-shift 18s ease-in-out infinite alternate}
+.fortnite-showcase .fortnite-ambient::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,155,60,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(200,155,60,.022) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 30%,black 25%,transparent 80%)}
+.fortnite-showcase .fortnite-particle{position:absolute;bottom:-20px;width:3px;height:3px;border-radius:50%;background:rgba(245,196,81,.72);box-shadow:0 0 10px rgba(200,155,60,.55);animation:fortnite-particle-rise var(--duration) linear infinite;animation-delay:var(--delay)}
+@keyframes fortnite-bg-shift{0%{opacity:.72;transform:scale(1) translate3d(-1%,0,0)}100%{opacity:1;transform:scale(1.06) translate3d(1%,-1%,0)}}
+@keyframes fortnite-particle-rise{0%{transform:translate3d(0,20px,0) scale(.2);opacity:0}12%{opacity:.8}85%{opacity:.45}100%{transform:translate3d(var(--drift),-105vh,0) scale(1);opacity:0}}
+.fortnite-showcase .container{position:relative;z-index:2;width:min(1460px,calc(100% - 28px));max-width:none}
 .fortnite-showcase .topbar{position:fixed;inset:0 0 auto;z-index:50;height:66px;padding:13px clamp(16px,3.5vw,38px);background:rgba(3,5,8,.84);border-bottom:1px solid rgba(200,155,60,.12);backdrop-filter:blur(14px)}
 .fortnite-showcase .brand-mark{border-radius:9px;border:1px solid rgba(200,155,60,.55);background:linear-gradient(145deg,rgba(200,155,60,.2),rgba(200,155,60,.05));color:#f5c451;font-family:var(--font-display)}
 .fortnite-showcase .brand-copy{font-family:var(--font-display);letter-spacing:2px;text-transform:uppercase}
@@ -362,6 +368,8 @@ button { font: inherit; color: inherit; }
 .fortnite-showcase .series-group summary{display:flex;padding:9px 13px;font-size:11.5px}.fortnite-showcase .series-group summary::after{color:#c89b3c}.fortnite-showcase .series-group summary em{color:#c89b3c}.fortnite-showcase .series-group p{padding:0 13px 11px;font-size:12px;color:#96948e}
 .fortnite-showcase .seasons{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));max-height:215px;gap:8px}.fortnite-showcase .season{border:1px solid var(--border-subtle);border-radius:8px;padding:8px 10px;font-size:11px;background:rgba(255,255,255,.02)}
 .fortnite-showcase .season b{font-size:12.5px}.fortnite-showcase .season.pass{border-color:rgba(200,155,60,.42);background:linear-gradient(180deg,rgba(200,155,60,.1),rgba(200,155,60,.02))}
+.fortnite-showcase .season-history-panel{position:relative;clear:both;width:100%;min-width:0;margin-top:14px}
+.fortnite-showcase .season-history-panel .seasons{width:100%;max-height:260px}
 .fortnite-showcase .block-title{margin:44px 0 22px}.fortnite-showcase .block-title h2{font-family:var(--font-display);color:#c89b3c;font-size:1.25rem;letter-spacing:3px;text-transform:uppercase}.fortnite-showcase .block-title p{color:#96948e;font-size:11.5px}
 .fortnite-showcase .hl{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(154px,172px);gap:13px;overflow-x:auto;padding:4px 2px 14px}
 .fortnite-showcase .toolbar{position:sticky;top:64px;z-index:35;margin-top:10px;padding:14px 16px;border-radius:12px;background:rgba(6,10,18,.92);border:1px solid var(--border-hi);backdrop-filter:blur(18px);box-shadow:0 18px 40px rgba(0,0,0,.55)}
@@ -399,6 +407,26 @@ button { font: inherit; color: inherit; }
     <a class="btn ghost" href="https://www.eldorado.gg/users/Go2Game/shop/Account" target="_blank" rel="noopener noreferrer">View on Eldorado</a>
   </header>
 
+<div class="fortnite-ambient" aria-hidden="true">
+  <i class="fortnite-particle" style="left:0%;--duration:7s;--delay:-0s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:37%;--duration:8s;--delay:-1s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:74%;--duration:9s;--delay:-2s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:11%;--duration:10s;--delay:-3s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:48%;--duration:11s;--delay:-4s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:85%;--duration:12s;--delay:-5s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:22%;--duration:13s;--delay:-6s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:59%;--duration:7s;--delay:-7s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:96%;--duration:8s;--delay:-8s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:33%;--duration:9s;--delay:-0s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:70%;--duration:10s;--delay:-1s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:7%;--duration:11s;--delay:-2s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:44%;--duration:12s;--delay:-3s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:81%;--duration:13s;--delay:-4s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:18%;--duration:7s;--delay:-5s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:55%;--duration:8s;--delay:-6s;--drift:18px"></i>
+  <i class="fortnite-particle" style="left:92%;--duration:9s;--delay:-7s;--drift:-18px"></i>
+  <i class="fortnite-particle" style="left:29%;--duration:10s;--delay:-8s;--drift:18px"></i>
+</div>
 <div class="page-shell">
   <main class="main-col">
     <section class="hero-fortnite">
@@ -418,10 +446,9 @@ button { font: inherit; color: inherit; }
     <div class="section-head"><h2>Account Overview</h2><span class="count">Verified Locker Metrics</span></div>
     <div class="stats">
       <div class="stat epic"><b>45</b><span>Outfits</span></div>
-      <div class="stat rare"><b>0</b><span>Back Blings</span></div>
-      <div class="stat uncommon"><b>97</b><span>Pickaxes</span></div>
-      <div class="stat legendary"><b>69</b><span>Emotes</span></div>
-      <div class="stat vbucks"><b>79</b><span>Gliders</span></div>
+      <div class="stat rare"><b>97</b><span>Pickaxes</span></div>
+      <div class="stat uncommon"><b>69</b><span>Emotes</span></div>
+      <div class="stat legendary"><b>79</b><span>Gliders</span></div>
       <div class="stat vbucks"><b>400</b><span>V-Bucks</span></div>
     </div>
 
@@ -443,7 +470,7 @@ button { font: inherit; color: inherit; }
       <div class="panel"><h2>Rarity by Cosmetic Type</h2><p class="sub">Distribution across each locker category.</p><div class="matrix">
 <div class="mrow"><span>Outfits</span><div class="rbar thin"><i class="r-legendary" style="flex-grow:7"></i><i class="r-epic" style="flex-grow:33"></i><i class="r-rare" style="flex-grow:5"></i></div><b>45</b></div><div class="mrow"><span>Pickaxes</span><div class="rbar thin"><i class="r-epic" style="flex-grow:23"></i><i class="r-rare" style="flex-grow:69"></i><i class="r-uncommon" style="flex-grow:4"></i><i class="r-common" style="flex-grow:1"></i></div><b>97</b></div><div class="mrow"><span>Emotes</span><div class="rbar thin"><i class="r-epic" style="flex-grow:13"></i><i class="r-rare" style="flex-grow:15"></i><i class="r-uncommon" style="flex-grow:38"></i><i class="r-common" style="flex-grow:3"></i></div><b>69</b></div><div class="mrow"><span>Gliders</span><div class="rbar thin"><i class="r-legendary" style="flex-grow:4"></i><i class="r-epic" style="flex-grow:34"></i><i class="r-rare" style="flex-grow:17"></i><i class="r-uncommon" style="flex-grow:8"></i><i class="r-common" style="flex-grow:16"></i></div><b>79</b></div>      </div></div>      <div class="panel"><h2>Special Series</h2><p class="sub">Expand to view collaboration outfits.</p><div class="series-groups">
 <details class="series-group"><summary><span>🕷️ MARVEL</span><em>2</em></summary><p>Green Goblin, Deadpool (Pen &amp; Ink)</p></details><details class="series-group"><summary><span>🦇 DC</span><em>2</em></summary><p>Clark Kent, The Flash</p></details><details class="series-group"><summary><span>🎤 ICONS</span><em>3</em></summary><p>TheGrefg, MARSHINOBI, Neymar Jr</p></details><details class="series-group"><summary><span>🎮 GAMING LEGENDS</span><em>3</em></summary><p>Lara Croft, Geralt of Rivia, Doom Slayer</p></details>      </div></div>    </div>
-    <div class="panel" style="margin-top:14px"><h2>Season History</h2><p class="sub">28 seasons played · 5 Battle Passes owned</p><div class="seasons">
+    <div class="panel season-history-panel"><h2>Season History</h2><p class="sub">28 seasons played · 5 Battle Passes owned</p><div class="seasons">
 <div class="season"><b>Season 42</b>Lv 1 · 0 wins</div><div class="season"><b>Season 41</b>Lv 1 · 0 wins</div><div class="season"><b>Season 40</b>Lv 13 · 0 wins</div><div class="season"><b>Season 39</b>Lv 11 · 1 wins</div><div class="season"><b>Season 38</b>Lv 5 · 0 wins</div><div class="season"><b>Season 37</b>Lv 61 · 2 wins</div><div class="season"><b>Season 36</b>Lv 27 · 4 wins</div><div class="season"><b>Season 35</b>Lv 26 · 0 wins</div><div class="season"><b>Season 34</b>Lv 25 · 0 wins</div><div class="season"><b>Season 33</b>Lv 49 · 2 wins</div><div class="season"><b>Season 32</b>Lv 27 · 0 wins</div><div class="season"><b>Season 31</b>Lv 31 · 0 wins</div><div class="season"><b>Season 30</b>Lv 37 · 2 wins</div><div class="season"><b>Season 29</b>Lv 26 · 0 wins</div><div class="season"><b>Season 28</b>Lv 33 · 2 wins</div><div class="season"><b>Season 27</b>Lv 26 · 0 wins</div><div class="season"><b>Season 26</b>Lv 60 · 0 wins</div><div class="season"><b>Season 25</b>Lv 9 · 0 wins</div><div class="season pass"><b>Season 24</b>Lv 82 · 5 wins<span class="tag">★ Battle Pass</span></div><div class="season pass"><b>Season 23</b>Lv 157 · 5 wins<span class="tag">★ Battle Pass</span></div><div class="season"><b>Season 22</b>Lv 84 · 1 wins</div><div class="season"><b>Season 21</b>Lv 14 · 0 wins</div><div class="season"><b>Season 20</b>Lv 24 · 0 wins</div><div class="season"><b>Season 19</b>Lv 47 · 1 wins</div><div class="season pass"><b>Season 18</b>Lv 42 · 5 wins<span class="tag">★ Battle Pass</span></div><div class="season pass"><b>Season 17</b>Lv 80 · 5 wins<span class="tag">★ Battle Pass</span></div><div class="season pass"><b>Season 16</b>Lv 49 · 0 wins<span class="tag">★ Battle Pass</span></div><div class="season"><b>Season 15</b>Lv 44 · 2 wins</div>    </div></div>
     <div class="section-head"><h2>Notable &amp; Rare Showcase</h2><span class="count">Exclusive &amp; legendary pieces</span></div>
     <div class="hl"><article class="card r-legendary"><div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_784_athena_commando_f_renegaderaiderfire/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_784_athena_commando_f_renegaderaiderfire/icon.png" alt="Blaze" width="128" height="128" loading="lazy"></div><div class="meta"><h3>Blaze</h3><span>Legendary</span></div></article><article class="card r-legendary"><div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_a_111_athena_commando_m_faux/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_a_111_athena_commando_m_faux/icon.png" alt="Joey" width="128" height="128" loading="lazy"></div><div class="meta"><h3>Joey</h3><span>Legendary</span></div></article><article class="card r-legendary"><div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_a_110_athena_commando_m_alientrooper/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_a_110_athena_commando_m_alientrooper/icon.png" alt="Kymera" width="128" height="128" loading="lazy"></div><div class="meta"><h3>Kymera</h3><span>Legendary</span></div></article><article class="card r-legendary"><div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/character_apprentice/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/character_apprentice/icon.png" alt="Nezumi" width="128" height="128" loading="lazy"></div><div class="meta"><h3>Nezumi</h3><span>Legendary</span></div></article><article class="card r-legendary"><div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/character_inferno/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/character_inferno/icon.png" alt="Renzo the Destroyer" width="128" height="128" loading="lazy"></div><div class="meta"><h3>Renzo the Destroyer</h3><span>Legendary</span></div></article><article class="card r-legendary"><div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/character_citadel/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/character_citadel/icon.png" alt="The Ageless" width="128" height="128" loading="lazy"></div><div class="meta"><h3>The Ageless</h3><span>Legendary</span></div></article><article class="card r-legendary"><div class="art"><img src="https://fortnite-api.com/images/cosmetics/br/cid_a_225_athena_commando_f_cubequeen/smallicon.png" data-fb="https://fortnite-api.com/images/cosmetics/br/cid_a_225_athena_commando_f_cubequeen/icon.png" alt="The Cube Queen" width="128" height="128" loading="lazy"></div><div class="meta"><h3>The Cube Queen</h3><span>Legendary</span></div></article></div>
